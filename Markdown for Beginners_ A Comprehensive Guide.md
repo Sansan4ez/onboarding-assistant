@@ -1,9 +1,3 @@
-
-
-# 
-
----
-
 ## Markdown for Beginners: A Comprehensive Guide
 
 Markdown is an excellent tool for beginners looking to format text easily. This guide will walk you through the basics and help you start creating well-formatted documents.
