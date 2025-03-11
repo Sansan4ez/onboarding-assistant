@@ -1,13 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# 
-
----
-
-# translate it into Russian while preserving the meaning.
-
-Вот подробное руководство для начинающих по использованию Pandoc:
-
 ## Установка
 
 1. Посетите официальный сайт Pandoc (https://pandoc.org/installing.html)
