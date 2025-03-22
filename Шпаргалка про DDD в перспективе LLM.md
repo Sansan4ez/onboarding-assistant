@@ -1,6 +1,6 @@
-#### Шпаргалка про DDD в перспективе LLM
+# Шпаргалка про DDD в перспективе LLM
 
-##### Пропускаем эти термины
+## Пропускаем эти термины
 
 Это тактические термины. Они полезны при разработке систем, но не обязательно применимы к LLM. Смело их пропускаем:
 
@@ -20,7 +20,7 @@ An object defined by its identity rather than its attributes. An entity has a un
 
 **Specification** — **Спецификация** ([Спецификация (шаблон проектирования) — Википедия](https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_\(%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F\)#:~:text=%C2%AB%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%C2%BB%20%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8%20%C2%A0%E2%80%94%20%D1%8D%D1%82%D0%BE,%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%20%D0%B1%D1%8B%D1%82%D1%8C%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE%20%D0%B2%20%D0%B2%D0%B8%D0%B4%D0%B5)) A design pattern that encapsulates a business rule or criteria as an object, which can evaluate to true/false for a given candidate object.
 
-##### Обращаем внимание на эти термины
+## Обращаем внимание на эти термины
 
 А вот на эти термины стоит обращать внимание при чтении книг и статей. Связанные с ними концепции сильно меня выручают при переносе сложных процессов на LLM.
 

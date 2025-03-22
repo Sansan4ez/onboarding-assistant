@@ -334,8 +334,7 @@ UV представляет собой революционный инструм
 
 UV — это инструмент, который меняет представление о том, как должна выглядеть экосистема инструментов для Python-разработки. Его стоит взять на вооружение каждому Python-разработчику для упрощения и ускорения рабочего процесса[^1][^11][^16].
 
-<div style="text-align: center">⁂</div>
-
+К просмотру обязательно!!! https://youtu.be/0Osso8mLL-A?si=T4pNll_e7vPFm23L
 [^1]: https://www.youtube.com/watch?v=0Osso8mLL-A
 
 [^2]: https://www.semanticscholar.org/paper/6715755c2b0792b74cd7ae03fa6b7bebccd5b1ec
