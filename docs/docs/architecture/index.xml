@@ -1,26 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Architecture on AI onboarding assistant</title>
-    <link>http://localhost:1313/onboarding-assistant/docs/architecture/</link>
-    <description>Recent content in Architecture on AI onboarding assistant</description>
-    <generator>Hugo</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/onboarding-assistant/docs/architecture/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/architecture/assistant-architecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/architecture/assistant-architecture/</guid>
-      <description>&lt;h1 id=&#34;построение-эффективных-ai-агентов&#34;&gt;&#xA;  Построение эффективных AI-агентов&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d0%b5-%d1%8d%d1%84%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d1%8b%d1%85-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%be%d0%b2&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;За последний год специалисты Anthropic работали с десятками команд, создающих агентов на основе больших языковых моделей (LLM) в различных отраслях. Последовательно отмечалось, что наиболее успешные реализации не использовали сложные фреймворки или специализированные библиотеки. Вместо этого они строились на простых, компонуемых паттернах.&lt;/p&gt;&#xA;&lt;h2 id=&#34;что-такое-агенты&#34;&gt;&#xA;  Что такое агенты?&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Термин &amp;ldquo;агент&amp;rdquo; можно определить по-разному. Некоторые клиенты определяют агентов как полностью автономные системы, которые работают независимо в течение длительного времени, используя различные инструменты для выполнения сложных задач. Другие используют этот термин для описания более регламентированных реализаций, следующих предопределенным рабочим процессам. В Anthropic все эти вариации классифицируются как &lt;strong&gt;агентные системы&lt;/strong&gt;, но проводится важное архитектурное различие между &lt;strong&gt;рабочими процессами (workflows)&lt;/strong&gt; и &lt;strong&gt;агентами (agents)&lt;/strong&gt;:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/architecture/ddd-llm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/architecture/ddd-llm/</guid>
-      <description>&lt;h1 id=&#34;шпаргалка-про-ddd-в-перспективе-llm&#34;&gt;&#xA;  Шпаргалка про DDD в перспективе LLM&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%88%d0%bf%d0%b0%d1%80%d0%b3%d0%b0%d0%bb%d0%ba%d0%b0-%d0%bf%d1%80%d0%be-ddd-%d0%b2-%d0%bf%d0%b5%d1%80%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%b5-llm&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;пропускаем-эти-термины&#34;&gt;&#xA;  Пропускаем эти термины&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d1%80%d0%be%d0%bf%d1%83%d1%81%d0%ba%d0%b0%d0%b5%d0%bc-%d1%8d%d1%82%d0%b8-%d1%82%d0%b5%d1%80%d0%bc%d0%b8%d0%bd%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Это тактические термины. Они полезны при разработке систем, но не обязательно применимы к LLM. Смело их пропускаем:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Aggregate Root&lt;/strong&gt; — &lt;strong&gt;Корневой агрегат&lt;/strong&gt; (&#xA;  &lt;a href=&#34;https://github.com/MaksimDzhangirov/practicalDDD/blob/master/docs/aggregate.md#:~:text=%D0%9A%D0%BE%D1%80%D0%BD%D0%B5%D0%B2%D0%BE%D0%B9%20%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%20%28,Aggregate%20Root&#34;&gt;practicalDDD/docs/aggregate.md at master · MaksimDzhangirov/practicalDDD · GitHub&lt;/a&gt;)&lt;br&gt;&#xA;The primary entity in an &lt;em&gt;Aggregate&lt;/em&gt; (a cluster of related objects treated as one unit) that acts as the gatekeeper. All external references go through the aggregate root, which ensures the integrity and consistency of the aggregate’s invariants.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture on AI onboarding assistant</title><link>http://localhost:1313/onboarding-assistant/docs/architecture/</link><description>Recent content in Architecture on AI onboarding assistant</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/onboarding-assistant/docs/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>http://localhost:1313/onboarding-assistant/docs/architecture/assistant-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/architecture/assistant-architecture/</guid><description>&lt;h1 id="построение-эффективных-ai-агентов">
+ Построение эффективных AI-агентов
+ 
+ &lt;a class="anchor" href="#%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d0%b5-%d1%8d%d1%84%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d1%8b%d1%85-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%be%d0%b2">#&lt;/a>
+ 
+&lt;/h1>
+&lt;p>За последний год специалисты Anthropic работали с десятками команд, создающих агентов на основе больших языковых моделей (LLM) в различных отраслях. Последовательно отмечалось, что наиболее успешные реализации не использовали сложные фреймворки или специализированные библиотеки. Вместо этого они строились на простых, компонуемых паттернах.&lt;/p>
+&lt;h2 id="что-такое-агенты">
+ Что такое агенты?
+ 
+ &lt;a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d1%8b">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>Термин &amp;ldquo;агент&amp;rdquo; можно определить по-разному. Некоторые клиенты определяют агентов как полностью автономные системы, которые работают независимо в течение длительного времени, используя различные инструменты для выполнения сложных задач. Другие используют этот термин для описания более регламентированных реализаций, следующих предопределенным рабочим процессам. В Anthropic все эти вариации классифицируются как &lt;strong>агентные системы&lt;/strong>, но проводится важное архитектурное различие между &lt;strong>рабочими процессами (workflows)&lt;/strong> и &lt;strong>агентами (agents)&lt;/strong>:&lt;/p></description></item><item><title/><link>http://localhost:1313/onboarding-assistant/docs/architecture/ddd-llm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/architecture/ddd-llm/</guid><description>&lt;h1 id="шпаргалка-про-ddd-в-перспективе-llm">
+ Шпаргалка про DDD в перспективе LLM
+ 
+ &lt;a class="anchor" href="#%d1%88%d0%bf%d0%b0%d1%80%d0%b3%d0%b0%d0%bb%d0%ba%d0%b0-%d0%bf%d1%80%d0%be-ddd-%d0%b2-%d0%bf%d0%b5%d1%80%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%b5-llm">#&lt;/a>
+ 
+&lt;/h1>
+&lt;h2 id="пропускаем-эти-термины">
+ Пропускаем эти термины
+ 
+ &lt;a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%bf%d1%83%d1%81%d0%ba%d0%b0%d0%b5%d0%bc-%d1%8d%d1%82%d0%b8-%d1%82%d0%b5%d1%80%d0%bc%d0%b8%d0%bd%d1%8b">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>Это тактические термины. Они полезны при разработке систем, но не обязательно применимы к LLM. Смело их пропускаем:&lt;/p>
+&lt;p>&lt;strong>Aggregate Root&lt;/strong> — &lt;strong>Корневой агрегат&lt;/strong> (
+ &lt;a href="https://github.com/MaksimDzhangirov/practicalDDD/blob/master/docs/aggregate.md#:~:text=%D0%9A%D0%BE%D1%80%D0%BD%D0%B5%D0%B2%D0%BE%D0%B9%20%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%20%28,Aggregate%20Root">practicalDDD/docs/aggregate.md at master · MaksimDzhangirov/practicalDDD · GitHub&lt;/a>)&lt;br>
+The primary entity in an &lt;em>Aggregate&lt;/em> (a cluster of related objects treated as one unit) that acts as the gatekeeper. All external references go through the aggregate root, which ensures the integrity and consistency of the aggregate’s invariants.&lt;/p></description></item></channel></rss>

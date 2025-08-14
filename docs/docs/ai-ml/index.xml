@@ -1,47 +1,211 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>AI &amp; Machine Learning on AI onboarding assistant</title>
-    <link>http://localhost:1313/onboarding-assistant/docs/ai-ml/</link>
-    <description>Recent content in AI &amp; Machine Learning on AI onboarding assistant</description>
-    <generator>Hugo</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/onboarding-assistant/docs/ai-ml/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Основы LLM</title>
-      <link>http://localhost:1313/onboarding-assistant/docs/ai-ml/llm-basics/</link>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/llm-basics/</guid>
-      <description>&lt;h1 id=&#34;основы-больших-языковых-моделей-llm&#34;&gt;&#xA;  Основы больших языковых моделей (LLM)&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d1%8b-%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%b8%d1%85-%d1%8f%d0%b7%d1%8b%d0%ba%d0%be%d0%b2%d1%8b%d1%85-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b5%d0%b9-llm&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;что-такое-llm&#34;&gt;&#xA;  Что такое LLM?&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-llm&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Большие языковые модели (Large Language Models) - это нейронные сети, обученные на огромных объемах текстовых данных.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ключевые-концепции&#34;&gt;&#xA;  Ключевые концепции&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d0%bf%d1%86%d0%b8%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Токенизация&lt;/strong&gt; - разбиение текста на токены&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Attention механизмы&lt;/strong&gt; - фокус на релевантных частях текста&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fine-tuning&lt;/strong&gt; - дообучение под конкретные задачи&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Prompt engineering&lt;/strong&gt; - искусство составления запросов&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;популярные-модели&#34;&gt;&#xA;  Популярные модели&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d0%bf%d1%83%d0%bb%d1%8f%d1%80%d0%bd%d1%8b%d0%b5-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPT (Generative Pre-trained Transformer)&lt;/li&gt;&#xA;&lt;li&gt;BERT (Bidirectional Encoder Representations from Transformers)&lt;/li&gt;&#xA;&lt;li&gt;LLaMA (Large Language Model Meta AI)&lt;/li&gt;&#xA;&lt;li&gt;Claude (Anthropic)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;применение-в-разработке&#34;&gt;&#xA;  Применение в разработке&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b5&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Генерация кода&lt;/li&gt;&#xA;&lt;li&gt;Документирование&lt;/li&gt;&#xA;&lt;li&gt;Отладка&lt;/li&gt;&#xA;&lt;li&gt;Рефакторинг&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>AI-агенты</title>
-      <link>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-agents/</link>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-agents/</guid>
-      <description>&lt;h1 id=&#34;построение-эффективных-ai-агентов&#34;&gt;&#xA;  Построение эффективных AI-агентов&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d0%b5-%d1%8d%d1%84%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d1%8b%d1%85-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%be%d0%b2&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;что-такое-ai-агент&#34;&gt;&#xA;  Что такое AI-агент?&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;AI-агент - это автономная система, способная воспринимать окружающую среду, принимать решения и выполнять действия для достижения целей.&lt;/p&gt;&#xA;&lt;h2 id=&#34;архитектура-ai-агента&#34;&gt;&#xA;  Архитектура AI-агента&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%b0%d1%80%d1%85%d0%b8%d1%82%d0%b5%d0%ba%d1%82%d1%83%d1%80%d0%b0-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%b0&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-восприятие-perception&#34;&gt;&#xA;  1. Восприятие (Perception)&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%d0%b2%d0%be%d1%81%d0%bf%d1%80%d0%b8%d1%8f%d1%82%d0%b8%d0%b5-perception&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Анализ входных данных&lt;/li&gt;&#xA;&lt;li&gt;Обработка сенсорной информации&lt;/li&gt;&#xA;&lt;li&gt;Извлечение признаков&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-мышление-reasoning&#34;&gt;&#xA;  2. Мышление (Reasoning)&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2-%d0%bc%d1%8b%d1%88%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-reasoning&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Анализ ситуации&lt;/li&gt;&#xA;&lt;li&gt;Планирование действий&lt;/li&gt;&#xA;&lt;li&gt;Принятие решений&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-действие-action&#34;&gt;&#xA;  3. Действие (Action)&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#3-%d0%b4%d0%b5%d0%b9%d1%81%d1%82%d0%b2%d0%b8%d0%b5-action&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Выполнение задач&lt;/li&gt;&#xA;&lt;li&gt;Взаимодействие с окружением&lt;/li&gt;&#xA;&lt;li&gt;Обратная связь&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;типы-агентов&#34;&gt;&#xA;  Типы агентов&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%82%d0%b8%d0%bf%d1%8b-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%be%d0%b2&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Реактивные агенты&lt;/strong&gt; - простые правила &amp;ldquo;стимул-реакция&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Модельные агенты&lt;/strong&gt; - с внутренней моделью мира&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Целевые агенты&lt;/strong&gt; - ориентированные на достижение целей&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Утилитарные агенты&lt;/strong&gt; - максимизирующие полезность&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;инструменты-разработки&#34;&gt;&#xA;  Инструменты разработки&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LangChain&lt;/li&gt;&#xA;&lt;li&gt;AutoGen&lt;/li&gt;&#xA;&lt;li&gt;CrewAI&lt;/li&gt;&#xA;&lt;li&gt;Semantic Kernel&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>RAG</title>
-      <link>http://localhost:1313/onboarding-assistant/docs/ai-ml/rag/</link>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/rag/</guid>
-      <description>&lt;h1 id=&#34;rag-retrieval-augmented-generation&#34;&gt;&#xA;  RAG (Retrieval-Augmented Generation)&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#rag-retrieval-augmented-generation&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;что-такое-rag&#34;&gt;&#xA;  Что такое RAG?&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-rag&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;RAG - это архитектура, которая объединяет поиск информации (Retrieval) с генерацией текста (Generation) для создания более точных и актуальных ответов.&lt;/p&gt;&#xA;&lt;h2 id=&#34;принцип-работы&#34;&gt;&#xA;  Принцип работы&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b8%d0%bf-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Поиск&lt;/strong&gt; - система ищет релевантную информацию в базе знаний&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Обогащение&lt;/strong&gt; - найденная информация добавляется к запросу пользователя&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Генерация&lt;/strong&gt; - LLM генерирует ответ на основе обогащенного запроса&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;преимущества-rag&#34;&gt;&#xA;  Преимущества RAG&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d1%80%d0%b5%d0%b8%d0%bc%d1%83%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b0-rag&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Актуальность&lt;/strong&gt; - информация всегда свежая&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Точность&lt;/strong&gt; - ответы основаны на проверенных данных&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Прозрачность&lt;/strong&gt; - можно указать источники информации&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Контроль&lt;/strong&gt; - управление базой знаний&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;компоненты-rag&#34;&gt;&#xA;  Компоненты RAG&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%ba%d0%be%d0%bc%d0%bf%d0%be%d0%bd%d0%b5%d0%bd%d1%82%d1%8b-rag&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;retriever&#34;&gt;&#xA;  Retriever&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#retriever&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Векторный поиск&lt;/li&gt;&#xA;&lt;li&gt;Полнотекстовый поиск&lt;/li&gt;&#xA;&lt;li&gt;Гибридный поиск&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;generator&#34;&gt;&#xA;  Generator&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#generator&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Языковая модель&lt;/li&gt;&#xA;&lt;li&gt;Промпт-инженерия&lt;/li&gt;&#xA;&lt;li&gt;Постобработка&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;применение&#34;&gt;&#xA;  Применение&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Чат-боты с базой знаний&lt;/li&gt;&#xA;&lt;li&gt;Анализ документов&lt;/li&gt;&#xA;&lt;li&gt;Техническая поддержка&lt;/li&gt;&#xA;&lt;li&gt;Образовательные платформы&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-assistants/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-assistants/</guid>
-      <description>&lt;h1 id=&#34;современные-ии-ассистенты-сравнительный-анализ-ведущих-решений-2025-года&#34;&gt;&#xA;  Современные ИИ-ассистенты: Сравнительный анализ ведущих решений 2025 года&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%81%d0%be%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5-%d0%b8%d0%b8-%d0%b0%d1%81%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bd%d1%82%d1%8b-%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d0%b9-2025-%d0%b3%d0%be%d0%b4%d0%b0&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;В начале 2025 года рынок искусственного интеллекта представляет собой динамично развивающуюся экосистему с множеством решений, каждое из которых имеет свои уникальные характеристики и преимущества. На фоне экспоненциального роста возможностей нейросетей особый интерес представляют те системы, которые обеспечивают удобный доступ пользователям из России. Представленные в обзоре ИИ-ассистенты отличаются функциональностью, доступностью и способами взаимодействия, что позволяет пользователям выбирать оптимальное решение в зависимости от конкретных задач. В данном исследовании мы рассмотрим шесть популярных ИИ-систем, доступных в начале 2025 года, и проведем их всесторонний анализ.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/ai-ml/structured-output/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/structured-output/</guid>
-      <description>&lt;h1 id=&#34;подробное-руководство-по-структурированному-выводу-с-использованием-цепочки-рассуждений&#34;&gt;&#xA;  Подробное руководство по структурированному выводу с использованием цепочки рассуждений&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d0%b4%d1%80%d0%be%d0%b1%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%bf%d0%be-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%bc%d1%83-%d0%b2%d1%8b%d0%b2%d0%be%d0%b4%d1%83-%d1%81-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5%d0%bc-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%ba%d0%b8-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Структурированный вывод в сочетании с методом цепочки рассуждений (Chain of Thought, CoT) позволяет большим языковым моделям (LLM) создавать организованные, логичные ответы, демонстрируя этапы решения задач. Это руководство объединяет принципы инженерии подсказок, проектирования схем и систем рассуждений, предоставляя практические инструкции для разработчиков, исследователей и пользователей. Интеграция структурированных форматов данных с системным подходом к рассуждениям повышает точность моделей, улучшает согласованность результатов и упрощает взаимодействие человека с ИИ.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI &amp; Machine Learning on AI onboarding assistant</title><link>http://localhost:1313/onboarding-assistant/docs/ai-ml/</link><description>Recent content in AI &amp; Machine Learning on AI onboarding assistant</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/onboarding-assistant/docs/ai-ml/index.xml" rel="self" type="application/rss+xml"/><item><title>Основы LLM</title><link>http://localhost:1313/onboarding-assistant/docs/ai-ml/llm-basics/</link><pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/llm-basics/</guid><description>&lt;h1 id="основы-больших-языковых-моделей-llm">
+ Основы больших языковых моделей (LLM)
+ 
+ &lt;a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d1%8b-%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%b8%d1%85-%d1%8f%d0%b7%d1%8b%d0%ba%d0%be%d0%b2%d1%8b%d1%85-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b5%d0%b9-llm">#&lt;/a>
+ 
+&lt;/h1>
+&lt;h2 id="что-такое-llm">
+ Что такое LLM?
+ 
+ &lt;a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-llm">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>Большие языковые модели (Large Language Models) - это нейронные сети, обученные на огромных объемах текстовых данных.&lt;/p>
+&lt;h2 id="ключевые-концепции">
+ Ключевые концепции
+ 
+ &lt;a class="anchor" href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d0%bf%d1%86%d0%b8%d0%b8">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Токенизация&lt;/strong> - разбиение текста на токены&lt;/li>
+&lt;li>&lt;strong>Attention механизмы&lt;/strong> - фокус на релевантных частях текста&lt;/li>
+&lt;li>&lt;strong>Fine-tuning&lt;/strong> - дообучение под конкретные задачи&lt;/li>
+&lt;li>&lt;strong>Prompt engineering&lt;/strong> - искусство составления запросов&lt;/li>
+&lt;/ul>
+&lt;h2 id="популярные-модели">
+ Популярные модели
+ 
+ &lt;a class="anchor" href="#%d0%bf%d0%be%d0%bf%d1%83%d0%bb%d1%8f%d1%80%d0%bd%d1%8b%d0%b5-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>GPT (Generative Pre-trained Transformer)&lt;/li>
+&lt;li>BERT (Bidirectional Encoder Representations from Transformers)&lt;/li>
+&lt;li>LLaMA (Large Language Model Meta AI)&lt;/li>
+&lt;li>Claude (Anthropic)&lt;/li>
+&lt;/ul>
+&lt;h2 id="применение-в-разработке">
+ Применение в разработке
+ 
+ &lt;a class="anchor" href="#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b5">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>Генерация кода&lt;/li>
+&lt;li>Документирование&lt;/li>
+&lt;li>Отладка&lt;/li>
+&lt;li>Рефакторинг&lt;/li>
+&lt;/ul></description></item><item><title>AI-агенты</title><link>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-agents/</link><pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-agents/</guid><description>&lt;h1 id="построение-эффективных-ai-агентов">
+ Построение эффективных AI-агентов
+ 
+ &lt;a class="anchor" href="#%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d0%b5-%d1%8d%d1%84%d1%84%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d1%8b%d1%85-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%be%d0%b2">#&lt;/a>
+ 
+&lt;/h1>
+&lt;h2 id="что-такое-ai-агент">
+ Что такое AI-агент?
+ 
+ &lt;a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>AI-агент - это автономная система, способная воспринимать окружающую среду, принимать решения и выполнять действия для достижения целей.&lt;/p>
+&lt;h2 id="архитектура-ai-агента">
+ Архитектура AI-агента
+ 
+ &lt;a class="anchor" href="#%d0%b0%d1%80%d1%85%d0%b8%d1%82%d0%b5%d0%ba%d1%82%d1%83%d1%80%d0%b0-ai-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%b0">#&lt;/a>
+ 
+&lt;/h2>
+&lt;h3 id="1-восприятие-perception">
+ 1. Восприятие (Perception)
+ 
+ &lt;a class="anchor" href="#1-%d0%b2%d0%be%d1%81%d0%bf%d1%80%d0%b8%d1%8f%d1%82%d0%b8%d0%b5-perception">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>Анализ входных данных&lt;/li>
+&lt;li>Обработка сенсорной информации&lt;/li>
+&lt;li>Извлечение признаков&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-мышление-reasoning">
+ 2. Мышление (Reasoning)
+ 
+ &lt;a class="anchor" href="#2-%d0%bc%d1%8b%d1%88%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-reasoning">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>Анализ ситуации&lt;/li>
+&lt;li>Планирование действий&lt;/li>
+&lt;li>Принятие решений&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-действие-action">
+ 3. Действие (Action)
+ 
+ &lt;a class="anchor" href="#3-%d0%b4%d0%b5%d0%b9%d1%81%d1%82%d0%b2%d0%b8%d0%b5-action">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>Выполнение задач&lt;/li>
+&lt;li>Взаимодействие с окружением&lt;/li>
+&lt;li>Обратная связь&lt;/li>
+&lt;/ul>
+&lt;h2 id="типы-агентов">
+ Типы агентов
+ 
+ &lt;a class="anchor" href="#%d1%82%d0%b8%d0%bf%d1%8b-%d0%b0%d0%b3%d0%b5%d0%bd%d1%82%d0%be%d0%b2">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Реактивные агенты&lt;/strong> - простые правила &amp;ldquo;стимул-реакция&amp;rdquo;&lt;/li>
+&lt;li>&lt;strong>Модельные агенты&lt;/strong> - с внутренней моделью мира&lt;/li>
+&lt;li>&lt;strong>Целевые агенты&lt;/strong> - ориентированные на достижение целей&lt;/li>
+&lt;li>&lt;strong>Утилитарные агенты&lt;/strong> - максимизирующие полезность&lt;/li>
+&lt;/ul>
+&lt;h2 id="инструменты-разработки">
+ Инструменты разработки
+ 
+ &lt;a class="anchor" href="#%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b8">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>LangChain&lt;/li>
+&lt;li>AutoGen&lt;/li>
+&lt;li>CrewAI&lt;/li>
+&lt;li>Semantic Kernel&lt;/li>
+&lt;/ul></description></item><item><title>RAG</title><link>http://localhost:1313/onboarding-assistant/docs/ai-ml/rag/</link><pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/rag/</guid><description>&lt;h1 id="rag-retrieval-augmented-generation">
+ RAG (Retrieval-Augmented Generation)
+ 
+ &lt;a class="anchor" href="#rag-retrieval-augmented-generation">#&lt;/a>
+ 
+&lt;/h1>
+&lt;h2 id="что-такое-rag">
+ Что такое RAG?
+ 
+ &lt;a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-rag">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>RAG - это архитектура, которая объединяет поиск информации (Retrieval) с генерацией текста (Generation) для создания более точных и актуальных ответов.&lt;/p>
+&lt;h2 id="принцип-работы">
+ Принцип работы
+ 
+ &lt;a class="anchor" href="#%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b8%d0%bf-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ol>
+&lt;li>&lt;strong>Поиск&lt;/strong> - система ищет релевантную информацию в базе знаний&lt;/li>
+&lt;li>&lt;strong>Обогащение&lt;/strong> - найденная информация добавляется к запросу пользователя&lt;/li>
+&lt;li>&lt;strong>Генерация&lt;/strong> - LLM генерирует ответ на основе обогащенного запроса&lt;/li>
+&lt;/ol>
+&lt;h2 id="преимущества-rag">
+ Преимущества RAG
+ 
+ &lt;a class="anchor" href="#%d0%bf%d1%80%d0%b5%d0%b8%d0%bc%d1%83%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b0-rag">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Актуальность&lt;/strong> - информация всегда свежая&lt;/li>
+&lt;li>&lt;strong>Точность&lt;/strong> - ответы основаны на проверенных данных&lt;/li>
+&lt;li>&lt;strong>Прозрачность&lt;/strong> - можно указать источники информации&lt;/li>
+&lt;li>&lt;strong>Контроль&lt;/strong> - управление базой знаний&lt;/li>
+&lt;/ul>
+&lt;h2 id="компоненты-rag">
+ Компоненты RAG
+ 
+ &lt;a class="anchor" href="#%d0%ba%d0%be%d0%bc%d0%bf%d0%be%d0%bd%d0%b5%d0%bd%d1%82%d1%8b-rag">#&lt;/a>
+ 
+&lt;/h2>
+&lt;h3 id="retriever">
+ Retriever
+ 
+ &lt;a class="anchor" href="#retriever">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>Векторный поиск&lt;/li>
+&lt;li>Полнотекстовый поиск&lt;/li>
+&lt;li>Гибридный поиск&lt;/li>
+&lt;/ul>
+&lt;h3 id="generator">
+ Generator
+ 
+ &lt;a class="anchor" href="#generator">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>Языковая модель&lt;/li>
+&lt;li>Промпт-инженерия&lt;/li>
+&lt;li>Постобработка&lt;/li>
+&lt;/ul>
+&lt;h2 id="применение">
+ Применение
+ 
+ &lt;a class="anchor" href="#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>Чат-боты с базой знаний&lt;/li>
+&lt;li>Анализ документов&lt;/li>
+&lt;li>Техническая поддержка&lt;/li>
+&lt;li>Образовательные платформы&lt;/li>
+&lt;/ul></description></item><item><title/><link>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-assistants/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/ai-assistants/</guid><description>&lt;h1 id="современные-ии-ассистенты-сравнительный-анализ-ведущих-решений-2025-года">
+ Современные ИИ-ассистенты: Сравнительный анализ ведущих решений 2025 года
+ 
+ &lt;a class="anchor" href="#%d1%81%d0%be%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5-%d0%b8%d0%b8-%d0%b0%d1%81%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bd%d1%82%d1%8b-%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d0%b9-2025-%d0%b3%d0%be%d0%b4%d0%b0">#&lt;/a>
+ 
+&lt;/h1>
+&lt;p>В начале 2025 года рынок искусственного интеллекта представляет собой динамично развивающуюся экосистему с множеством решений, каждое из которых имеет свои уникальные характеристики и преимущества. На фоне экспоненциального роста возможностей нейросетей особый интерес представляют те системы, которые обеспечивают удобный доступ пользователям из России. Представленные в обзоре ИИ-ассистенты отличаются функциональностью, доступностью и способами взаимодействия, что позволяет пользователям выбирать оптимальное решение в зависимости от конкретных задач. В данном исследовании мы рассмотрим шесть популярных ИИ-систем, доступных в начале 2025 года, и проведем их всесторонний анализ.&lt;/p></description></item><item><title/><link>http://localhost:1313/onboarding-assistant/docs/ai-ml/structured-output/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/ai-ml/structured-output/</guid><description>&lt;h1 id="подробное-руководство-по-структурированному-выводу-с-использованием-цепочки-рассуждений">
+ Подробное руководство по структурированному выводу с использованием цепочки рассуждений
+ 
+ &lt;a class="anchor" href="#%d0%bf%d0%be%d0%b4%d1%80%d0%be%d0%b1%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%bf%d0%be-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%bc%d1%83-%d0%b2%d1%8b%d0%b2%d0%be%d0%b4%d1%83-%d1%81-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5%d0%bc-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%ba%d0%b8-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9">#&lt;/a>
+ 
+&lt;/h1>
+&lt;p>Структурированный вывод в сочетании с методом цепочки рассуждений (Chain of Thought, CoT) позволяет большим языковым моделям (LLM) создавать организованные, логичные ответы, демонстрируя этапы решения задач. Это руководство объединяет принципы инженерии подсказок, проектирования схем и систем рассуждений, предоставляя практические инструкции для разработчиков, исследователей и пользователей. Интеграция структурированных форматов данных с системным подходом к рассуждениям повышает точность моделей, улучшает согласованность результатов и упрощает взаимодействие человека с ИИ.&lt;/p></description></item></channel></rss>

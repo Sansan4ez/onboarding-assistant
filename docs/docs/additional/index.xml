@@ -1,19 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Additional Materials on AI onboarding assistant</title>
-    <link>http://localhost:1313/onboarding-assistant/docs/additional/</link>
-    <description>Recent content in Additional Materials on AI onboarding assistant</description>
-    <generator>Hugo</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/onboarding-assistant/docs/additional/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/additional/checklist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/additional/checklist/</guid>
-      <description>&lt;h1 id=&#34;checklist-паттерн---это-подход-к-построению-диалога-с-ai-ассистентом-при-котором-задача-разбивается-на-четко-определенные-шаги-которые-последовательно-выполняются-основные-особенности-этого-паттерна&#34;&gt;&#xA;  Checklist паттерн - это подход к построению диалога с AI-ассистентом, при котором задача разбивается на четко определенные шаги, которые последовательно выполняются. Основные особенности этого паттерна:&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#checklist-%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd---%d1%8d%d1%82%d0%be-%d0%bf%d0%be%d0%b4%d1%85%d0%be%d0%b4-%d0%ba-%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d1%8e-%d0%b4%d0%b8%d0%b0%d0%bb%d0%be%d0%b3%d0%b0-%d1%81-ai-%d0%b0%d1%81%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bd%d1%82%d0%be%d0%bc-%d0%bf%d1%80%d0%b8-%d0%ba%d0%be%d1%82%d0%be%d1%80%d0%be%d0%bc-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b0-%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d0%b2%d0%b0%d0%b5%d1%82%d1%81%d1%8f-%d0%bd%d0%b0-%d1%87%d0%b5%d1%82%d0%ba%d0%be-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5-%d1%88%d0%b0%d0%b3%d0%b8-%d0%ba%d0%be%d1%82%d0%be%d1%80%d1%8b%d0%b5-%d0%bf%d0%be%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be-%d0%b2%d1%8b%d0%bf%d0%be%d0%bb%d0%bd%d1%8f%d1%8e%d1%82%d1%81%d1%8f-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d1%8d%d1%82%d0%be%d0%b3%d0%be-%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd%d0%b0&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Декомпозиция задачи на последовательные шаги, которые можно легко проверить и выполнить.&lt;/li&gt;&#xA;&lt;li&gt;Использование простых, конкретных промптов для получения необходимой информации на каждом шаге.&lt;/li&gt;&#xA;&lt;li&gt;Накопление и структурирование информации в процессе прохождения чек-листа.&lt;/li&gt;&#xA;&lt;li&gt;Использование контекстного кэширования для повторного использования уже полученных данных.&lt;/li&gt;&#xA;&lt;li&gt;Ориентация на точность и надежность ответов, а не на гибкость и разнообразие.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;преимущества-checklist-паттерна&#34;&gt;&#xA;  Преимущества Checklist паттерна:&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d1%80%d0%b5%d0%b8%d0%bc%d1%83%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b0-checklist-%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd%d0%b0&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Четкая структура и понятный workflow, позволяющие избежать когнитивной перегрузки модели.&lt;/li&gt;&#xA;&lt;li&gt;Высокая точность и надежность ответов за счет последовательного сбора информации.&lt;/li&gt;&#xA;&lt;li&gt;Возможность повторного использования уже полученных данных.&lt;/li&gt;&#xA;&lt;li&gt;Подходит для задач, где требуется большая точность, а не гибкость.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Главное - просто декомпозировать задачи так, чтобы когнитивные способности моделей не перегружать.&#xA;Просто checklist + проход по фиксированному workflow.&#xA;Никаких ролей и разнообразных агентов (это больше для гибких ассистентов)&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Additional Materials on AI onboarding assistant</title><link>http://localhost:1313/onboarding-assistant/docs/additional/</link><description>Recent content in Additional Materials on AI onboarding assistant</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/onboarding-assistant/docs/additional/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>http://localhost:1313/onboarding-assistant/docs/additional/checklist/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/additional/checklist/</guid><description>&lt;h1 id="checklist-паттерн---это-подход-к-построению-диалога-с-ai-ассистентом-при-котором-задача-разбивается-на-четко-определенные-шаги-которые-последовательно-выполняются-основные-особенности-этого-паттерна">
+ Checklist паттерн - это подход к построению диалога с AI-ассистентом, при котором задача разбивается на четко определенные шаги, которые последовательно выполняются. Основные особенности этого паттерна:
+ 
+ &lt;a class="anchor" href="#checklist-%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd---%d1%8d%d1%82%d0%be-%d0%bf%d0%be%d0%b4%d1%85%d0%be%d0%b4-%d0%ba-%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d1%8e-%d0%b4%d0%b8%d0%b0%d0%bb%d0%be%d0%b3%d0%b0-%d1%81-ai-%d0%b0%d1%81%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bd%d1%82%d0%be%d0%bc-%d0%bf%d1%80%d0%b8-%d0%ba%d0%be%d1%82%d0%be%d1%80%d0%be%d0%bc-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b0-%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d0%b2%d0%b0%d0%b5%d1%82%d1%81%d1%8f-%d0%bd%d0%b0-%d1%87%d0%b5%d1%82%d0%ba%d0%be-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5-%d1%88%d0%b0%d0%b3%d0%b8-%d0%ba%d0%be%d1%82%d0%be%d1%80%d1%8b%d0%b5-%d0%bf%d0%be%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be-%d0%b2%d1%8b%d0%bf%d0%be%d0%bb%d0%bd%d1%8f%d1%8e%d1%82%d1%81%d1%8f-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d1%8d%d1%82%d0%be%d0%b3%d0%be-%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd%d0%b0">#&lt;/a>
+ 
+&lt;/h1>
+&lt;ol>
+&lt;li>Декомпозиция задачи на последовательные шаги, которые можно легко проверить и выполнить.&lt;/li>
+&lt;li>Использование простых, конкретных промптов для получения необходимой информации на каждом шаге.&lt;/li>
+&lt;li>Накопление и структурирование информации в процессе прохождения чек-листа.&lt;/li>
+&lt;li>Использование контекстного кэширования для повторного использования уже полученных данных.&lt;/li>
+&lt;li>Ориентация на точность и надежность ответов, а не на гибкость и разнообразие.&lt;/li>
+&lt;/ol>
+&lt;h2 id="преимущества-checklist-паттерна">
+ Преимущества Checklist паттерна:
+ 
+ &lt;a class="anchor" href="#%d0%bf%d1%80%d0%b5%d0%b8%d0%bc%d1%83%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b0-checklist-%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd%d0%b0">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>Четкая структура и понятный workflow, позволяющие избежать когнитивной перегрузки модели.&lt;/li>
+&lt;li>Высокая точность и надежность ответов за счет последовательного сбора информации.&lt;/li>
+&lt;li>Возможность повторного использования уже полученных данных.&lt;/li>
+&lt;li>Подходит для задач, где требуется большая точность, а не гибкость.&lt;/li>
+&lt;/ul>
+&lt;p>Главное - просто декомпозировать задачи так, чтобы когнитивные способности моделей не перегружать.
+Просто checklist + проход по фиксированному workflow.
+Никаких ролей и разнообразных агентов (это больше для гибких ассистентов)&lt;/p></description></item></channel></rss>

@@ -1,33 +1,231 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Content Management on AI onboarding assistant</title>
-    <link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/</link>
-    <description>Recent content in Content Management on AI onboarding assistant</description>
-    <generator>Hugo</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/onboarding-assistant/docs/content-mgmt/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Git и GitHub</title>
-      <link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-github-guide/</link>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-github-guide/</guid>
-      <description>&lt;h1 id=&#34;git-и-github-для-начинающих&#34;&gt;&#xA;  Git и GitHub для начинающих&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#git-%d0%b8-github-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;что-такое-git&#34;&gt;&#xA;  Что такое Git?&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-git&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Git - это распределенная система контроля версий, которая позволяет отслеживать изменения в файлах и координировать работу над ними между несколькими людьми.&lt;/p&gt;&#xA;&lt;h2 id=&#34;основные-концепции&#34;&gt;&#xA;  Основные концепции&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d0%bf%d1%86%d0%b8%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-репозиторий&#34;&gt;&#xA;  1. Репозиторий&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%d1%80%d0%b5%d0%bf%d0%be%d0%b7%d0%b8%d1%82%d0%be%d1%80%d0%b8%d0%b9&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Локальный репозиторий&lt;/strong&gt; - на вашем компьютере&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Удаленный репозиторий&lt;/strong&gt; - на сервере (GitHub, GitLab)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-коммиты&#34;&gt;&#xA;  2. Коммиты&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2-%d0%ba%d0%be%d0%bc%d0%bc%d0%b8%d1%82%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Коммит&lt;/strong&gt; - снимок состояния файлов в определенный момент&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Сообщение коммита&lt;/strong&gt; - описание изменений&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Хеш коммита&lt;/strong&gt; - уникальный идентификатор&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-ветки&#34;&gt;&#xA;  3. Ветки&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#3-%d0%b2%d0%b5%d1%82%d0%ba%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Main/Master&lt;/strong&gt; - основная ветка&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Feature ветки&lt;/strong&gt; - для разработки новых функций&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Merge&lt;/strong&gt; - объединение веток&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;основные-команды&#34;&gt;&#xA;  Основные команды&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Инициализация репозитория&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Клонирование репозитория&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone &amp;lt;url&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Добавление файлов&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add &amp;lt;filename&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Создание коммита&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Описание изменений&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Просмотр статуса&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git status&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Просмотр истории&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github&#34;&gt;&#xA;  GitHub&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#github&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;GitHub - это веб-платформа для хостинга Git-репозиториев с дополнительными возможностями:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Markdown Guide</title>
-      <link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/markdown-guide/</link>
-      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/content-mgmt/markdown-guide/</guid>
-      <description>&lt;h1 id=&#34;markdown-для-начинающих&#34;&gt;&#xA;  Markdown для начинающих&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#markdown-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;что-такое-markdown&#34;&gt;&#xA;  Что такое Markdown?&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-markdown&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Markdown - это легкий язык разметки, предназначенный для создания форматированного текста с помощью простого синтаксиса.&lt;/p&gt;&#xA;&lt;h2 id=&#34;основные-элементы&#34;&gt;&#xA;  Основные элементы&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-заголовки&#34;&gt;&#xA;  1. Заголовки&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#1-%d0%b7%d0%b0%d0%b3%d0%be%d0%bb%d0%be%d0%b2%d0%ba%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Заголовок 1 уровня&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## Заголовок 2 уровня&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### Заголовок 3 уровня&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#### Заголовок 4 уровня&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-текст&#34;&gt;&#xA;  2. Текст&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#2-%d1%82%d0%b5%d0%ba%d1%81%d1%82&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;**Жирный текст**&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;font-style:italic&#34;&gt;*Курсив*&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;~~Зачеркнутый текст~~&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`Моноширинный текст`&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-списки&#34;&gt;&#xA;  3. Списки&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#3-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Неупорядоченный список&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Второй элемент&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Вложенный элемент&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Еще один&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; Упорядоченный список&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; Второй элемент&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;3.&lt;/span&gt; Третий элемент&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-ссылки-и-изображения&#34;&gt;&#xA;  4. Ссылки и изображения&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#4-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8-%d0%b8-%d0%b8%d0%b7%d0%be%d0%b1%d1%80%d0%b0%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#f92672&#34;&gt;Текст ссылки&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;URL&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;Альтернативный текст&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;путь_к_изображению&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;5-код&#34;&gt;&#xA;  5. Код&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#5-%d0%ba%d0%be%d0%b4&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`Встроенный код`&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;```python&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Блок кода&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;def hello_world():&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&amp;#34;Hello, World!&amp;#34;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&#xA;### 6. Цитаты&#xA;&#xA;```markdown&#xA;&amp;gt; Это цитата&#xA;&amp;gt;&#xA;&amp;gt; Вторая строка цитаты&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;7-таблицы&#34;&gt;&#xA;  7. Таблицы&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#7-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;| Заголовок 1 | Заголовок 2 | Заголовок 3 |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|-------------|-------------|-------------|&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;| Ячейка 1    | Ячейка 2    | Ячейка 3    |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;| Ячейка 4    | Ячейка 5    | Ячейка 6    |&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;расширения&#34;&gt;&#xA;  Расширения&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d1%80%d0%b0%d1%81%d1%88%d0%b8%d1%80%d0%b5%d0%bd%d0%b8%d1%8f&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;github-flavored-markdown&#34;&gt;&#xA;  GitHub Flavored Markdown&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#github-flavored-markdown&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Task Lists&lt;/strong&gt;: &lt;code&gt;- [x] Выполнено&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Strikethrough&lt;/strong&gt;: &lt;code&gt;~~текст~~&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tables&lt;/strong&gt;: таблицы&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fenced Code Blocks&lt;/strong&gt;: блоки кода с подсветкой&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;hugo-extensions&#34;&gt;&#xA;  Hugo Extensions&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hugo-extensions&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Shortcodes&lt;/strong&gt;: специальные команды Hugo&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Front Matter&lt;/strong&gt;: метаданные в начале файла&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Internal Links&lt;/strong&gt;: внутренние ссылки между страницами&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;лучшие-практики&#34;&gt;&#xA;  Лучшие практики&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bb%d1%83%d1%87%d1%88%d0%b8%d0%b5-%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b8&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Используйте заголовки&lt;/strong&gt; для структурирования&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Добавляйте пустые строки&lt;/strong&gt; для читаемости&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Используйте списки&lt;/strong&gt; для перечислений&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Добавляйте код&lt;/strong&gt; в блоки кода&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Проверяйте предварительный просмотр&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;инструменты&#34;&gt;&#xA;  Инструменты&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Typora&lt;/strong&gt; - WYSIWYG редактор&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt; - с расширениями&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt; - для заметок&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HackMD&lt;/strong&gt; - онлайн редактор&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-pages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-pages/</guid>
-      <description>&lt;h1 id=&#34;полное-руководство-для-начинающих-по-github-pages-хостинг-статических-сайтов-с-лёгкостью&#34;&gt;&#xA;  Полное руководство для начинающих по GitHub Pages: Хостинг статических сайтов с лёгкостью&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85-%d0%bf%d0%be-github-pages-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d1%85-%d1%81%d0%b0%d0%b9%d1%82%d0%be%d0%b2-%d1%81-%d0%bb%d1%91%d0%b3%d0%ba%d0%be%d1%81%d1%82%d1%8c%d1%8e&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;GitHub Pages стал ключевым инструментом для разработчиков, студентов и профессионалов, которые хотят бесплатно размещать статические веб-сайты. Этот сервис интегрируется с системой контроля версий GitHub, позволяя развернуть портфолио, документацию к проектам, блоги или бизнес-страницы напрямую из репозитория. Используя GitHub Pages, пользователи получают доступ к надёжному хостингу, поддержке пользовательских доменов и встроенному генератору статических сайтов Jekyll. Это руководство шаг за шагом объяснит, как настроить GitHub Pages — от базовой конфигурации до продвинутых функций — чтобы вы смогли уверенно разместить свой первый статический сайт.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Content Management on AI onboarding assistant</title><link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/</link><description>Recent content in Content Management on AI onboarding assistant</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/onboarding-assistant/docs/content-mgmt/index.xml" rel="self" type="application/rss+xml"/><item><title>Git и GitHub</title><link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-github-guide/</link><pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-github-guide/</guid><description>&lt;h1 id="git-и-github-для-начинающих">
+ Git и GitHub для начинающих
+ 
+ &lt;a class="anchor" href="#git-%d0%b8-github-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85">#&lt;/a>
+ 
+&lt;/h1>
+&lt;h2 id="что-такое-git">
+ Что такое Git?
+ 
+ &lt;a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-git">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>Git - это распределенная система контроля версий, которая позволяет отслеживать изменения в файлах и координировать работу над ними между несколькими людьми.&lt;/p>
+&lt;h2 id="основные-концепции">
+ Основные концепции
+ 
+ &lt;a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d0%bf%d1%86%d0%b8%d0%b8">#&lt;/a>
+ 
+&lt;/h2>
+&lt;h3 id="1-репозиторий">
+ 1. Репозиторий
+ 
+ &lt;a class="anchor" href="#1-%d1%80%d0%b5%d0%bf%d0%be%d0%b7%d0%b8%d1%82%d0%be%d1%80%d0%b8%d0%b9">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Локальный репозиторий&lt;/strong> - на вашем компьютере&lt;/li>
+&lt;li>&lt;strong>Удаленный репозиторий&lt;/strong> - на сервере (GitHub, GitLab)&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-коммиты">
+ 2. Коммиты
+ 
+ &lt;a class="anchor" href="#2-%d0%ba%d0%be%d0%bc%d0%bc%d0%b8%d1%82%d1%8b">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Коммит&lt;/strong> - снимок состояния файлов в определенный момент&lt;/li>
+&lt;li>&lt;strong>Сообщение коммита&lt;/strong> - описание изменений&lt;/li>
+&lt;li>&lt;strong>Хеш коммита&lt;/strong> - уникальный идентификатор&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-ветки">
+ 3. Ветки
+ 
+ &lt;a class="anchor" href="#3-%d0%b2%d0%b5%d1%82%d0%ba%d0%b8">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Main/Master&lt;/strong> - основная ветка&lt;/li>
+&lt;li>&lt;strong>Feature ветки&lt;/strong> - для разработки новых функций&lt;/li>
+&lt;li>&lt;strong>Merge&lt;/strong> - объединение веток&lt;/li>
+&lt;/ul>
+&lt;h2 id="основные-команды">
+ Основные команды
+ 
+ &lt;a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b">#&lt;/a>
+ 
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Инициализация репозитория&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Клонирование репозитория&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone &amp;lt;url&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Добавление файлов&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git add &amp;lt;filename&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git add .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Создание коммита&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git commit -m &lt;span style="color:#e6db74">&amp;#34;Описание изменений&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Просмотр статуса&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git status
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Просмотр истории&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git log
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="github">
+ GitHub
+ 
+ &lt;a class="anchor" href="#github">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>GitHub - это веб-платформа для хостинга Git-репозиториев с дополнительными возможностями:&lt;/p></description></item><item><title>Markdown Guide</title><link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/markdown-guide/</link><pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/content-mgmt/markdown-guide/</guid><description>&lt;h1 id="markdown-для-начинающих">
+ Markdown для начинающих
+ 
+ &lt;a class="anchor" href="#markdown-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85">#&lt;/a>
+ 
+&lt;/h1>
+&lt;h2 id="что-такое-markdown">
+ Что такое Markdown?
+ 
+ &lt;a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-markdown">#&lt;/a>
+ 
+&lt;/h2>
+&lt;p>Markdown - это легкий язык разметки, предназначенный для создания форматированного текста с помощью простого синтаксиса.&lt;/p>
+&lt;h2 id="основные-элементы">
+ Основные элементы
+ 
+ &lt;a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b">#&lt;/a>
+ 
+&lt;/h2>
+&lt;h3 id="1-заголовки">
+ 1. Заголовки
+ 
+ &lt;a class="anchor" href="#1-%d0%b7%d0%b0%d0%b3%d0%be%d0%bb%d0%be%d0%b2%d0%ba%d0%b8">#&lt;/a>
+ 
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span># Заголовок 1 уровня
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Заголовок 2 уровня
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">### Заголовок 3 уровня
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#### Заголовок 4 уровня
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2-текст">
+ 2. Текст
+ 
+ &lt;a class="anchor" href="#2-%d1%82%d0%b5%d0%ba%d1%81%d1%82">#&lt;/a>
+ 
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>**Жирный текст**
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-style:italic">*Курсив*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">~~Зачеркнутый текст~~&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">`Моноширинный текст`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-списки">
+ 3. Списки
+ 
+ &lt;a class="anchor" href="#3-%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%b8">#&lt;/a>
+ 
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> Неупорядоченный список
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> Второй элемент
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Вложенный элемент
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Еще один
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> Упорядоченный список
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> Второй элемент
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> Третий элемент
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="4-ссылки-и-изображения">
+ 4. Ссылки и изображения
+ 
+ &lt;a class="anchor" href="#4-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8-%d0%b8-%d0%b8%d0%b7%d0%be%d0%b1%d1%80%d0%b0%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f">#&lt;/a>
+ 
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#f92672">Текст ссылки&lt;/span>](&lt;span style="color:#a6e22e">URL&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Альтернативный текст&lt;/span>](&lt;span style="color:#a6e22e">путь_к_изображению&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="5-код">
+ 5. Код
+ 
+ &lt;a class="anchor" href="#5-%d0%ba%d0%be%d0%b4">#&lt;/a>
+ 
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">`Встроенный код`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>```python
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Блок кода
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>def hello_world():
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&amp;#34;Hello, World!&amp;#34;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>
+### 6. Цитаты
+
+```markdown
+&amp;gt; Это цитата
+&amp;gt;
+&amp;gt; Вторая строка цитаты
+&lt;/code>&lt;/pre>&lt;h3 id="7-таблицы">
+ 7. Таблицы
+ 
+ &lt;a class="anchor" href="#7-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d1%8b">#&lt;/a>
+ 
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>| Заголовок 1 | Заголовок 2 | Заголовок 3 |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-------------|-------------|-------------|
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>| Ячейка 1 | Ячейка 2 | Ячейка 3 |
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>| Ячейка 4 | Ячейка 5 | Ячейка 6 |
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="расширения">
+ Расширения
+ 
+ &lt;a class="anchor" href="#%d1%80%d0%b0%d1%81%d1%88%d0%b8%d1%80%d0%b5%d0%bd%d0%b8%d1%8f">#&lt;/a>
+ 
+&lt;/h2>
+&lt;h3 id="github-flavored-markdown">
+ GitHub Flavored Markdown
+ 
+ &lt;a class="anchor" href="#github-flavored-markdown">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Task Lists&lt;/strong>: &lt;code>- [x] Выполнено&lt;/code>&lt;/li>
+&lt;li>&lt;strong>Strikethrough&lt;/strong>: &lt;code>~~текст~~&lt;/code>&lt;/li>
+&lt;li>&lt;strong>Tables&lt;/strong>: таблицы&lt;/li>
+&lt;li>&lt;strong>Fenced Code Blocks&lt;/strong>: блоки кода с подсветкой&lt;/li>
+&lt;/ul>
+&lt;h3 id="hugo-extensions">
+ Hugo Extensions
+ 
+ &lt;a class="anchor" href="#hugo-extensions">#&lt;/a>
+ 
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Shortcodes&lt;/strong>: специальные команды Hugo&lt;/li>
+&lt;li>&lt;strong>Front Matter&lt;/strong>: метаданные в начале файла&lt;/li>
+&lt;li>&lt;strong>Internal Links&lt;/strong>: внутренние ссылки между страницами&lt;/li>
+&lt;/ul>
+&lt;h2 id="лучшие-практики">
+ Лучшие практики
+ 
+ &lt;a class="anchor" href="#%d0%bb%d1%83%d1%87%d1%88%d0%b8%d0%b5-%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d0%ba%d0%b8">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ol>
+&lt;li>&lt;strong>Используйте заголовки&lt;/strong> для структурирования&lt;/li>
+&lt;li>&lt;strong>Добавляйте пустые строки&lt;/strong> для читаемости&lt;/li>
+&lt;li>&lt;strong>Используйте списки&lt;/strong> для перечислений&lt;/li>
+&lt;li>&lt;strong>Добавляйте код&lt;/strong> в блоки кода&lt;/li>
+&lt;li>&lt;strong>Проверяйте предварительный просмотр&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;h2 id="инструменты">
+ Инструменты
+ 
+ &lt;a class="anchor" href="#%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b">#&lt;/a>
+ 
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Typora&lt;/strong> - WYSIWYG редактор&lt;/li>
+&lt;li>&lt;strong>VS Code&lt;/strong> - с расширениями&lt;/li>
+&lt;li>&lt;strong>Obsidian&lt;/strong> - для заметок&lt;/li>
+&lt;li>&lt;strong>HackMD&lt;/strong> - онлайн редактор&lt;/li>
+&lt;/ul></description></item><item><title/><link>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-pages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-pages/</guid><description>&lt;h1 id="полное-руководство-для-начинающих-по-github-pages-хостинг-статических-сайтов-с-лёгкостью">
+ Полное руководство для начинающих по GitHub Pages: Хостинг статических сайтов с лёгкостью
+ 
+ &lt;a class="anchor" href="#%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85-%d0%bf%d0%be-github-pages-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d1%85-%d1%81%d0%b0%d0%b9%d1%82%d0%be%d0%b2-%d1%81-%d0%bb%d1%91%d0%b3%d0%ba%d0%be%d1%81%d1%82%d1%8c%d1%8e">#&lt;/a>
+ 
+&lt;/h1>
+&lt;p>GitHub Pages стал ключевым инструментом для разработчиков, студентов и профессионалов, которые хотят бесплатно размещать статические веб-сайты. Этот сервис интегрируется с системой контроля версий GitHub, позволяя развернуть портфолио, документацию к проектам, блоги или бизнес-страницы напрямую из репозитория. Используя GitHub Pages, пользователи получают доступ к надёжному хостингу, поддержке пользовательских доменов и встроенному генератору статических сайтов Jekyll. Это руководство шаг за шагом объяснит, как настроить GitHub Pages — от базовой конфигурации до продвинутых функций — чтобы вы смогли уверенно разместить свой первый статический сайт.&lt;/p></description></item></channel></rss>

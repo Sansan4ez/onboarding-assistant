@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Backend &amp; Database on AI onboarding assistant</title>
-    <link>http://localhost:1313/onboarding-assistant/docs/backend/</link>
-    <description>Recent content in Backend &amp; Database on AI onboarding assistant</description>
-    <generator>Hugo</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/onboarding-assistant/docs/backend/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/onboarding-assistant/docs/backend/supabase-analysis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/onboarding-assistant/docs/backend/supabase-analysis/</guid>
-      <description>&lt;h1 id=&#34;комплексный-анализ-supabase-особенности-преимущества-недостатки-и-возможности-локального-развертывания&#34;&gt;&#xA;  Комплексный Анализ Supabase: Особенности, Преимущества, Недостатки и Возможности Локального Развертывания&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%d0%ba%d0%be%d0%bc%d0%bf%d0%bb%d0%b5%d0%ba%d1%81%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7-supabase-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%bf%d1%80%d0%b5%d0%b8%d0%bc%d1%83%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b0-%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-%d0%b8-%d0%b2%d0%be%d0%b7%d0%bc%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%bb%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d1%80%d0%b0%d0%b7%d0%b2%d0%b5%d1%80%d1%82%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Supabase представляет собой мощную открытую альтернативу Firebase, предлагающую комплексный набор инструментов для разработки современных приложений с минимальными затратами на инфраструктуру. Платформа объединяет полноценную базу данных PostgreSQL, систему аутентификации, хранилище файлов, функции edge-вычислений, векторные встраивания и инструменты для работы в реальном времени. Основное преимущество Supabase заключается в превосходном опыте разработчика, что подтверждается многочисленными положительными отзывами сообщества. При этом возможности локального развертывания позволяют организациям сохранять полный контроль над своими данными и инфраструктурой, что делает решение привлекательным как для небольших стартапов, так и для корпоративных пользователей.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backend &amp; Database on AI onboarding assistant</title><link>http://localhost:1313/onboarding-assistant/docs/backend/</link><description>Recent content in Backend &amp; Database on AI onboarding assistant</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/onboarding-assistant/docs/backend/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>http://localhost:1313/onboarding-assistant/docs/backend/supabase-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/onboarding-assistant/docs/backend/supabase-analysis/</guid><description>&lt;h1 id="комплексный-анализ-supabase-особенности-преимущества-недостатки-и-возможности-локального-развертывания">
+ Комплексный Анализ Supabase: Особенности, Преимущества, Недостатки и Возможности Локального Развертывания
+ 
+ &lt;a class="anchor" href="#%d0%ba%d0%be%d0%bc%d0%bf%d0%bb%d0%b5%d0%ba%d1%81%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7-supabase-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%bf%d1%80%d0%b5%d0%b8%d0%bc%d1%83%d1%89%d0%b5%d1%81%d1%82%d0%b2%d0%b0-%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-%d0%b8-%d0%b2%d0%be%d0%b7%d0%bc%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%bb%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d1%80%d0%b0%d0%b7%d0%b2%d0%b5%d1%80%d1%82%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f">#&lt;/a>
+ 
+&lt;/h1>
+&lt;p>Supabase представляет собой мощную открытую альтернативу Firebase, предлагающую комплексный набор инструментов для разработки современных приложений с минимальными затратами на инфраструктуру. Платформа объединяет полноценную базу данных PostgreSQL, систему аутентификации, хранилище файлов, функции edge-вычислений, векторные встраивания и инструменты для работы в реальном времени. Основное преимущество Supabase заключается в превосходном опыте разработчика, что подтверждается многочисленными положительными отзывами сообщества. При этом возможности локального развертывания позволяют организациям сохранять полный контроль над своими данными и инфраструктурой, что делает решение привлекательным как для небольших стартапов, так и для корпоративных пользователей.&lt;/p></description></item></channel></rss>
