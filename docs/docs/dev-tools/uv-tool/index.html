@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+<head><script src="/onboarding-assistant/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=onboarding-assistant/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  UV — Швейцарский Нож Python-разработчика
+  
+  #
+  
+
+UV — современный универсальный инструмент для Python-разработки, который объединяет в себе функциональность множества классических утилит и решает большинство проблем управления зависимостями и средой разработки. Созданный на Rust и разработанный командой Astral (авторами Ruff), UV обеспечивает высокую производительность и универсальность.
+
+  Что такое UV и почему его стоит использовать
+  
+  #
+  
+
+UV (Universal Virtualenv) — это высокопроизводительный инструмент для Python-разработчиков, объединяющий функциональность нескольких других инструментов:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/onboarding-assistant/docs/dev-tools/uv-tool/">
+  <meta property="og:site_name" content="AI onboarding assistant">
+  <meta property="og:title" content="AI onboarding assistant">
+  <meta property="og:description" content="UV — Швейцарский Нож Python-разработчика # UV — современный универсальный инструмент для Python-разработки, который объединяет в себе функциональность множества классических утилит и решает большинство проблем управления зависимостями и средой разработки. Созданный на Rust и разработанный командой Astral (авторами Ruff), UV обеспечивает высокую производительность и универсальность.
+Что такое UV и почему его стоит использовать # UV (Universal Virtualenv) — это высокопроизводительный инструмент для Python-разработчиков, объединяющий функциональность нескольких других инструментов:">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Uv Tool | AI onboarding assistant</title>
+<link rel="icon" href="/onboarding-assistant/favicon.png" >
+<link rel="manifest" href="/onboarding-assistant/manifest.json">
+<link rel="canonical" href="http://localhost:1313/onboarding-assistant/docs/dev-tools/uv-tool/">
+<link rel="stylesheet" href="/onboarding-assistant/book.min.ce742184041b67827be505801d71b6b40c09608dfb292033ea54dbbc1d71a174.css" integrity="sha256-znQhhAQbZ4J75QWAHXG2tAwJYI37KSAz6lTbvB1xoXQ=" crossorigin="anonymous">
+  <script defer src="/onboarding-assistant/fuse.min.js"></script>
+  <script defer src="/onboarding-assistant/en.search.min.b7fb698aecb025344082fd17e6382a9196b9832ef44b49a25f2de0431e5b0078.js" integrity="sha256-t/tpiuywJTRAgv0X5jgqkZa5gy70S0miXy3gQx5bAHg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/onboarding-assistant/"><span>AI onboarding assistant</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7cb49bdb84cb44cbcedabd34f28a625a" class="toggle"  />
+    <label for="section-7cb49bdb84cb44cbcedabd34f28a625a" class="flex">
+      <a href="/onboarding-assistant/docs/ai-ml/" class="flex-auto ">AI &amp; Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/llm-basics/" class="">Основы LLM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-agents/" class="">AI-агенты</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/rag/" class="">RAG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="">Ai Assistants</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/structured-output/" class="">Structured Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48bac2ebdb668c2706c02aa184db8476" class="toggle"  />
+    <label for="section-48bac2ebdb668c2706c02aa184db8476" class="flex">
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex-auto ">Search Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="">Vector Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/fulltext-search/" class="">Fulltext Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="">Hybrid Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/metadata-search/" class="">Metadata Search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f5ab346261e7d1af858195b11cdc5fb" class="toggle" checked />
+    <label for="section-5f5ab346261e7d1af858195b11cdc5fb" class="flex">
+      <a href="/onboarding-assistant/docs/dev-tools/" class="flex-auto ">Development Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai/" class="">Cursor AI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="">Ai Pair Programming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai-guide/" class="">Cursor Ai Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="">Cursor Composer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/dify-ai/" class="">Dify Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="">Setup Cursor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/uv-tool/" class="active">Uv Tool</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa32f49e3c3654f259d4d098efa4fddd" class="toggle"  />
+    <label for="section-aa32f49e3c3654f259d4d098efa4fddd" class="flex">
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex-auto ">Content Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-github-guide/" class="">Git и GitHub</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="">Markdown Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-pages/" class="">Git Pages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eefc9810de7c421f8dbbe8d3488aff57" class="toggle"  />
+    <label for="section-eefc9810de7c421f8dbbe8d3488aff57" class="flex">
+      <a href="/onboarding-assistant/docs/backend/" class="flex-auto ">Backend &amp; Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/backend/supabase-analysis/" class="">Supabase Analysis</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="toggle"  />
+    <label for="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="flex">
+      <a href="/onboarding-assistant/docs/architecture/" class="flex-auto ">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/assistant-architecture/" class="">Assistant Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/ddd-llm/" class="">Ddd Llm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4c34cc6447adf3b72852a3545bac8e21" class="toggle"  />
+    <label for="section-4c34cc6447adf3b72852a3545bac8e21" class="flex">
+      <a href="/onboarding-assistant/docs/utilities/" class="flex-auto ">Utilities</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/hugo-guide/" class="">Hugo - Статический генератор сайтов</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fe95e3eb7fab23a8556775a589dda04" class="toggle"  />
+    <label for="section-4fe95e3eb7fab23a8556775a589dda04" class="flex">
+      <a href="/onboarding-assistant/docs/additional/" class="flex-auto ">Additional Materials</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/additional/checklist/" class="">Checklist</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/onboarding-assistant/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Uv Tool</h3>
+
+  <label for="toc-control">
+    
+    <img src="/onboarding-assistant/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#что-такое-uv-и-почему-его-стоит-использовать">Что такое UV и почему его стоит использовать</a></li>
+    <li><a href="#установка-uv">Установка UV</a>
+      <ul>
+        <li><a href="#на-linux-и-macos">На Linux и macOS</a></li>
+        <li><a href="#на-windows">На Windows</a></li>
+        <li><a href="#через-pip-или-pipx">Через pip или pipx</a></li>
+        <li><a href="#проверка-установленной-версии">Проверка установленной версии</a></li>
+        <li><a href="#обновление-uv">Обновление UV</a></li>
+      </ul>
+    </li>
+    <li><a href="#управление-версиями-python">Управление версиями Python</a>
+      <ul>
+        <li><a href="#просмотр-доступных-версий">Просмотр доступных версий</a></li>
+        <li><a href="#установка-определенной-версии-python">Установка определенной версии Python</a></li>
+        <li><a href="#использование-определенной-версии-python-в-проекте">Использование определенной версии Python в проекте</a></li>
+      </ul>
+    </li>
+    <li><a href="#создание-и-управление-проектами">Создание и управление проектами</a>
+      <ul>
+        <li><a href="#инициализация-нового-проекта">Инициализация нового проекта</a></li>
+        <li><a href="#создание-виртуального-окружения">Создание виртуального окружения</a></li>
+        <li><a href="#активация-виртуального-окружения">Активация виртуального окружения</a></li>
+        <li><a href="#где-хранится-виртуальное-окружение">Где хранится виртуальное окружение</a></li>
+      </ul>
+    </li>
+    <li><a href="#работа-с-пакетами">Работа с пакетами</a>
+      <ul>
+        <li><a href="#установка-пакетов">Установка пакетов</a></li>
+        <li><a href="#просмотр-дерева-зависимостей">Просмотр дерева зависимостей</a></li>
+        <li><a href="#фиксация-зависимостей-lock-файл">Фиксация зависимостей (lock-файл)</a></li>
+        <li><a href="#установка-dev-зависимостей">Установка dev-зависимостей</a></li>
+      </ul>
+    </li>
+    <li><a href="#запуск-python-кода">Запуск Python-кода</a>
+      <ul>
+        <li><a href="#запуск-скрипта-в-проекте">Запуск скрипта в проекте</a></li>
+        <li><a href="#запуск-скрипта-без-проекта">Запуск скрипта без проекта</a></li>
+        <li><a href="#запуск-с-аргументами">Запуск с аргументами</a></li>
+        <li><a href="#встраивание-зависимостей-в-скрипт">Встраивание зависимостей в скрипт</a></li>
+      </ul>
+    </li>
+    <li><a href="#продвинутые-возможности">Продвинутые возможности</a>
+      <ul>
+        <li><a href="#использование-инструментов-форматирования-и-анализа-кода">Использование инструментов форматирования и анализа кода</a></li>
+        <li><a href="#установка-глобальных-инструментов">Установка глобальных инструментов</a></li>
+        <li><a href="#настройка-pyright-lsp-для-работы-с-uv">Настройка Pyright LSP для работы с UV</a></li>
+        <li><a href="#использование-в-docker">Использование в Docker</a></li>
+      </ul>
+    </li>
+    <li><a href="#сравнение-с-другими-инструментами">Сравнение с другими инструментами</a></li>
+    <li><a href="#заключение">Заключение</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="uv--швейцарский-нож-python-разработчика">
+  UV — Швейцарский Нож Python-разработчика
+  
+  <a class="anchor" href="#uv--%d1%88%d0%b2%d0%b5%d0%b9%d1%86%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9-%d0%bd%d0%be%d0%b6-python-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%87%d0%b8%d0%ba%d0%b0">#</a>
+  
+</h1>
+<p>UV — современный универсальный инструмент для Python-разработки, который объединяет в себе функциональность множества классических утилит и решает большинство проблем управления зависимостями и средой разработки. Созданный на Rust и разработанный командой Astral (авторами Ruff), UV обеспечивает высокую производительность и универсальность.</p>
+<h2 id="что-такое-uv-и-почему-его-стоит-использовать">
+  Что такое UV и почему его стоит использовать
+  
+  <a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-uv-%d0%b8-%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%b5%d0%b3%d0%be-%d1%81%d1%82%d0%be%d0%b8%d1%82-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c">#</a>
+  
+</h2>
+<p>UV (Universal Virtualenv) — это высокопроизводительный инструмент для Python-разработчиков, объединяющий функциональность нескольких других инструментов:</p>
+<ul>
+<li>Управление пакетами (<code>pip</code>, <code>pip-tools</code>)</li>
+<li>Управление виртуальными окружениями (<code>venv</code>, <code>virtualenv</code>)</li>
+<li>Управление версиями Python (<code>pyenv</code>)</li>
+<li>Запуск скриптов в изолированной среде (<code>pipx</code>)</li>
+<li>Работа с зависимостями проекта (<code>poetry</code>, <code>pdm</code>)</li>
+</ul>
+<p>Основные преимущества UV:</p>
+<ul>
+<li>Скорость работы — в 15-20 раз быстрее стандартных инструментов Python<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+<li>Кросс-платформенность — одинаково хорошо работает на Linux, macOS и Windows</li>
+<li>Единый инструмент для всего жизненного цикла разработки</li>
+<li>Отличное управление зависимостями через lock-файлы</li>
+</ul>
+<h2 id="установка-uv">
+  Установка UV
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-uv">#</a>
+  
+</h2>
+<h3 id="на-linux-и-macos">
+  На Linux и macOS
+  
+  <a class="anchor" href="#%d0%bd%d0%b0-linux-%d0%b8-macos">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -LsSf https://astral.sh/uv/install.sh | sh
+</span></span></code></pre></div><p>Или через Homebrew:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install uv
+</span></span></code></pre></div><h3 id="на-windows">
+  На Windows
+  
+  <a class="anchor" href="#%d0%bd%d0%b0-windows">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>powershell -c <span style="color:#e6db74">&#34;irm https://astral.sh/uv/install.ps1 | iex&#34;</span>
+</span></span></code></pre></div><p>Альтернативно через Winget:</p>
+<pre tabindex="0"><code>winget install --id=astral-sh.uv -e
+</code></pre><p>Или Scoop:</p>
+<pre tabindex="0"><code>scoop install main/uv
+</code></pre><h3 id="через-pip-или-pipx">
+  Через pip или pipx
+  
+  <a class="anchor" href="#%d1%87%d0%b5%d1%80%d0%b5%d0%b7-pip-%d0%b8%d0%bb%d0%b8-pipx">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install uv
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># или</span>
+</span></span><span style="display:flex;"><span>pipx install uv
+</span></span></code></pre></div><h3 id="проверка-установленной-версии">
+  Проверка установленной версии
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b0-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%bd%d0%be%d0%b9-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b8">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv --version
+</span></span></code></pre></div><h3 id="обновление-uv">
+  Обновление UV
+  
+  <a class="anchor" href="#%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-uv">#</a>
+  
+</h3>
+<p>Если UV был установлен через автоматический установщик:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv self update
+</span></span></code></pre></div><p>Если через pip:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install --upgrade uv
+</span></span></code></pre></div><h2 id="управление-версиями-python">
+  Управление версиями Python
+  
+  <a class="anchor" href="#%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d1%8f%d0%bc%d0%b8-python">#</a>
+  
+</h2>
+<p>UV обладает уникальной возможностью автоматически скачивать и использовать нужные версии Python, что делает его отличной заменой pyenv<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<h3 id="просмотр-доступных-версий">
+  Просмотр доступных версий
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d1%81%d0%bc%d0%be%d1%82%d1%80-%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%bd%d1%8b%d1%85-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv python list
+</span></span></code></pre></div><h3 id="установка-определенной-версии-python">
+  Установка определенной версии Python
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d0%be%d0%b9-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b8-python">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv python install 3.11
+</span></span></code></pre></div><h3 id="использование-определенной-версии-python-в-проекте">
+  Использование определенной версии Python в проекте
+  
+  <a class="anchor" href="#%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d0%be%d0%b9-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b8-python-%d0%b2-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b5">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv python use 3.11
+</span></span></code></pre></div><p>Эта команда создаст файл <code>.python-version</code> в текущей директории, указывающий на нужную версию Python.</p>
+<h2 id="создание-и-управление-проектами">
+  Создание и управление проектами
+  
+  <a class="anchor" href="#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b8-%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0%d0%bc%d0%b8">#</a>
+  
+</h2>
+<h3 id="инициализация-нового-проекта">
+  Инициализация нового проекта
+  
+  <a class="anchor" href="#%d0%b8%d0%bd%d0%b8%d1%86%d0%b8%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f-%d0%bd%d0%be%d0%b2%d0%be%d0%b3%d0%be-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir my-project
+</span></span><span style="display:flex;"><span>cd my-project
+</span></span><span style="display:flex;"><span>uv init
+</span></span></code></pre></div><p>UV создаст базовую структуру проекта с <code>pyproject.toml</code> и другими необходимыми файлами<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<h3 id="создание-виртуального-окружения">
+  Создание виртуального окружения
+  
+  <a class="anchor" href="#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b2%d0%b8%d1%80%d1%82%d1%83%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d0%be%d0%ba%d1%80%d1%83%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv venv
+</span></span></code></pre></div><p>Или с указанием версии Python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv venv --python<span style="color:#f92672">=</span>3.11
+</span></span></code></pre></div><h3 id="активация-виртуального-окружения">
+  Активация виртуального окружения
+  
+  <a class="anchor" href="#%d0%b0%d0%ba%d1%82%d0%b8%d0%b2%d0%b0%d1%86%d0%b8%d1%8f-%d0%b2%d0%b8%d1%80%d1%82%d1%83%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d0%be%d0%ba%d1%80%d1%83%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h3>
+<p>На Linux/macOS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .venv/bin/activate
+</span></span></code></pre></div><p>На Windows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.venv<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\a</span>ctivate
+</span></span></code></pre></div><h3 id="где-хранится-виртуальное-окружение">
+  Где хранится виртуальное окружение
+  
+  <a class="anchor" href="#%d0%b3%d0%b4%d0%b5-%d1%85%d1%80%d0%b0%d0%bd%d0%b8%d1%82%d1%81%d1%8f-%d0%b2%d0%b8%d1%80%d1%82%d1%83%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b5-%d0%be%d0%ba%d1%80%d1%83%d0%b6%d0%b5%d0%bd%d0%b8%d0%b5">#</a>
+  
+</h3>
+<p>По умолчанию UV создаёт виртуальное окружение в директории <code>.venv</code> вашего проекта<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<h2 id="работа-с-пакетами">
+  Работа с пакетами
+  
+  <a class="anchor" href="#%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0-%d1%81-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%b0%d0%bc%d0%b8">#</a>
+  
+</h2>
+<h3 id="установка-пакетов">
+  Установка пакетов
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%be%d0%b2">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv pip install flask
+</span></span></code></pre></div><p>Или установка из файла requirements.txt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv pip install -r requirements.txt
+</span></span></code></pre></div><h3 id="просмотр-дерева-зависимостей">
+  Просмотр дерева зависимостей
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d1%81%d0%bc%d0%be%d1%82%d1%80-%d0%b4%d0%b5%d1%80%d0%b5%d0%b2%d0%b0-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv pip list --tree
+</span></span></code></pre></div><p>Эта команда покажет не только установленные пакеты, но и все их зависимости в древовидной структуре<sup id="fnref1:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<h3 id="фиксация-зависимостей-lock-файл">
+  Фиксация зависимостей (lock-файл)
+  
+  <a class="anchor" href="#%d1%84%d0%b8%d0%ba%d1%81%d0%b0%d1%86%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9-lock-%d1%84%d0%b0%d0%b9%d0%bb">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv pip freeze &gt; requirements.txt
+</span></span></code></pre></div><p>Или использование встроенного lock-механизма:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv lock
+</span></span></code></pre></div><h3 id="установка-dev-зависимостей">
+  Установка dev-зависимостей
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-dev-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9">#</a>
+  
+</h3>
+<p>Для разделения основных и разработческих зависимостей:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv pip install --dev pytest
+</span></span></code></pre></div><h2 id="запуск-python-кода">
+  Запуск Python-кода
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-python-%d0%ba%d0%be%d0%b4%d0%b0">#</a>
+  
+</h2>
+<h3 id="запуск-скрипта-в-проекте">
+  Запуск скрипта в проекте
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-%d1%81%d0%ba%d1%80%d0%b8%d0%bf%d1%82%d0%b0-%d0%b2-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b5">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv run script.py
+</span></span></code></pre></div><p>UV автоматически обнаружит виртуальное окружение и запустит скрипт с использованием правильной версии Python и установленных в проекте пакетов<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</p>
+<h3 id="запуск-скрипта-без-проекта">
+  Запуск скрипта без проекта
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-%d1%81%d0%ba%d1%80%d0%b8%d0%bf%d1%82%d0%b0-%d0%b1%d0%b5%d0%b7-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv run /path/to/script.py
+</span></span></code></pre></div><p>UV создаст временное окружение для запуска скрипта.</p>
+<h3 id="запуск-с-аргументами">
+  Запуск с аргументами
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-%d1%81-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d0%bc%d0%b8">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv run script.py arg1 arg2
+</span></span></code></pre></div><h3 id="встраивание-зависимостей-в-скрипт">
+  Встраивание зависимостей в скрипт
+  
+  <a class="anchor" href="#%d0%b2%d1%81%d1%82%d1%80%d0%b0%d0%b8%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d0%b5%d0%b9-%d0%b2-%d1%81%d0%ba%d1%80%d0%b8%d0%bf%d1%82">#</a>
+  
+</h3>
+<p>Одна из самых мощных возможностей UV — запуск скрипта с указанием зависимостей в самом коде:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># uv-x: flask==2.0.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># uv-x: requests&gt;=2.26.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> flask
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ваш код...</span>
+</span></span></code></pre></div><p>Затем запустите:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv run script.py
+</span></span></code></pre></div><p>UV автоматически установит указанные зависимости во временное окружение и запустит скрипт<sup id="fnref2:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<h2 id="продвинутые-возможности">
+  Продвинутые возможности
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b4%d0%b2%d0%b8%d0%bd%d1%83%d1%82%d1%8b%d0%b5-%d0%b2%d0%be%d0%b7%d0%bc%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d0%b8">#</a>
+  
+</h2>
+<h3 id="использование-инструментов-форматирования-и-анализа-кода">
+  Использование инструментов форматирования и анализа кода
+  
+  <a class="anchor" href="#%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f-%d0%b8-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0-%d0%ba%d0%be%d0%b4%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv tool run ruff check .
+</span></span><span style="display:flex;"><span>uv tool run black .
+</span></span></code></pre></div><h3 id="установка-глобальных-инструментов">
+  Установка глобальных инструментов
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-%d0%b3%d0%bb%d0%be%d0%b1%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d1%85-%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv tool install ruff
+</span></span></code></pre></div><p>Установленные инструменты доступны через команду <code>uvx</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uvx ruff check .
+</span></span></code></pre></div><h3 id="настройка-pyright-lsp-для-работы-с-uv">
+  Настройка Pyright LSP для работы с UV
+  
+  <a class="anchor" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-pyright-lsp-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b-%d1%81-uv">#</a>
+  
+</h3>
+<p>Для интеграции с языковыми серверами (например, для VS Code):</p>
+<p>В <code>settings.json</code> VS Code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;python.linting.enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;python.linting.pyrightEnabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;python.analysis.extraPaths&#34;</span>: [<span style="color:#e6db74">&#34;.venv/lib/python3.11/site-packages&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Это позволит LSP находить пакеты, установленные через UV<sup id="fnref3:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<h3 id="использование-в-docker">
+  Использование в Docker
+  
+  <a class="anchor" href="#%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b2-docker">#</a>
+  
+</h3>
+<p>UV отлично работает в контейнерах, позволяя создавать более эффективные Docker образы:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> python:3.11-slim</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Установка UV</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> curl -LsSf https://astral.sh/uv/install.sh | sh<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> requirements.txt .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> pyproject.toml .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Установка зависимостей (быстрее, чем pip)</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> uv pip install -r requirements.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;uv&#34;</span>, <span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;app.py&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="сравнение-с-другими-инструментами">
+  Сравнение с другими инструментами
+  
+  <a class="anchor" href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d1%81-%d0%b4%d1%80%d1%83%d0%b3%d0%b8%d0%bc%d0%b8-%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d0%bc%d0%b8">#</a>
+  
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Особенность</th>
+          <th style="text-align: left">UV</th>
+          <th style="text-align: left">pip</th>
+          <th style="text-align: left">Poetry</th>
+          <th style="text-align: left">pipenv</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Скорость</td>
+          <td style="text-align: left">Очень высокая</td>
+          <td style="text-align: left">Низкая</td>
+          <td style="text-align: left">Средняя</td>
+          <td style="text-align: left">Низкая</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Управление виртуальными окружениями</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Управление версиями Python</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">❌</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Lock-файлы</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Разделение dev-зависимостей</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Запуск скриптов</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Встраивание зависимостей в скрипты</td>
+          <td style="text-align: left">✅</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">❌</td>
+          <td style="text-align: left">❌</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="заключение">
+  Заключение
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5">#</a>
+  
+</h2>
+<p>UV представляет собой революционный инструмент для Python-разработчиков, объединяющий функциональность нескольких отдельных инструментов в единое, быстрое и удобное решение. Основные преимущества:</p>
+<ol>
+<li>Значительно ускоряет работу с зависимостями и виртуальными окружениями</li>
+<li>Упрощает управление проектами благодаря единому интерфейсу</li>
+<li>Обеспечивает предсказуемость сборок через lock-файлы</li>
+<li>Предлагает уникальные возможности, такие как встраивание зависимостей в скрипты</li>
+<li>Поддерживает все основные платформы и сценарии использования</li>
+</ol>
+<p>UV — это инструмент, который меняет представление о том, как должна выглядеть экосистема инструментов для Python-разработки. Его стоит взять на вооружение каждому Python-разработчику для упрощения и ускорения рабочего процесса<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>К просмотру обязательно!!! 
+  <a href="https://youtu.be/0Osso8mLL-A?si=T4pNll_e7vPFm23L">https://youtu.be/0Osso8mLL-A?si=T4pNll_e7vPFm23L</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>
+  <a href="https://www.youtube.com/watch?v=l04of2hEb8c">https://www.youtube.com/watch?v=l04of2hEb8c</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>
+  <a href="https://www.reddit.com/r/Python/comments/1ex6n9k/uv_unified_python_packaging/">https://www.reddit.com/r/Python/comments/1ex6n9k/uv_unified_python_packaging/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>
+  <a href="https://www.semanticscholar.org/paper/376531a8bc33f029c04af55d410f0052dfa114c8">https://www.semanticscholar.org/paper/376531a8bc33f029c04af55d410f0052dfa114c8</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>
+  <a href="https://github.com/Hexlet/ru-instructions/blob/main/uv.md">https://github.com/Hexlet/ru-instructions/blob/main/uv.md</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>
+  <a href="https://www.youtube.com/watch?v=0Osso8mLL-A">https://www.youtube.com/watch?v=0Osso8mLL-A</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref3:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>
+  <a href="https://habr.com/ru/articles/875840/">https://habr.com/ru/articles/875840/</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>
+  <a href="https://www.youtube.com/watch?v=0Osso8mLL-A">https://www.youtube.com/watch?v=0Osso8mLL-A</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="flex align-center book-icon">
+        <img src="/onboarding-assistant/svg/backward.svg" class="book-icon" alt="Previous" title="Setup Cursor" />
+        <span>Setup Cursor</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex align-center book-icon">
+        <span>Content Management</span>
+        <img src="/onboarding-assistant/svg/forward.svg" class="book-icon" alt="Next" title="Content Management" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#что-такое-uv-и-почему-его-стоит-использовать">Что такое UV и почему его стоит использовать</a></li>
+    <li><a href="#установка-uv">Установка UV</a>
+      <ul>
+        <li><a href="#на-linux-и-macos">На Linux и macOS</a></li>
+        <li><a href="#на-windows">На Windows</a></li>
+        <li><a href="#через-pip-или-pipx">Через pip или pipx</a></li>
+        <li><a href="#проверка-установленной-версии">Проверка установленной версии</a></li>
+        <li><a href="#обновление-uv">Обновление UV</a></li>
+      </ul>
+    </li>
+    <li><a href="#управление-версиями-python">Управление версиями Python</a>
+      <ul>
+        <li><a href="#просмотр-доступных-версий">Просмотр доступных версий</a></li>
+        <li><a href="#установка-определенной-версии-python">Установка определенной версии Python</a></li>
+        <li><a href="#использование-определенной-версии-python-в-проекте">Использование определенной версии Python в проекте</a></li>
+      </ul>
+    </li>
+    <li><a href="#создание-и-управление-проектами">Создание и управление проектами</a>
+      <ul>
+        <li><a href="#инициализация-нового-проекта">Инициализация нового проекта</a></li>
+        <li><a href="#создание-виртуального-окружения">Создание виртуального окружения</a></li>
+        <li><a href="#активация-виртуального-окружения">Активация виртуального окружения</a></li>
+        <li><a href="#где-хранится-виртуальное-окружение">Где хранится виртуальное окружение</a></li>
+      </ul>
+    </li>
+    <li><a href="#работа-с-пакетами">Работа с пакетами</a>
+      <ul>
+        <li><a href="#установка-пакетов">Установка пакетов</a></li>
+        <li><a href="#просмотр-дерева-зависимостей">Просмотр дерева зависимостей</a></li>
+        <li><a href="#фиксация-зависимостей-lock-файл">Фиксация зависимостей (lock-файл)</a></li>
+        <li><a href="#установка-dev-зависимостей">Установка dev-зависимостей</a></li>
+      </ul>
+    </li>
+    <li><a href="#запуск-python-кода">Запуск Python-кода</a>
+      <ul>
+        <li><a href="#запуск-скрипта-в-проекте">Запуск скрипта в проекте</a></li>
+        <li><a href="#запуск-скрипта-без-проекта">Запуск скрипта без проекта</a></li>
+        <li><a href="#запуск-с-аргументами">Запуск с аргументами</a></li>
+        <li><a href="#встраивание-зависимостей-в-скрипт">Встраивание зависимостей в скрипт</a></li>
+      </ul>
+    </li>
+    <li><a href="#продвинутые-возможности">Продвинутые возможности</a>
+      <ul>
+        <li><a href="#использование-инструментов-форматирования-и-анализа-кода">Использование инструментов форматирования и анализа кода</a></li>
+        <li><a href="#установка-глобальных-инструментов">Установка глобальных инструментов</a></li>
+        <li><a href="#настройка-pyright-lsp-для-работы-с-uv">Настройка Pyright LSP для работы с UV</a></li>
+        <li><a href="#использование-в-docker">Использование в Docker</a></li>
+      </ul>
+    </li>
+    <li><a href="#сравнение-с-другими-инструментами">Сравнение с другими инструментами</a></li>
+    <li><a href="#заключение">Заключение</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

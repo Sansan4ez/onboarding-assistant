@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+<head><script src="/onboarding-assistant/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=onboarding-assistant/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Hugo - Статический генератор сайтов
+  
+  #
+  
+
+Hugo — быстрый статический генератор сайтов, написанный на Go. Идеально подходит для создания документации, блогов и лендингов.
+
+  🚀 Установка
+  
+  #
+  
+
+
+  macOS (с Homebrew)
+  
+  #
+  
+
+brew install hugo
+
+  Ubuntu/Debian
+  
+  #
+  
+
+sudo apt-get install hugo
+
+  Windows (с Chocolatey)
+  
+  #
+  
+
+choco install hugo-extended
+
+  Проверка версии
+  
+  #
+  
+
+hugo version
+
+  📁 Структура проекта Hugo
+  
+  #
+  
+
+my-site/
+├── archetypes/          # Шаблоны для нового контента
+├── content/             # Контент сайта (Markdown файлы)
+├── data/               # Файлы данных (JSON, YAML, TOML)
+├── layouts/            # HTML шаблоны
+├── static/             # Статические файлы (CSS, JS, изображения)
+├── themes/             # Темы
+├── hugo.toml           # Конфигурация сайта
+└── public/             # Собранный сайт (генерируется)
+
+  ⚡ Основные команды
+  
+  #
+  
+
+
+  Разработка
+  
+  #
+  
+
+# Создание нового сайта
+hugo new site my-site
+
+# Запуск dev сервера
+hugo server
+
+# Запуск с черновиками
+hugo server -D
+
+# Запуск с минификацией
+hugo server --minify
+
+# Запуск на конкретном порту
+hugo server --port 3000
+
+  Создание контента
+  
+  #
+  
+
+# Создание новой страницы
+hugo new content/posts/my-post.md
+
+# Создание страницы в разделе
+hugo new content/docs/guide.md
+
+  Сборка
+  
+  #
+  
+
+# Сборка для продакшена
+hugo
+
+# Сборка с минификацией
+hugo --minify
+
+# Сборка черновиков
+hugo -D
+
+# Очистка кеша
+hugo --gc
+
+  Проверка
+  
+  #
+  
+
+# Проверка конфигурации
+hugo check
+
+# Подробный вывод при сборке
+hugo --verbose
+
+# Показать метрики сборки
+hugo --templateMetrics
+
+  📄 Front Matter
+  
+  #
+  
+
+Каждый Markdown файл начинается с метаданных:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/onboarding-assistant/docs/utilities/hugo-guide/">
+  <meta property="og:site_name" content="AI onboarding assistant">
+  <meta property="og:title" content="Hugo - Статический генератор сайтов">
+  <meta property="og:description" content="Hugo - Статический генератор сайтов # Hugo — быстрый статический генератор сайтов, написанный на Go. Идеально подходит для создания документации, блогов и лендингов.
+🚀 Установка # macOS (с Homebrew) # brew install hugo Ubuntu/Debian # sudo apt-get install hugo Windows (с Chocolatey) # choco install hugo-extended Проверка версии # hugo version 📁 Структура проекта Hugo # my-site/ ├── archetypes/ # Шаблоны для нового контента ├── content/ # Контент сайта (Markdown файлы) ├── data/ # Файлы данных (JSON, YAML, TOML) ├── layouts/ # HTML шаблоны ├── static/ # Статические файлы (CSS, JS, изображения) ├── themes/ # Темы ├── hugo.toml # Конфигурация сайта └── public/ # Собранный сайт (генерируется) ⚡ Основные команды # Разработка # # Создание нового сайта hugo new site my-site # Запуск dev сервера hugo server # Запуск с черновиками hugo server -D # Запуск с минификацией hugo server --minify # Запуск на конкретном порту hugo server --port 3000 Создание контента # # Создание новой страницы hugo new content/posts/my-post.md # Создание страницы в разделе hugo new content/docs/guide.md Сборка # # Сборка для продакшена hugo # Сборка с минификацией hugo --minify # Сборка черновиков hugo -D # Очистка кеша hugo --gc Проверка # # Проверка конфигурации hugo check # Подробный вывод при сборке hugo --verbose # Показать метрики сборки hugo --templateMetrics 📄 Front Matter # Каждый Markdown файл начинается с метаданных:">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2024-12-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-19T00:00:00+00:00">
+<title>Hugo - Статический генератор сайтов | AI onboarding assistant</title>
+<link rel="icon" href="/onboarding-assistant/favicon.png" >
+<link rel="manifest" href="/onboarding-assistant/manifest.json">
+<link rel="canonical" href="http://localhost:1313/onboarding-assistant/docs/utilities/hugo-guide/">
+<link rel="stylesheet" href="/onboarding-assistant/book.min.ce742184041b67827be505801d71b6b40c09608dfb292033ea54dbbc1d71a174.css" integrity="sha256-znQhhAQbZ4J75QWAHXG2tAwJYI37KSAz6lTbvB1xoXQ=" crossorigin="anonymous">
+  <script defer src="/onboarding-assistant/fuse.min.js"></script>
+  <script defer src="/onboarding-assistant/en.search.min.b7fb698aecb025344082fd17e6382a9196b9832ef44b49a25f2de0431e5b0078.js" integrity="sha256-t/tpiuywJTRAgv0X5jgqkZa5gy70S0miXy3gQx5bAHg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/onboarding-assistant/"><span>AI onboarding assistant</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7cb49bdb84cb44cbcedabd34f28a625a" class="toggle"  />
+    <label for="section-7cb49bdb84cb44cbcedabd34f28a625a" class="flex">
+      <a href="/onboarding-assistant/docs/ai-ml/" class="flex-auto ">AI &amp; Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/llm-basics/" class="">Основы LLM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-agents/" class="">AI-агенты</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/rag/" class="">RAG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="">Ai Assistants</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/structured-output/" class="">Structured Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48bac2ebdb668c2706c02aa184db8476" class="toggle"  />
+    <label for="section-48bac2ebdb668c2706c02aa184db8476" class="flex">
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex-auto ">Search Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="">Vector Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/fulltext-search/" class="">Fulltext Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="">Hybrid Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/metadata-search/" class="">Metadata Search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f5ab346261e7d1af858195b11cdc5fb" class="toggle"  />
+    <label for="section-5f5ab346261e7d1af858195b11cdc5fb" class="flex">
+      <a href="/onboarding-assistant/docs/dev-tools/" class="flex-auto ">Development Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai/" class="">Cursor AI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="">Ai Pair Programming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai-guide/" class="">Cursor Ai Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="">Cursor Composer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/dify-ai/" class="">Dify Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="">Setup Cursor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/uv-tool/" class="">Uv Tool</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa32f49e3c3654f259d4d098efa4fddd" class="toggle"  />
+    <label for="section-aa32f49e3c3654f259d4d098efa4fddd" class="flex">
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex-auto ">Content Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-github-guide/" class="">Git и GitHub</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="">Markdown Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-pages/" class="">Git Pages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eefc9810de7c421f8dbbe8d3488aff57" class="toggle"  />
+    <label for="section-eefc9810de7c421f8dbbe8d3488aff57" class="flex">
+      <a href="/onboarding-assistant/docs/backend/" class="flex-auto ">Backend &amp; Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/backend/supabase-analysis/" class="">Supabase Analysis</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="toggle"  />
+    <label for="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="flex">
+      <a href="/onboarding-assistant/docs/architecture/" class="flex-auto ">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/assistant-architecture/" class="">Assistant Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/ddd-llm/" class="">Ddd Llm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4c34cc6447adf3b72852a3545bac8e21" class="toggle" checked />
+    <label for="section-4c34cc6447adf3b72852a3545bac8e21" class="flex">
+      <a href="/onboarding-assistant/docs/utilities/" class="flex-auto ">Utilities</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/hugo-guide/" class="active">Hugo - Статический генератор сайтов</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fe95e3eb7fab23a8556775a589dda04" class="toggle"  />
+    <label for="section-4fe95e3eb7fab23a8556775a589dda04" class="flex">
+      <a href="/onboarding-assistant/docs/additional/" class="flex-auto ">Additional Materials</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/additional/checklist/" class="">Checklist</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/onboarding-assistant/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Hugo - Статический генератор сайтов</h3>
+
+  <label for="toc-control">
+    
+    <img src="/onboarding-assistant/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-установка">🚀 Установка</a>
+      <ul>
+        <li><a href="#macos-с-homebrew">macOS (с Homebrew)</a></li>
+        <li><a href="#ubuntudebian">Ubuntu/Debian</a></li>
+        <li><a href="#windows-с-chocolatey">Windows (с Chocolatey)</a></li>
+        <li><a href="#проверка-версии">Проверка версии</a></li>
+      </ul>
+    </li>
+    <li><a href="#-структура-проекта-hugo">📁 Структура проекта Hugo</a></li>
+    <li><a href="#-основные-команды">⚡ Основные команды</a>
+      <ul>
+        <li><a href="#разработка">Разработка</a></li>
+        <li><a href="#создание-контента">Создание контента</a></li>
+        <li><a href="#сборка">Сборка</a></li>
+        <li><a href="#проверка">Проверка</a></li>
+      </ul>
+    </li>
+    <li><a href="#-front-matter">📄 Front Matter</a>
+      <ul>
+        <li><a href="#основные-параметры">Основные параметры</a></li>
+      </ul>
+    </li>
+    <li><a href="#-работа-с-темами">🎨 Работа с темами</a>
+      <ul>
+        <li><a href="#установка-темы">Установка темы</a></li>
+        <li><a href="#настройка-в-hugotoml">Настройка в hugo.toml</a></li>
+        <li><a href="#переопределение-шаблонов">Переопределение шаблонов</a></li>
+      </ul>
+    </li>
+    <li><a href="#-конфигурация-hugotoml">🔧 Конфигурация hugo.toml</a></li>
+    <li><a href="#-внутренние-ссылки">🔗 Внутренние ссылки</a>
+      <ul>
+        <li><a href="#shortcode-relref-рекомендуется">Shortcode relref (рекомендуется)</a></li>
+        <li><a href="#относительные-ссылки">Относительные ссылки</a></li>
+      </ul>
+    </li>
+    <li><a href="#-shortcodes">📋 Shortcodes</a>
+      <ul>
+        <li><a href="#встроенные">Встроенные</a></li>
+        <li><a href="#пользовательские">Пользовательские</a></li>
+      </ul>
+    </li>
+    <li><a href="#-деплой">🚀 Деплой</a>
+      <ul>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+        <li><a href="#netlify">Netlify</a></li>
+        <li><a href="#vercel">Vercel</a></li>
+      </ul>
+    </li>
+    <li><a href="#-частые-ошибки">⚠️ Частые ошибки</a>
+      <ul>
+        <li><a href="#битые-ссылки">Битые ссылки</a></li>
+        <li><a href="#проблемы-с-темой">Проблемы с темой</a></li>
+        <li><a href="#черновики-не-показываются">Черновики не показываются</a></li>
+      </ul>
+    </li>
+    <li><a href="#-полезные-ресурсы">📚 Полезные ресурсы</a></li>
+    <li><a href="#-отладка">🔍 Отладка</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="hugo---статический-генератор-сайтов">
+  Hugo - Статический генератор сайтов
+  
+  <a class="anchor" href="#hugo---%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9-%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80-%d1%81%d0%b0%d0%b9%d1%82%d0%be%d0%b2">#</a>
+  
+</h1>
+<p>Hugo — быстрый статический генератор сайтов, написанный на Go. Идеально подходит для создания документации, блогов и лендингов.</p>
+<h2 id="-установка">
+  🚀 Установка
+  
+  <a class="anchor" href="#-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0">#</a>
+  
+</h2>
+<h3 id="macos-с-homebrew">
+  macOS (с Homebrew)
+  
+  <a class="anchor" href="#macos-%d1%81-homebrew">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><h3 id="ubuntudebian">
+  Ubuntu/Debian
+  
+  <a class="anchor" href="#ubuntudebian">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install hugo
+</span></span></code></pre></div><h3 id="windows-с-chocolatey">
+  Windows (с Chocolatey)
+  
+  <a class="anchor" href="#windows-%d1%81-chocolatey">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>choco install hugo-extended
+</span></span></code></pre></div><h3 id="проверка-версии">
+  Проверка версии
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b0-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b8">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h2 id="-структура-проекта-hugo">
+  📁 Структура проекта Hugo
+  
+  <a class="anchor" href="#-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0-hugo">#</a>
+  
+</h2>
+<pre tabindex="0"><code>my-site/
+├── archetypes/          # Шаблоны для нового контента
+├── content/             # Контент сайта (Markdown файлы)
+├── data/               # Файлы данных (JSON, YAML, TOML)
+├── layouts/            # HTML шаблоны
+├── static/             # Статические файлы (CSS, JS, изображения)
+├── themes/             # Темы
+├── hugo.toml           # Конфигурация сайта
+└── public/             # Собранный сайт (генерируется)
+</code></pre><h2 id="-основные-команды">
+  ⚡ Основные команды
+  
+  <a class="anchor" href="#-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d1%8b">#</a>
+  
+</h2>
+<h3 id="разработка">
+  Разработка
+  
+  <a class="anchor" href="#%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Создание нового сайта</span>
+</span></span><span style="display:flex;"><span>hugo new site my-site
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Запуск dev сервера</span>
+</span></span><span style="display:flex;"><span>hugo server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Запуск с черновиками</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Запуск с минификацией</span>
+</span></span><span style="display:flex;"><span>hugo server --minify
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Запуск на конкретном порту</span>
+</span></span><span style="display:flex;"><span>hugo server --port <span style="color:#ae81ff">3000</span>
+</span></span></code></pre></div><h3 id="создание-контента">
+  Создание контента
+  
+  <a class="anchor" href="#%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%bd%d1%82%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Создание новой страницы</span>
+</span></span><span style="display:flex;"><span>hugo new content/posts/my-post.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Создание страницы в разделе</span>
+</span></span><span style="display:flex;"><span>hugo new content/docs/guide.md
+</span></span></code></pre></div><h3 id="сборка">
+  Сборка
+  
+  <a class="anchor" href="#%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Сборка для продакшена</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Сборка с минификацией</span>
+</span></span><span style="display:flex;"><span>hugo --minify
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Сборка черновиков</span>
+</span></span><span style="display:flex;"><span>hugo -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Очистка кеша</span>
+</span></span><span style="display:flex;"><span>hugo --gc
+</span></span></code></pre></div><h3 id="проверка">
+  Проверка
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b0">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Проверка конфигурации</span>
+</span></span><span style="display:flex;"><span>hugo check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Подробный вывод при сборке</span>
+</span></span><span style="display:flex;"><span>hugo --verbose
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Показать метрики сборки</span>
+</span></span><span style="display:flex;"><span>hugo --templateMetrics
+</span></span></code></pre></div><h2 id="-front-matter">
+  📄 Front Matter
+  
+  <a class="anchor" href="#-front-matter">#</a>
+  
+</h2>
+<p>Каждый Markdown файл начинается с метаданных:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Заголовок страницы&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-12-19</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">weight</span>: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Описание страницы&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;tag1&#34;</span>, <span style="color:#e6db74">&#34;tag2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;category1&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Содержимое страницы</span>
+</span></span></code></pre></div><h3 id="основные-параметры">
+  Основные параметры
+  
+  <a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%bf%d0%b0%d1%80%d0%b0%d0%bc%d0%b5%d1%82%d1%80%d1%8b">#</a>
+  
+</h3>
+<ul>
+<li><code>title</code> - заголовок страницы</li>
+<li><code>date</code> - дата создания</li>
+<li><code>draft</code> - черновик (true/false)</li>
+<li><code>weight</code> - порядок сортировки</li>
+<li><code>description</code> - описание для SEO</li>
+<li><code>tags</code> - теги</li>
+<li><code>categories</code> - категории</li>
+</ul>
+<h2 id="-работа-с-темами">
+  🎨 Работа с темами
+  
+  <a class="anchor" href="#-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0-%d1%81-%d1%82%d0%b5%d0%bc%d0%b0%d0%bc%d0%b8">#</a>
+  
+</h2>
+<h3 id="установка-темы">
+  Установка темы
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-%d1%82%d0%b5%d0%bc%d1%8b">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Как git submodule (рекомендуется)</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/theme/repo.git themes/theme-name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Или клонирование</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/theme/repo.git themes/theme-name
+</span></span></code></pre></div><h3 id="настройка-в-hugotoml">
+  Настройка в hugo.toml
+  
+  <a class="anchor" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d0%b2-hugotoml">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;theme-name&#34;</span>
+</span></span></code></pre></div><h3 id="переопределение-шаблонов">
+  Переопределение шаблонов
+  
+  <a class="anchor" href="#%d0%bf%d0%b5%d1%80%d0%b5%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d1%88%d0%b0%d0%b1%d0%bb%d0%be%d0%bd%d0%be%d0%b2">#</a>
+  
+</h3>
+<p>Создайте файл в <code>layouts/</code> с тем же путем, что и в теме для переопределения.</p>
+<h2 id="-конфигурация-hugotoml">
+  🔧 Конфигурация hugo.toml
+  
+  <a class="anchor" href="#-%d0%ba%d0%be%d0%bd%d1%84%d0%b8%d0%b3%d1%83%d1%80%d0%b0%d1%86%d0%b8%d1%8f-hugotoml">#</a>
+  
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://example.com&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;ru-ru&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Мой сайт&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#39;my-theme&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Папка для сборки для публикации на GitHub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#34;docs&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Параметры темы</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;Автор&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;Описание сайта&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Настройки Markdown</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Разрешает HTML в Markdown</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Меню</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Главная&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h2 id="-внутренние-ссылки">
+  🔗 Внутренние ссылки
+  
+  <a class="anchor" href="#-%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b5%d0%bd%d0%bd%d0%b8%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8">#</a>
+  
+</h2>
+<h3 id="shortcode-relref-рекомендуется">
+  Shortcode relref (рекомендуется)
+  
+  <a class="anchor" href="#shortcode-relref-%d1%80%d0%b5%d0%ba%d0%be%d0%bc%d0%b5%d0%bd%d0%b4%d1%83%d0%b5%d1%82%d1%81%d1%8f">#</a>
+  
+</h3>
+<pre tabindex="0"><code>[Ссылка на страницу](релативная_ссылка_с_relref)
+[Ссылка на раздел](релативная_ссылка_на_раздел)
+</code></pre><p>Пример синтаксиса: двойные фигурные скобки с углами, relref, путь в кавычках</p>
+<h3 id="относительные-ссылки">
+  Относительные ссылки
+  
+  <a class="anchor" href="#%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">Страница</span>](<span style="color:#a6e22e">/page/</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">Раздел</span>](<span style="color:#a6e22e">/section/</span>)
+</span></span></code></pre></div><h2 id="-shortcodes">
+  📋 Shortcodes
+  
+  <a class="anchor" href="#-shortcodes">#</a>
+  
+</h2>
+<p>Hugo поддерживает встроенные shortcodes:</p>
+<h3 id="встроенные">
+  Встроенные
+  
+  <a class="anchor" href="#%d0%b2%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5">#</a>
+  
+</h3>
+<ul>
+<li><strong>youtube</strong> - встраивание видео YouTube</li>
+<li><strong>tweet</strong> - встраивание твитов</li>
+<li><strong>ref</strong> - ссылка на страницу</li>
+<li><strong>relref</strong> - относительная ссылка</li>
+</ul>
+<p>Синтаксис: двойные фигурные скобки с углами, имя shortcode, параметры</p>
+<h3 id="пользовательские">
+  Пользовательские
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d1%81%d0%ba%d0%b8%d0%b5">#</a>
+  
+</h3>
+<p>Создайте файл в <code>layouts/shortcodes/myshortcode.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;custom&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ .Inner }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Использование: оберните контент в парный shortcode с именем myshortcode</p>
+<h2 id="-деплой">
+  🚀 Деплой
+  
+  <a class="anchor" href="#-%d0%b4%d0%b5%d0%bf%d0%bb%d0%be%d0%b9">#</a>
+  
+</h2>
+<h3 id="github-pages">
+  GitHub Pages
+  
+  <a class="anchor" href="#github-pages">#</a>
+  
+</h3>
+<ol>
+<li>Настройте <code>baseURL</code> в hugo.toml</li>
+<li>Установите <code>publishDir = &quot;docs&quot;</code></li>
+<li>Соберите сайт: <code>hugo --minify</code></li>
+<li>Настройте GitHub Pages на папку <code>docs/</code></li>
+</ol>
+<h3 id="netlify">
+  Netlify
+  
+  <a class="anchor" href="#netlify">#</a>
+  
+</h3>
+<ol>
+<li>Подключите репозиторий</li>
+<li>Команда сборки: <code>hugo --minify</code></li>
+<li>Папка публикации: <code>public</code></li>
+</ol>
+<h3 id="vercel">
+  Vercel
+  
+  <a class="anchor" href="#vercel">#</a>
+  
+</h3>
+<ol>
+<li>Импортируйте проект</li>
+<li>Framework: Hugo</li>
+<li>Автоматическая сборка при push</li>
+</ol>
+<h2 id="-частые-ошибки">
+  ⚠️ Частые ошибки
+  
+  <a class="anchor" href="#-%d1%87%d0%b0%d1%81%d1%82%d1%8b%d0%b5-%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b8">#</a>
+  
+</h2>
+<h3 id="битые-ссылки">
+  Битые ссылки
+  
+  <a class="anchor" href="#%d0%b1%d0%b8%d1%82%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8">#</a>
+  
+</h3>
+<ul>
+<li>❌ <code>[ссылка](page.md)</code> - не добавляйте .md</li>
+<li>✅ Используйте relref shortcode для внутренних ссылок</li>
+</ul>
+<h3 id="проблемы-с-темой">
+  Проблемы с темой
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d1%82%d0%b5%d0%bc%d0%be%d0%b9">#</a>
+  
+</h3>
+<ul>
+<li>Проверьте правильность имени темы в конфиге</li>
+<li>Убедитесь, что тема установлена в <code>themes/</code></li>
+</ul>
+<h3 id="черновики-не-показываются">
+  Черновики не показываются
+  
+  <a class="anchor" href="#%d1%87%d0%b5%d1%80%d0%bd%d0%be%d0%b2%d0%b8%d0%ba%d0%b8-%d0%bd%d0%b5-%d0%bf%d0%be%d0%ba%d0%b0%d0%b7%d1%8b%d0%b2%d0%b0%d1%8e%d1%82%d1%81%d1%8f">#</a>
+  
+</h3>
+<ul>
+<li>Используйте флаг <code>-D</code> при разработке</li>
+<li>Проверьте <code>draft: false</code> в front matter</li>
+</ul>
+<h2 id="-полезные-ресурсы">
+  📚 Полезные ресурсы
+  
+  <a class="anchor" href="#-%d0%bf%d0%be%d0%bb%d0%b5%d0%b7%d0%bd%d1%8b%d0%b5-%d1%80%d0%b5%d1%81%d1%83%d1%80%d1%81%d1%8b">#</a>
+  
+</h2>
+<ul>
+<li>
+  <a href="https://gohugo.io/documentation/">Официальная документация Hugo</a></li>
+<li>
+  <a href="https://themes.gohugo.io/">Темы Hugo</a></li>
+<li>
+  <a href="https://gohugo.io/content-management/shortcodes/">Hugo Shortcodes</a></li>
+<li>
+  <a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax Highlighting</a></li>
+</ul>
+<h2 id="-отладка">
+  🔍 Отладка
+  
+  <a class="anchor" href="#-%d0%be%d1%82%d0%bb%d0%b0%d0%b4%d0%ba%d0%b0">#</a>
+  
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Проверка конфигурации</span>
+</span></span><span style="display:flex;"><span>hugo check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Детальная информация о сборке</span>
+</span></span><span style="display:flex;"><span>hugo --verbose
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Показать переменные окружения</span>
+</span></span><span style="display:flex;"><span>hugo env
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Список всех команд</span>
+</span></span><span style="display:flex;"><span>hugo help
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/onboarding-assistant/docs/utilities/" class="flex align-center book-icon">
+        <img src="/onboarding-assistant/svg/backward.svg" class="book-icon" alt="Previous" title="Utilities" />
+        <span>Utilities</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/onboarding-assistant/docs/utilities/pandoc/" class="flex align-center book-icon">
+        <span>Pandoc</span>
+        <img src="/onboarding-assistant/svg/forward.svg" class="book-icon" alt="Next" title="Pandoc" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-установка">🚀 Установка</a>
+      <ul>
+        <li><a href="#macos-с-homebrew">macOS (с Homebrew)</a></li>
+        <li><a href="#ubuntudebian">Ubuntu/Debian</a></li>
+        <li><a href="#windows-с-chocolatey">Windows (с Chocolatey)</a></li>
+        <li><a href="#проверка-версии">Проверка версии</a></li>
+      </ul>
+    </li>
+    <li><a href="#-структура-проекта-hugo">📁 Структура проекта Hugo</a></li>
+    <li><a href="#-основные-команды">⚡ Основные команды</a>
+      <ul>
+        <li><a href="#разработка">Разработка</a></li>
+        <li><a href="#создание-контента">Создание контента</a></li>
+        <li><a href="#сборка">Сборка</a></li>
+        <li><a href="#проверка">Проверка</a></li>
+      </ul>
+    </li>
+    <li><a href="#-front-matter">📄 Front Matter</a>
+      <ul>
+        <li><a href="#основные-параметры">Основные параметры</a></li>
+      </ul>
+    </li>
+    <li><a href="#-работа-с-темами">🎨 Работа с темами</a>
+      <ul>
+        <li><a href="#установка-темы">Установка темы</a></li>
+        <li><a href="#настройка-в-hugotoml">Настройка в hugo.toml</a></li>
+        <li><a href="#переопределение-шаблонов">Переопределение шаблонов</a></li>
+      </ul>
+    </li>
+    <li><a href="#-конфигурация-hugotoml">🔧 Конфигурация hugo.toml</a></li>
+    <li><a href="#-внутренние-ссылки">🔗 Внутренние ссылки</a>
+      <ul>
+        <li><a href="#shortcode-relref-рекомендуется">Shortcode relref (рекомендуется)</a></li>
+        <li><a href="#относительные-ссылки">Относительные ссылки</a></li>
+      </ul>
+    </li>
+    <li><a href="#-shortcodes">📋 Shortcodes</a>
+      <ul>
+        <li><a href="#встроенные">Встроенные</a></li>
+        <li><a href="#пользовательские">Пользовательские</a></li>
+      </ul>
+    </li>
+    <li><a href="#-деплой">🚀 Деплой</a>
+      <ul>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+        <li><a href="#netlify">Netlify</a></li>
+        <li><a href="#vercel">Vercel</a></li>
+      </ul>
+    </li>
+    <li><a href="#-частые-ошибки">⚠️ Частые ошибки</a>
+      <ul>
+        <li><a href="#битые-ссылки">Битые ссылки</a></li>
+        <li><a href="#проблемы-с-темой">Проблемы с темой</a></li>
+        <li><a href="#черновики-не-показываются">Черновики не показываются</a></li>
+      </ul>
+    </li>
+    <li><a href="#-полезные-ресурсы">📚 Полезные ресурсы</a></li>
+    <li><a href="#-отладка">🔍 Отладка</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

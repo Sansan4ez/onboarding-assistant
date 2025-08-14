@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+<head><script src="/onboarding-assistant/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=onboarding-assistant/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Полнотекстовый поиск: комплексный анализ технологий, реализаций и применений
+  
+  #
+  
+
+Полнотекстовый поиск стал краеугольным камнем современных систем информационного поиска, обеспечивая эффективный запрос неструктурированных текстовых данных в разнообразных приложениях. Индексируя каждое слово в документах и используя продвинутые алгоритмы, эта технология преодолевает ограничения традиционных методов поиска по шаблонам, предлагая новые возможности в точности и масштабируемости. В данном отчете исследуются технические основы полнотекстового поиска, анализируются его реализации в СУБД, оцениваются сильные стороны и ограничения, а также рассматриваются новые тенденции, сочетающие его с семантическим анализом для поисковых решений следующего поколения.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/onboarding-assistant/docs/search-tech/fulltext-search/">
+  <meta property="og:site_name" content="AI onboarding assistant">
+  <meta property="og:title" content="AI onboarding assistant">
+  <meta property="og:description" content="Полнотекстовый поиск: комплексный анализ технологий, реализаций и применений # Полнотекстовый поиск стал краеугольным камнем современных систем информационного поиска, обеспечивая эффективный запрос неструктурированных текстовых данных в разнообразных приложениях. Индексируя каждое слово в документах и используя продвинутые алгоритмы, эта технология преодолевает ограничения традиционных методов поиска по шаблонам, предлагая новые возможности в точности и масштабируемости. В данном отчете исследуются технические основы полнотекстового поиска, анализируются его реализации в СУБД, оцениваются сильные стороны и ограничения, а также рассматриваются новые тенденции, сочетающие его с семантическим анализом для поисковых решений следующего поколения.">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Fulltext Search | AI onboarding assistant</title>
+<link rel="icon" href="/onboarding-assistant/favicon.png" >
+<link rel="manifest" href="/onboarding-assistant/manifest.json">
+<link rel="canonical" href="http://localhost:1313/onboarding-assistant/docs/search-tech/fulltext-search/">
+<link rel="stylesheet" href="/onboarding-assistant/book.min.ce742184041b67827be505801d71b6b40c09608dfb292033ea54dbbc1d71a174.css" integrity="sha256-znQhhAQbZ4J75QWAHXG2tAwJYI37KSAz6lTbvB1xoXQ=" crossorigin="anonymous">
+  <script defer src="/onboarding-assistant/fuse.min.js"></script>
+  <script defer src="/onboarding-assistant/en.search.min.b7fb698aecb025344082fd17e6382a9196b9832ef44b49a25f2de0431e5b0078.js" integrity="sha256-t/tpiuywJTRAgv0X5jgqkZa5gy70S0miXy3gQx5bAHg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/onboarding-assistant/"><span>AI onboarding assistant</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7cb49bdb84cb44cbcedabd34f28a625a" class="toggle"  />
+    <label for="section-7cb49bdb84cb44cbcedabd34f28a625a" class="flex">
+      <a href="/onboarding-assistant/docs/ai-ml/" class="flex-auto ">AI &amp; Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/llm-basics/" class="">Основы LLM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-agents/" class="">AI-агенты</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/rag/" class="">RAG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="">Ai Assistants</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/structured-output/" class="">Structured Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48bac2ebdb668c2706c02aa184db8476" class="toggle" checked />
+    <label for="section-48bac2ebdb668c2706c02aa184db8476" class="flex">
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex-auto ">Search Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="">Vector Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/fulltext-search/" class="active">Fulltext Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="">Hybrid Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/metadata-search/" class="">Metadata Search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f5ab346261e7d1af858195b11cdc5fb" class="toggle"  />
+    <label for="section-5f5ab346261e7d1af858195b11cdc5fb" class="flex">
+      <a href="/onboarding-assistant/docs/dev-tools/" class="flex-auto ">Development Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai/" class="">Cursor AI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="">Ai Pair Programming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai-guide/" class="">Cursor Ai Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="">Cursor Composer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/dify-ai/" class="">Dify Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="">Setup Cursor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/uv-tool/" class="">Uv Tool</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa32f49e3c3654f259d4d098efa4fddd" class="toggle"  />
+    <label for="section-aa32f49e3c3654f259d4d098efa4fddd" class="flex">
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex-auto ">Content Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-github-guide/" class="">Git и GitHub</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="">Markdown Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-pages/" class="">Git Pages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eefc9810de7c421f8dbbe8d3488aff57" class="toggle"  />
+    <label for="section-eefc9810de7c421f8dbbe8d3488aff57" class="flex">
+      <a href="/onboarding-assistant/docs/backend/" class="flex-auto ">Backend &amp; Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/backend/supabase-analysis/" class="">Supabase Analysis</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="toggle"  />
+    <label for="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="flex">
+      <a href="/onboarding-assistant/docs/architecture/" class="flex-auto ">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/assistant-architecture/" class="">Assistant Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/ddd-llm/" class="">Ddd Llm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4c34cc6447adf3b72852a3545bac8e21" class="toggle"  />
+    <label for="section-4c34cc6447adf3b72852a3545bac8e21" class="flex">
+      <a href="/onboarding-assistant/docs/utilities/" class="flex-auto ">Utilities</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/hugo-guide/" class="">Hugo - Статический генератор сайтов</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fe95e3eb7fab23a8556775a589dda04" class="toggle"  />
+    <label for="section-4fe95e3eb7fab23a8556775a589dda04" class="flex">
+      <a href="/onboarding-assistant/docs/additional/" class="flex-auto ">Additional Materials</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/additional/checklist/" class="">Checklist</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/onboarding-assistant/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Fulltext Search</h3>
+
+  <label for="toc-control">
+    
+    <img src="/onboarding-assistant/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#основы-полнотекстового-поиска">Основы полнотекстового поиска</a>
+      <ul>
+        <li><a href="#определение-и-ключевые-принципы">Определение и ключевые принципы</a></li>
+        <li><a href="#архитектура-инвертированного-индекса">Архитектура инвертированного индекса</a></li>
+        <li><a href="#процесс-индексирования">Процесс индексирования</a></li>
+      </ul>
+    </li>
+    <li><a href="#характеристики-производительности-и-оптимизация">Характеристики производительности и оптимизация</a>
+      <ul>
+        <li><a href="#механика-выполнения-запросов">Механика выполнения запросов</a></li>
+        <li><a href="#сравнительные-тесты">Сравнительные тесты</a></li>
+      </ul>
+    </li>
+    <li><a href="#реализации-в-современных-системах">Реализации в современных системах</a>
+      <ul>
+        <li><a href="#паттерны-интеграции-с-субд">Паттерны интеграции с СУБД</a></li>
+        <li><a href="#методы-оптимизации">Методы оптимизации</a></li>
+      </ul>
+    </li>
+    <li><a href="#ограничения-и-проблемы">Ограничения и проблемы</a>
+      <ul>
+        <li><a href="#технические-ограничения">Технические ограничения</a></li>
+        <li><a href="#настройка-релевантности">Настройка релевантности</a></li>
+      </ul>
+    </li>
+    <li><a href="#новые-тенденции-и-гибридные-подходы">Новые тенденции и гибридные подходы</a>
+      <ul>
+        <li><a href="#интеграция-с-семантическим-поиском">Интеграция с семантическим поиском</a></li>
+        <li><a href="#инновации-в-реальном-времени">Инновации в реальном времени</a></li>
+      </ul>
+    </li>
+    <li><a href="#применение-в-индустрии">Применение в индустрии</a>
+      <ul>
+        <li><a href="#поиск-в-ecommerce">Поиск в eCommerce</a></li>
+        <li><a href="#аналитика-логов">Аналитика логов</a></li>
+        <li><a href="#поиск-в-биомедицинской-литературе">Поиск в биомедицинской литературе</a></li>
+      </ul>
+    </li>
+    <li><a href="#будущее-развитие">Будущее развитие</a></li>
+    <li><a href="#заключение">Заключение</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="полнотекстовый-поиск-комплексный-анализ-технологий-реализаций-и-применений">
+  Полнотекстовый поиск: комплексный анализ технологий, реализаций и применений
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d1%82%d0%b5%d0%ba%d1%81%d1%82%d0%be%d0%b2%d1%8b%d0%b9-%d0%bf%d0%be%d0%b8%d1%81%d0%ba-%d0%ba%d0%be%d0%bc%d0%bf%d0%bb%d0%b5%d0%ba%d1%81%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d0%b9-%d1%80%d0%b5%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b9-%d0%b8-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b9">#</a>
+  
+</h1>
+<p>Полнотекстовый поиск стал краеугольным камнем современных систем информационного поиска, обеспечивая эффективный запрос неструктурированных текстовых данных в разнообразных приложениях. Индексируя каждое слово в документах и используя продвинутые алгоритмы, эта технология преодолевает ограничения традиционных методов поиска по шаблонам, предлагая новые возможности в точности и масштабируемости. В данном отчете исследуются технические основы полнотекстового поиска, анализируются его реализации в СУБД, оцениваются сильные стороны и ограничения, а также рассматриваются новые тенденции, сочетающие его с семантическим анализом для поисковых решений следующего поколения.</p>
+<h2 id="основы-полнотекстового-поиска">
+  Основы полнотекстового поиска
+  
+  <a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d1%8b-%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d1%82%d0%b5%d0%ba%d1%81%d1%82%d0%be%d0%b2%d0%be%d0%b3%d0%be-%d0%bf%d0%be%d0%b8%d1%81%d0%ba%d0%b0">#</a>
+  
+</h2>
+<h3 id="определение-и-ключевые-принципы">
+  Определение и ключевые принципы
+  
+  <a class="anchor" href="#%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b8-%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b8%d0%bf%d1%8b">#</a>
+  
+</h3>
+<p>Полнотекстовый поиск — это набор методов для запроса коллекций документов путем анализа их полного текстового содержимого, а не метаданных или частичных представлений. В отличие от простого сопоставления шаблонов (например, оператора SQL <code>LIKE</code>), он использует лингвистический анализ для обработки вариаций слов, фразовых структур и ранжирования по релевантности. Технология обеспечивает три ключевые функции:</p>
+<ol>
+<li><strong>Токенизация</strong>: Разделение текста на поисковые единицы (слова, числа) с удалением шумовых символов.</li>
+<li><strong>Нормализация</strong>: Приведение терминов к стандартизированной форме через стемминг, лемматизацию и приведение к нижнему регистру.</li>
+<li><strong>Индексирование</strong>: Создание оптимизированных структур данных для быстрого поиска терминов в больших наборах данных.</li>
+</ol>
+<p>Эти процессы позволяют системам обрабатывать запросы вроде &ldquo;беговые кроссовки&rdquo;, находя варианты вроде &ldquo;кроссовки для бега&rdquo; благодаря морфологическому анализу и расширению синонимов.</p>
+<h3 id="архитектура-инвертированного-индекса">
+  Архитектура инвертированного индекса
+  
+  <a class="anchor" href="#%d0%b0%d1%80%d1%85%d0%b8%d1%82%d0%b5%d0%ba%d1%82%d1%83%d1%80%d0%b0-%d0%b8%d0%bd%d0%b2%d0%b5%d1%80%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b3%d0%be-%d0%b8%d0%bd%d0%b4%d0%b5%d0%ba%d1%81%d0%b0">#</a>
+  
+</h3>
+<p>Инвертированный индекс лежит в основе большинства реализаций полнотекстового поиска, отображая термины на их местоположения в документах через два основных компонента:</p>
+<ol>
+<li><strong>Словарь терминов</strong>: Алфавитный список уникальных токенов.</li>
+<li><strong>Списки вхождений (postings lists)</strong>: Записи для каждого термина, содержащие:
+<ul>
+<li>ID документов, где встречается термин;</li>
+<li>Позиции в документах;</li>
+<li>Статистику частот для оценки релевантности.</li>
+</ul>
+</li>
+</ol>
+<p>Рассмотрим три отзыва о товарах:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">ID документа</th>
+          <th style="text-align: left">Содержание</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">101</td>
+          <td style="text-align: left">&ldquo;Легкие беговые кроссовки с отличным сцеплением&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">102</td>
+          <td style="text-align: left">&ldquo;Трейловые кроссовки вызвали волдыри&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">103</td>
+          <td style="text-align: left">&ldquo;Лучшие водонепроницаемые кроссовки для сложного рельефа&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<p>Результирующий инвертированный индекс будет иметь структуру:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Термин</th>
+          <th style="text-align: left">Вхождения (DocID: Позиции)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">лучшие</td>
+          <td style="text-align: left">103:</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">водонепроницаемые</td>
+          <td style="text-align: left">103:</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">волдыри</td>
+          <td style="text-align: left">102:</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">легкие</td>
+          <td style="text-align: left">101:</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">беговые</td>
+          <td style="text-align: left">101:, 102:</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">кроссовки</td>
+          <td style="text-align: left">101:, 102:, 103:</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">сцепление</td>
+          <td style="text-align: left">101:</td>
+      </tr>
+  </tbody>
+</table>
+<p>Эта структура обеспечивает поиск за O(1) и эффективные булевы операции. Например, запрос &ldquo;беговые И кроссовки&rdquo; пересекает списки вхождений обоих терминов, находя документ 101.</p>
+<h3 id="процесс-индексирования">
+  Процесс индексирования
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d1%86%d0%b5%d1%81%d1%81-%d0%b8%d0%bd%d0%b4%d0%b5%d0%ba%d1%81%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h3>
+<ol>
+<li><strong>Парсинг документов</strong>: Извлечение текста из файлов (PDF, HTML) с обработкой кодировок и форматирования.</li>
+<li><strong>Токенизация</strong>: Разделение текста на токены с использованием языковых правил:
+<ul>
+<li>Английский: Разделение по пробелам и пунктуации;</li>
+<li>Китайский: Статистическая/ML-сегментация слов.</li>
+</ul>
+</li>
+<li><strong>Нормализация</strong>:
+<ul>
+<li>Приведение к нижнему регистру: &ldquo;Search&rdquo; → &ldquo;search&rdquo;;</li>
+<li>Стемминг: &ldquo;running&rdquo; → &ldquo;run&rdquo;;</li>
+<li>Удаление стоп-слов (например, &ldquo;и&rdquo;, &ldquo;в&rdquo;).</li>
+</ul>
+</li>
+<li><strong>Построение индекса</strong>: Создание словаря терминов и сжатых списков вхождений.</li>
+</ol>
+<p>Продвинутые системы вроде Apache Lucene используют конечные автоматы для эффективного хранения терминов и skip-листы для быстрого обхода списков.</p>
+<h2 id="характеристики-производительности-и-оптимизация">
+  Характеристики производительности и оптимизация
+  
+  <a class="anchor" href="#%d1%85%d0%b0%d1%80%d0%b0%d0%ba%d1%82%d0%b5%d1%80%d0%b8%d1%81%d1%82%d0%b8%d0%ba%d0%b8-%d0%bf%d1%80%d0%be%d0%b8%d0%b7%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%b8-%d0%be%d0%bf%d1%82%d0%b8%d0%bc%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f">#</a>
+  
+</h2>
+<h3 id="механика-выполнения-запросов">
+  Механика выполнения запросов
+  
+  <a class="anchor" href="#%d0%bc%d0%b5%d1%85%d0%b0%d0%bd%d0%b8%d0%ba%d0%b0-%d0%b2%d1%8b%d0%bf%d0%be%d0%bb%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%bf%d1%80%d0%be%d1%81%d0%be%d0%b2">#</a>
+  
+</h3>
+<p>Полнотекстовые запросы проходят несколько этапов обработки:</p>
+<ol>
+<li><strong>Парсинг запроса</strong>: Интерпретация синтаксиса (булевы операторы, условия близости).</li>
+<li><strong>Расширение терминов</strong>: Применение синонимов, исправление опечаток, стемминг.</li>
+<li><strong>Извлечение списков вхождений</strong>: Получение записей из инвертированного индекса.</li>
+<li><strong>Комбинирование результатов</strong>: Объединение списков с помощью AND/OR/NOT.</li>
+<li><strong>Оценка релевантности</strong>: Ранжирование документов по алгоритмам вроде BM25:</li>
+</ol>
+<p>$$
+\text{BM25}(D,Q) = \sum_{i=1}^{n} \text{IDF}(q_i) \cdot \frac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot (1 - b + b \cdot \frac{|D|}{\text{avgdl}})}
+$$</p>
+<p>Где:</p>
+<ul>
+<li>$$
+f(q_i, D)
+$$: Частота термина в документе;</li>
+<li>$$
+|D|
+$$: Длина документа;</li>
+<li>$$
+k_1
+$$, $$
+b
+$$: Настраиваемые параметры.</li>
+</ul>
+<h3 id="сравнительные-тесты">
+  Сравнительные тесты
+  
+  <a class="anchor" href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%82%d0%b5%d1%81%d1%82%d1%8b">#</a>
+  
+</h3>
+<p>Тесты производительности в СУБД показывают преимущества перед поиском по шаблонам:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Операция</th>
+          <th style="text-align: left">MySQL <code>LIKE</code> (мс)</th>
+          <th style="text-align: left">Полнотекстовый индекс (мс)</th>
+          <th style="text-align: left">Ускорение</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Поиск одного термина</td>
+          <td style="text-align: left">420</td>
+          <td style="text-align: left">12</td>
+          <td style="text-align: left">35x</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Поиск фразы</td>
+          <td style="text-align: left">680</td>
+          <td style="text-align: left">18</td>
+          <td style="text-align: left">38x</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Булев запрос AND</td>
+          <td style="text-align: left">920</td>
+          <td style="text-align: left">24</td>
+          <td style="text-align: left">38x</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Поиск по близости</td>
+          <td style="text-align: left">Н/Д</td>
+          <td style="text-align: left">29</td>
+          <td style="text-align: left">-</td>
+      </tr>
+  </tbody>
+</table>
+<p>Данные тестов Apache Doris на 10 млн отзывов показывают 40-кратное снижение задержек при использовании инвертированных индексов.</p>
+<h2 id="реализации-в-современных-системах">
+  Реализации в современных системах
+  
+  <a class="anchor" href="#%d1%80%d0%b5%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8-%d0%b2-%d1%81%d0%be%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d1%8b%d1%85-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%d1%85">#</a>
+  
+</h2>
+<h3 id="паттерны-интеграции-с-субд">
+  Паттерны интеграции с СУБД
+  
+  <a class="anchor" href="#%d0%bf%d0%b0%d1%82%d1%82%d0%b5%d1%80%d0%bd%d1%8b-%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d0%b8-%d1%81-%d1%81%d1%83%d0%b1%d0%b4">#</a>
+  
+</h3>
+<ol>
+<li><strong>Нативные реализации</strong>:
+<ul>
+<li><strong>SQL Server</strong>: Предикаты <code>CONTAINS()</code>/<code>FREETEXT()</code> с настройкой тезаурусов;</li>
+<li><strong>PostgreSQL</strong>: Типы <code>tsvector</code>/<code>tsquery</code> с поддержкой 12 языков;</li>
+<li><strong>MySQL</strong>: Ограниченная поддержка в MyISAM/InnoDB с базовым стеммингом.</li>
+</ul>
+</li>
+<li><strong>Специализированные движки</strong>:
+<ul>
+<li><strong>Elasticsearch</strong>: Распределенная платформа на базе Lucene с реальным временем индексации;</li>
+<li><strong>Manticore Search</strong>: Интеграция с колоночными хранилищами для аналитических нагрузок;</li>
+<li><strong>RedisSearch</strong>: Оперативные инвертированные индексы в памяти с задержкой &lt;1 мс.</li>
+</ul>
+</li>
+<li><strong>Облачные решения</strong>:
+<ul>
+<li><strong>AWS CloudSearch</strong>: Управляемый сервис с автоскейлингом индексов;</li>
+<li><strong>Azure Cognitive Search</strong>: Поиск с ИИ-распознаванием сущностей.</li>
+</ul>
+</li>
+</ol>
+<h3 id="методы-оптимизации">
+  Методы оптимизации
+  
+  <a class="anchor" href="#%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b-%d0%be%d0%bf%d1%82%d0%b8%d0%bc%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8">#</a>
+  
+</h3>
+<ul>
+<li><strong>Партиционирование индексов</strong>: Шардирование по датам или хеш-ключам для параллельных запросов;</li>
+<li><strong>Сжатие</strong>: Дельта-кодирование (FOR, PFOR) для списков вхождений;</li>
+<li><strong>Кэширование</strong>: Запоминание частых запросов и &ldquo;горячих&rdquo; списков;</li>
+<li><strong>Гибридные индексы</strong>: Комбинация с B-деревьями для числовых диапазонов.</li>
+</ul>
+<p>Внедрение инвертированных индексов в CockroachDB с Roaring Bitmaps снизило задержки на 92%.</p>
+<h2 id="ограничения-и-проблемы">
+  Ограничения и проблемы
+  
+  <a class="anchor" href="#%d0%be%d0%b3%d1%80%d0%b0%d0%bd%d0%b8%d1%87%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b8-%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b">#</a>
+  
+</h2>
+<h3 id="технические-ограничения">
+  Технические ограничения
+  
+  <a class="anchor" href="#%d1%82%d0%b5%d1%85%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%be%d0%b3%d1%80%d0%b0%d0%bd%d0%b8%d1%87%d0%b5%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h3>
+<ol>
+<li><strong>Накладные расходы индексирования</strong>:
+<ul>
+<li>Хранилище: +25-70% к объему данных;</li>
+<li>Запись: Замедление вставки в 2-5 раз.</li>
+</ul>
+</li>
+<li><strong>Сложные запросы</strong>:
+<ul>
+<li>Трудности с концептуальными запросами вроде &ldquo;причины экономического спада&rdquo;, требующими внешних графов знаний;</li>
+<li>Ограниченная поддержка исправления опечаток для нелатинских алфавитов.</li>
+</ul>
+</li>
+<li><strong>Многоязычные сложности</strong>:
+<ul>
+<li>Токенизация японского/китайского требует интеграции Mecab/Jieba;</li>
+<li>Обработка RTL-языков (арабский, иврит) требует специальных конвейеров.</li>
+</ul>
+</li>
+</ol>
+<h3 id="настройка-релевантности">
+  Настройка релевантности
+  
+  <a class="anchor" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d1%80%d0%b5%d0%bb%d0%b5%d0%b2%d0%b0%d0%bd%d1%82%d0%bd%d0%be%d1%81%d1%82%d0%b8">#</a>
+  
+</h3>
+<p>Алгоритмы релевантности требуют точной настройки:</p>
+<ol>
+<li><strong>Проблемы TF-IDF</strong>:
+<ul>
+<li>Переоценка редких терминов (например, &ldquo;зебра&rdquo; против &ldquo;животное&rdquo;);</li>
+<li>Неулавливание семантических связей.</li>
+</ul>
+</li>
+<li><strong>Оптимизация BM25</strong>:
+Типичные диапазоны параметров:
+<ul>
+<li>$$
+k_1
+$$: 1.2-2.0 (контроль насыщения частоты терминов);</li>
+<li>$$
+b
+$$: 0.6-0.75 (баланс нормализации длины документов).</li>
+</ul>
+</li>
+<li><strong>Интеграция Learning-to-Rank</strong>:
+Модели машинного обучения (LambdaMART, XGBoost) дополняют традиционные методы:</li>
+</ol>
+<p>$$
+\text{Оценка}(D,Q) = 0.4 \cdot \text{BM25} + 0.3 \cdot \text{PageRank} + 0.3 \cdot \text{CTR пользователя}
+$$</p>
+<p>Требуется постоянное обучение на данных кликов.</p>
+<h2 id="новые-тенденции-и-гибридные-подходы">
+  Новые тенденции и гибридные подходы
+  
+  <a class="anchor" href="#%d0%bd%d0%be%d0%b2%d1%8b%d0%b5-%d1%82%d0%b5%d0%bd%d0%b4%d0%b5%d0%bd%d1%86%d0%b8%d0%b8-%d0%b8-%d0%b3%d0%b8%d0%b1%d1%80%d0%b8%d0%b4%d0%bd%d1%8b%d0%b5-%d0%bf%d0%be%d0%b4%d1%85%d0%be%d0%b4%d1%8b">#</a>
+  
+</h2>
+<h3 id="интеграция-с-семантическим-поиском">
+  Интеграция с семантическим поиском
+  
+  <a class="anchor" href="#%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d1%81-%d1%81%d0%b5%d0%bc%d0%b0%d0%bd%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%bc-%d0%bf%d0%be%d0%b8%d1%81%d0%ba%d0%be%d0%bc">#</a>
+  
+</h3>
+<p>Современные системы объединяют инвертированные индексы с нейросетевыми эмбеддингами:</p>
+<ol>
+<li><strong>Двухэтапная архитектура</strong>:
+<ul>
+<li><strong>Разреженный поиск</strong>: BM25 для полноты;</li>
+<li><strong>Плотный поиск</strong>: Эмбеддинги BERT для точности;</li>
+<li><strong>Переранжирование</strong>: Модели-кроссекодеры объединяют результаты.</li>
+</ul>
+</li>
+<li><strong>Результаты тестов</strong>:
+Гибридные системы показывают значительный рост качества:
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Метрика</th>
+          <th style="text-align: left">Только полнотекстовый</th>
+          <th style="text-align: left">Гибридная система</th>
+          <th style="text-align: left">Улучшение</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">NDCG@10</td>
+          <td style="text-align: left">0.42</td>
+          <td style="text-align: left">0.68</td>
+          <td style="text-align: left">+62%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Средний ранг</td>
+          <td style="text-align: left">0.31</td>
+          <td style="text-align: left">0.53</td>
+          <td style="text-align: left">+71%</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Задержка запроса</td>
+          <td style="text-align: left">120 мс</td>
+          <td style="text-align: left">210 мс</td>
+          <td style="text-align: left">-75%</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ol>
+<p>Данные тестов Manticore Search на eCommerce-данных.</p>
+<h3 id="инновации-в-реальном-времени">
+  Инновации в реальном времени
+  
+  <a class="anchor" href="#%d0%b8%d0%bd%d0%bd%d0%be%d0%b2%d0%b0%d1%86%d0%b8%d0%b8-%d0%b2-%d1%80%d0%b5%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%bc-%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%b8">#</a>
+  
+</h3>
+<ol>
+<li><strong>Инкрементальное индексирование</strong>:
+<ul>
+<li><code>IndexWriter</code> в Apache Lucene обновляет индексы за доли секунды;</li>
+<li>Потоки RedisSearch распространяют обновления через Pub/Sub.</li>
+</ul>
+</li>
+<li><strong>Аппаратное ускорение</strong>:
+<ul>
+<li>Токенизаторы на GPU (NVIDIA RAPIDS);</li>
+<li>Объединение списков на FPGA (AWS F1).</li>
+</ul>
+</li>
+</ol>
+<h2 id="применение-в-индустрии">
+  Применение в индустрии
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-%d0%b8%d0%bd%d0%b4%d1%83%d1%81%d1%82%d1%80%d0%b8%d0%b8">#</a>
+  
+</h2>
+<h3 id="поиск-в-ecommerce">
+  Поиск в eCommerce
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%b8%d1%81%d0%ba-%d0%b2-ecommerce">#</a>
+  
+</h3>
+<p>Кейс: Amazon Product Search</p>
+<ul>
+<li><strong>Размер индекса</strong>: 3.5 ПБ на 2 млрд товаров;</li>
+<li><strong>Пропускная способность</strong>: 1.2 млн запросов/сек в пик Prime Day;</li>
+<li><strong>Особенности</strong>:
+<ul>
+<li>Фасетная фильтрация через гибридные индексы;</li>
+<li>Персонализация через эмбеддинги истории покупок.</li>
+</ul>
+</li>
+</ul>
+<h3 id="аналитика-логов">
+  Аналитика логов
+  
+  <a class="anchor" href="#%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d1%82%d0%b8%d0%ba%d0%b0-%d0%bb%d0%be%d0%b3%d0%be%d0%b2">#</a>
+  
+</h3>
+<p>Реализация Splunk:</p>
+<ul>
+<li><strong>Скорость индексации</strong>: 20 ТБ/день с SLA 100 мс;</li>
+<li><strong>Сжатие</strong>: 4:1 через битовые индексы;</li>
+<li><strong>Типы запросов</strong>:
+<ul>
+<li><code>ошибка И (таймаут ИЛИ сбой) ВБЛИЗИ/5 &quot;сброс соединения&quot;</code>;</li>
+<li><code>статус:5xx И приложение:payment_svc</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="поиск-в-биомедицинской-литературе">
+  Поиск в биомедицинской литературе
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%b8%d1%81%d0%ba-%d0%b2-%d0%b1%d0%b8%d0%be%d0%bc%d0%b5%d0%b4%d0%b8%d1%86%d0%b8%d0%bd%d1%81%d0%ba%d0%be%d0%b9-%d0%bb%d0%b8%d1%82%d0%b5%d1%80%d0%b0%d1%82%d1%83%d1%80%d0%b5">#</a>
+  
+</h3>
+<p>Архитектура PubMed:</p>
+<ul>
+<li><strong>Контент</strong>: 35 млн статей с индексацией терминов MeSH;</li>
+<li><strong>Функции релевантности</strong>:
+<ul>
+<li>Повышение приоритета клинических испытаний;</li>
+<li>Расширение связей &ldquo;ген-заболевание&rdquo;;</li>
+<li>Нормализация химических соединений.</li>
+</ul>
+</li>
+</ul>
+<h2 id="будущее-развитие">
+  Будущее развитие
+  
+  <a class="anchor" href="#%d0%b1%d1%83%d0%b4%d1%83%d1%89%d0%b5%d0%b5-%d1%80%d0%b0%d0%b7%d0%b2%d0%b8%d1%82%d0%b8%d0%b5">#</a>
+  
+</h2>
+<ol>
+<li><strong>Обученные индексы</strong>:
+<ul>
+<li>Нейросетевые индексы Google ускоряют поиск на 18-24%;</li>
+<li>Фреймворк COSLI от Microsoft сокращает размер индексов на 40%.</li>
+</ul>
+</li>
+<li><strong>Квантовое ускорение</strong>:
+<ul>
+<li>Алгоритм Гровера демонстрирует квадратичное ускорение пересечений списков;</li>
+<li>Квантовые отжиги D-Wave ускоряют NOT-запросы на 89%.</li>
+</ul>
+</li>
+<li><strong>Этические аспекты</strong>:
+<ul>
+<li>Снижение смещений через &ldquo;честное&rdquo; ранжирование;</li>
+<li>Объяснимая оценка релевантности для регуляторов;</li>
+<li>Дифференциальная приватность в логах запросов.</li>
+</ul>
+</li>
+</ol>
+<h2 id="заключение">
+  Заключение
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5">#</a>
+  
+</h2>
+<p>Полнотекстовый поиск остается незаменимым для работы с неструктурированными данными, несмотря на развитие семантических технологий. Его основа на инвертированных индексах обеспечивает непревзойденную эффективность для точных терминов, а гибридные архитектуры с нейросетями закрывают семантические пробелы. Успешные реализации требуют тонкой настройки стратегий индексирования, алгоритмов релевантности и аппаратных ресурсов. В условиях экспоненциального роста данных инновации в распределенных индексах, обновлениях в реальном времени и этичном ИИ определят будущее поисковых систем.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="flex align-center book-icon">
+        <img src="/onboarding-assistant/svg/backward.svg" class="book-icon" alt="Previous" title="Vector Search" />
+        <span>Vector Search</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="flex align-center book-icon">
+        <span>Hybrid Search</span>
+        <img src="/onboarding-assistant/svg/forward.svg" class="book-icon" alt="Next" title="Hybrid Search" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#основы-полнотекстового-поиска">Основы полнотекстового поиска</a>
+      <ul>
+        <li><a href="#определение-и-ключевые-принципы">Определение и ключевые принципы</a></li>
+        <li><a href="#архитектура-инвертированного-индекса">Архитектура инвертированного индекса</a></li>
+        <li><a href="#процесс-индексирования">Процесс индексирования</a></li>
+      </ul>
+    </li>
+    <li><a href="#характеристики-производительности-и-оптимизация">Характеристики производительности и оптимизация</a>
+      <ul>
+        <li><a href="#механика-выполнения-запросов">Механика выполнения запросов</a></li>
+        <li><a href="#сравнительные-тесты">Сравнительные тесты</a></li>
+      </ul>
+    </li>
+    <li><a href="#реализации-в-современных-системах">Реализации в современных системах</a>
+      <ul>
+        <li><a href="#паттерны-интеграции-с-субд">Паттерны интеграции с СУБД</a></li>
+        <li><a href="#методы-оптимизации">Методы оптимизации</a></li>
+      </ul>
+    </li>
+    <li><a href="#ограничения-и-проблемы">Ограничения и проблемы</a>
+      <ul>
+        <li><a href="#технические-ограничения">Технические ограничения</a></li>
+        <li><a href="#настройка-релевантности">Настройка релевантности</a></li>
+      </ul>
+    </li>
+    <li><a href="#новые-тенденции-и-гибридные-подходы">Новые тенденции и гибридные подходы</a>
+      <ul>
+        <li><a href="#интеграция-с-семантическим-поиском">Интеграция с семантическим поиском</a></li>
+        <li><a href="#инновации-в-реальном-времени">Инновации в реальном времени</a></li>
+      </ul>
+    </li>
+    <li><a href="#применение-в-индустрии">Применение в индустрии</a>
+      <ul>
+        <li><a href="#поиск-в-ecommerce">Поиск в eCommerce</a></li>
+        <li><a href="#аналитика-логов">Аналитика логов</a></li>
+        <li><a href="#поиск-в-биомедицинской-литературе">Поиск в биомедицинской литературе</a></li>
+      </ul>
+    </li>
+    <li><a href="#будущее-развитие">Будущее развитие</a></li>
+    <li><a href="#заключение">Заключение</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

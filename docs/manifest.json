@@ -1,0 +1,15 @@
+{
+  "name": "AI onboarding assistant",
+  "short_name": "AI onboarding assistant",
+  "start_url": "/onboarding-assistant/",
+  "scope": "/onboarding-assistant/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/onboarding-assistant/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}

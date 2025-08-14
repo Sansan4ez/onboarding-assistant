@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+<head><script src="/onboarding-assistant/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=onboarding-assistant/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Полное руководство для начинающих по GitHub Pages: Хостинг статических сайтов с лёгкостью
+  
+  #
+  
+
+GitHub Pages стал ключевым инструментом для разработчиков, студентов и профессионалов, которые хотят бесплатно размещать статические веб-сайты. Этот сервис интегрируется с системой контроля версий GitHub, позволяя развернуть портфолио, документацию к проектам, блоги или бизнес-страницы напрямую из репозитория. Используя GitHub Pages, пользователи получают доступ к надёжному хостингу, поддержке пользовательских доменов и встроенному генератору статических сайтов Jekyll. Это руководство шаг за шагом объяснит, как настроить GitHub Pages — от базовой конфигурации до продвинутых функций — чтобы вы смогли уверенно разместить свой первый статический сайт.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-pages/">
+  <meta property="og:site_name" content="AI onboarding assistant">
+  <meta property="og:title" content="AI onboarding assistant">
+  <meta property="og:description" content="Полное руководство для начинающих по GitHub Pages: Хостинг статических сайтов с лёгкостью # GitHub Pages стал ключевым инструментом для разработчиков, студентов и профессионалов, которые хотят бесплатно размещать статические веб-сайты. Этот сервис интегрируется с системой контроля версий GitHub, позволяя развернуть портфолио, документацию к проектам, блоги или бизнес-страницы напрямую из репозитория. Используя GitHub Pages, пользователи получают доступ к надёжному хостингу, поддержке пользовательских доменов и встроенному генератору статических сайтов Jekyll. Это руководство шаг за шагом объяснит, как настроить GitHub Pages — от базовой конфигурации до продвинутых функций — чтобы вы смогли уверенно разместить свой первый статический сайт.">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Git Pages | AI onboarding assistant</title>
+<link rel="icon" href="/onboarding-assistant/favicon.png" >
+<link rel="manifest" href="/onboarding-assistant/manifest.json">
+<link rel="canonical" href="http://localhost:1313/onboarding-assistant/docs/content-mgmt/git-pages/">
+<link rel="stylesheet" href="/onboarding-assistant/book.min.ce742184041b67827be505801d71b6b40c09608dfb292033ea54dbbc1d71a174.css" integrity="sha256-znQhhAQbZ4J75QWAHXG2tAwJYI37KSAz6lTbvB1xoXQ=" crossorigin="anonymous">
+  <script defer src="/onboarding-assistant/fuse.min.js"></script>
+  <script defer src="/onboarding-assistant/en.search.min.b7fb698aecb025344082fd17e6382a9196b9832ef44b49a25f2de0431e5b0078.js" integrity="sha256-t/tpiuywJTRAgv0X5jgqkZa5gy70S0miXy3gQx5bAHg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/onboarding-assistant/"><span>AI onboarding assistant</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7cb49bdb84cb44cbcedabd34f28a625a" class="toggle"  />
+    <label for="section-7cb49bdb84cb44cbcedabd34f28a625a" class="flex">
+      <a href="/onboarding-assistant/docs/ai-ml/" class="flex-auto ">AI &amp; Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/llm-basics/" class="">Основы LLM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-agents/" class="">AI-агенты</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/rag/" class="">RAG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="">Ai Assistants</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/structured-output/" class="">Structured Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48bac2ebdb668c2706c02aa184db8476" class="toggle"  />
+    <label for="section-48bac2ebdb668c2706c02aa184db8476" class="flex">
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex-auto ">Search Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="">Vector Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/fulltext-search/" class="">Fulltext Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="">Hybrid Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/metadata-search/" class="">Metadata Search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f5ab346261e7d1af858195b11cdc5fb" class="toggle"  />
+    <label for="section-5f5ab346261e7d1af858195b11cdc5fb" class="flex">
+      <a href="/onboarding-assistant/docs/dev-tools/" class="flex-auto ">Development Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai/" class="">Cursor AI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="">Ai Pair Programming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai-guide/" class="">Cursor Ai Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="">Cursor Composer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/dify-ai/" class="">Dify Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="">Setup Cursor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/uv-tool/" class="">Uv Tool</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa32f49e3c3654f259d4d098efa4fddd" class="toggle" checked />
+    <label for="section-aa32f49e3c3654f259d4d098efa4fddd" class="flex">
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex-auto ">Content Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-github-guide/" class="">Git и GitHub</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="">Markdown Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-pages/" class="active">Git Pages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eefc9810de7c421f8dbbe8d3488aff57" class="toggle"  />
+    <label for="section-eefc9810de7c421f8dbbe8d3488aff57" class="flex">
+      <a href="/onboarding-assistant/docs/backend/" class="flex-auto ">Backend &amp; Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/backend/supabase-analysis/" class="">Supabase Analysis</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="toggle"  />
+    <label for="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="flex">
+      <a href="/onboarding-assistant/docs/architecture/" class="flex-auto ">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/assistant-architecture/" class="">Assistant Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/ddd-llm/" class="">Ddd Llm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4c34cc6447adf3b72852a3545bac8e21" class="toggle"  />
+    <label for="section-4c34cc6447adf3b72852a3545bac8e21" class="flex">
+      <a href="/onboarding-assistant/docs/utilities/" class="flex-auto ">Utilities</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/hugo-guide/" class="">Hugo - Статический генератор сайтов</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fe95e3eb7fab23a8556775a589dda04" class="toggle"  />
+    <label for="section-4fe95e3eb7fab23a8556775a589dda04" class="flex">
+      <a href="/onboarding-assistant/docs/additional/" class="flex-auto ">Additional Materials</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/additional/checklist/" class="">Checklist</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/onboarding-assistant/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Git Pages</h3>
+
+  <label for="toc-control">
+    
+    <img src="/onboarding-assistant/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#основы-github-pages-и-его-экосистема">Основы GitHub Pages и его экосистема</a>
+      <ul>
+        <li><a href="#что-такое-github-pages">Что такое GitHub Pages?</a></li>
+        <li><a href="#ключевые-особенности">Ключевые особенности</a></li>
+        <li><a href="#статические-vs-динамические-сайты">Статические vs. динамические сайты</a></li>
+      </ul>
+    </li>
+    <li><a href="#подготовка-к-работе-с-github-pages">Подготовка к работе с GitHub Pages</a>
+      <ul>
+        <li><a href="#1-создание-аккаунта-github">1. Создание аккаунта GitHub</a></li>
+        <li><a href="#2-установка-git-и-настройка-окружения">2. Установка Git и настройка окружения</a></li>
+        <li><a href="#3-базовые-навыки-работы-с-командной-строкой">3. Базовые навыки работы с командной строкой</a></li>
+      </ul>
+    </li>
+    <li><a href="#пошаговая-инструкция-по-развёртыванию-сайта">Пошаговая инструкция по развёртыванию сайта</a>
+      <ul>
+        <li><a href="#шаг-1-создание-репозитория">Шаг 1: Создание репозитория</a></li>
+        <li><a href="#шаг-2-клонирование-репозитория-локально">Шаг 2: Клонирование репозитория локально</a></li>
+        <li><a href="#шаг-3-добавление-контента">Шаг 3: Добавление контента</a></li>
+        <li><a href="#шаг-4-коммит-и-отправка-изменений">Шаг 4: Коммит и отправка изменений</a></li>
+      </ul>
+    </li>
+    <li><a href="#настройка-github-pages-для-проектов">Настройка GitHub Pages для проектов</a></li>
+    <li><a href="#подключение-пользовательского-домена">Подключение пользовательского домена</a>
+      <ul>
+        <li><a href="#1-покупка-домена">1. Покупка домена</a></li>
+        <li><a href="#2-настройка-dns-записей">2. Настройка DNS-записей</a></li>
+        <li><a href="#3-привязка-домена-к-github-pages">3. Привязка домена к GitHub Pages</a></li>
+      </ul>
+    </li>
+    <li><a href="#продвинутые-функции-и-кастомизация">Продвинутые функции и кастомизация</a>
+      <ul>
+        <li><a href="#темы-jekyll-и-генерация-статических-сайтов">Темы Jekyll и генерация статических сайтов</a></li>
+        <li><a href="#github-actions-для-автоматизации">GitHub Actions для автоматизации</a></li>
+      </ul>
+    </li>
+    <li><a href="#решение-распространённых-проблем">Решение распространённых проблем</a>
+      <ul>
+        <li><a href="#ошибка-404-после-развёртывания">Ошибка 404 после развёртывания</a></li>
+        <li><a href="#ошибки-сборки-jekyll">Ошибки сборки Jekyll</a></li>
+        <li><a href="#контент-не-обновляется">Контент не обновляется</a></li>
+      </ul>
+    </li>
+    <li><a href="#рекомендации-по-управлению-github-pages">Рекомендации по управлению GitHub Pages</a>
+      <ul>
+        <li><a href="#1-дисциплина-контроля-версий">1. Дисциплина контроля версий</a></li>
+        <li><a href="#2-безопасность">2. Безопасность</a></li>
+        <li><a href="#3-оптимизация-производительности">3. Оптимизация производительности</a></li>
+      </ul>
+    </li>
+    <li><a href="#заключение-усиление-вашего-веб-присутствия">Заключение: Усиление вашего веб-присутствия</a></li>
+    <li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a>
+      <ul>
+        <li><a href="#почему-мой-сайт-не-отображается">Почему мой сайт не отображается?</a></li>
+        <li><a href="#как-обновить-сайт">Как обновить сайт?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="полное-руководство-для-начинающих-по-github-pages-хостинг-статических-сайтов-с-лёгкостью">
+  Полное руководство для начинающих по GitHub Pages: Хостинг статических сайтов с лёгкостью
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85-%d0%bf%d0%be-github-pages-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d1%85-%d1%81%d0%b0%d0%b9%d1%82%d0%be%d0%b2-%d1%81-%d0%bb%d1%91%d0%b3%d0%ba%d0%be%d1%81%d1%82%d1%8c%d1%8e">#</a>
+  
+</h1>
+<p>GitHub Pages стал ключевым инструментом для разработчиков, студентов и профессионалов, которые хотят бесплатно размещать статические веб-сайты. Этот сервис интегрируется с системой контроля версий GitHub, позволяя развернуть портфолио, документацию к проектам, блоги или бизнес-страницы напрямую из репозитория. Используя GitHub Pages, пользователи получают доступ к надёжному хостингу, поддержке пользовательских доменов и встроенному генератору статических сайтов Jekyll. Это руководство шаг за шагом объяснит, как настроить GitHub Pages — от базовой конфигурации до продвинутых функций — чтобы вы смогли уверенно разместить свой первый статический сайт.</p>
+<h2 id="основы-github-pages-и-его-экосистема">
+  Основы GitHub Pages и его экосистема
+  
+  <a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d1%8b-github-pages-%d0%b8-%d0%b5%d0%b3%d0%be-%d1%8d%d0%ba%d0%be%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0">#</a>
+  
+</h2>
+<h3 id="что-такое-github-pages">
+  Что такое GitHub Pages?
+  
+  <a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-github-pages">#</a>
+  
+</h3>
+<p>GitHub Pages — это бесплатный сервис для хостинга статических сайтов. Он позволяет вам превращать репозитории (места, где хранится ваш код) в публично доступные веб-страницы. Вы можете использовать HTML, CSS, JavaScript и Markdown для создания вашего сайта. GitHub автоматически собирает и разворачивает ваш контент, когда вы обновляете определённые ветки. Сайты получают URL вида <code>username.github.io</code>, но вы также можете использовать собственные домены.</p>
+<h3 id="ключевые-особенности">
+  Ключевые особенности
+  
+  <a class="anchor" href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d0%be%d1%81%d0%be%d0%b1%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8">#</a>
+  
+</h3>
+<ul>
+<li><strong>Бесплатный хостинг</strong>: Идеально подходит для личных проектов и малого бизнеса.</li>
+<li><strong>Интеграция с Git</strong>: Автоматическое обновление через коммиты (сохранение изменений в коде).</li>
+<li><strong>Поддержка Jekyll</strong>: Встроенный генератор статических сайтов для настройки тем и создания блогов.</li>
+<li><strong>Пользовательские домены</strong>: Вы можете заменить стандартный URL на ваш собственный (например, <code>yourdomain.com</code>).</li>
+</ul>
+<h3 id="статические-vs-динамические-сайты">
+  Статические vs. динамические сайты
+  
+  <a class="anchor" href="#%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-vs-%d0%b4%d0%b8%d0%bd%d0%b0%d0%bc%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d1%81%d0%b0%d0%b9%d1%82%d1%8b">#</a>
+  
+</h3>
+<p>GitHub Pages предназначен исключительно для <strong>статических сайтов</strong>, которые состоят из готовых файлов, отправляемых браузеру. В отличие от динамических сайтов (например, WordPress), здесь отсутствует серверная обработка, что ускоряет загрузку и повышает безопасность. Типичные примеры использования: портфолио, документация и лендинги.</p>
+<h2 id="подготовка-к-работе-с-github-pages">
+  Подготовка к работе с GitHub Pages
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%b4%d0%b3%d0%be%d1%82%d0%be%d0%b2%d0%ba%d0%b0-%d0%ba-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b5-%d1%81-github-pages">#</a>
+  
+</h2>
+<h3 id="1-создание-аккаунта-github">
+  1. Создание аккаунта GitHub
+  
+  <a class="anchor" href="#1-%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d0%b0%d0%ba%d0%ba%d0%b0%d1%83%d0%bd%d1%82%d0%b0-github">#</a>
+  
+</h3>
+<p>Зарегистрируйтесь на 
+  <a href="https://github.com">github.com</a>. Для организационных сайтов репозиторий должен называться <code>&lt;organization&gt;.github.io</code>.</p>
+<h3 id="2-установка-git-и-настройка-окружения">
+  2. Установка Git и настройка окружения
+  
+  <a class="anchor" href="#2-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-git-%d0%b8-%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d0%be%d0%ba%d1%80%d1%83%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h3>
+<p>Скачайте Git с 
+  <a href="https://git-scm.com/">git-scm.com</a> и настройте имя/почту:</p>
+<pre tabindex="0"><code>
+git config --global user.name &#34;Ваше Имя&#34;
+git config --global user.email &#34;your.email@example.com&#34;
+</code></pre><p>Это свяжет локальные коммиты с вашим аккаунтом GitHub.</p>
+<h3 id="3-базовые-навыки-работы-с-командной-строкой">
+  3. Базовые навыки работы с командной строкой
+  
+  <a class="anchor" href="#3-%d0%b1%d0%b0%d0%b7%d0%be%d0%b2%d1%8b%d0%b5-%d0%bd%d0%b0%d0%b2%d1%8b%d0%ba%d0%b8-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b-%d1%81-%d0%ba%d0%be%d0%bc%d0%b0%d0%bd%d0%b4%d0%bd%d0%be%d0%b9-%d1%81%d1%82%d1%80%d0%be%d0%ba%d0%be%d0%b9">#</a>
+  
+</h3>
+<p>Освойте основные команды терминала:</p>
+<ul>
+<li><code>cd</code>: Навигация по директориям</li>
+<li><code>ls</code>: Просмотр файлов</li>
+<li><code>mkdir</code>: Создание папок.</li>
+</ul>
+<h2 id="пошаговая-инструкция-по-развёртыванию-сайта">
+  Пошаговая инструкция по развёртыванию сайта
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d1%88%d0%b0%d0%b3%d0%be%d0%b2%d0%b0%d1%8f-%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%86%d0%b8%d1%8f-%d0%bf%d0%be-%d1%80%d0%b0%d0%b7%d0%b2%d1%91%d1%80%d1%82%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d1%8e-%d1%81%d0%b0%d0%b9%d1%82%d0%b0">#</a>
+  
+</h2>
+<h3 id="шаг-1-создание-репозитория">
+  Шаг 1: Создание репозитория
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-1-%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5-%d1%80%d0%b5%d0%bf%d0%be%d0%b7%d0%b8%d1%82%d0%be%d1%80%d0%b8%d1%8f">#</a>
+  
+</h3>
+<ol>
+<li>Войдите в GitHub и нажмите <strong>+ &gt; New repository</strong>.
+<ul>
+<li><strong>Что такое репозиторий?</strong> Это место, где хранится ваш проект и все его изменения. Вы можете думать о нем как о папке для вашего кода.</li>
+</ul>
+</li>
+<li>Назовите репозиторий <code>&lt;username&gt;.github.io</code> (замените <code>username</code> на ваш логин).
+<ul>
+<li><strong>Почему именно так?</strong> Это название позволяет GitHub автоматически создать ваш сайт по адресу <code>https://username.github.io</code>. Это важно, чтобы ваш сайт был доступен по этому URL.</li>
+</ul>
+</li>
+<li>Выберите <strong>Public</strong> и отметьте <strong>Add a README.md file</strong>.
+<ul>
+<li><strong>Что такое README.md?</strong> Это файл, который описывает ваш проект и его цели. Он помогает другим пользователям понять, о чем ваш проект.</li>
+</ul>
+</li>
+</ol>
+<p>Интерфейс создания репозитория</p>
+<h3 id="шаг-2-клонирование-репозитория-локально">
+  Шаг 2: Клонирование репозитория локально
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-2-%d0%ba%d0%bb%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%80%d0%b5%d0%bf%d0%be%d0%b7%d0%b8%d1%82%d0%be%d1%80%d0%b8%d1%8f-%d0%bb%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d0%be">#</a>
+  
+</h3>
+<p>Скопируйте URL репозитория и выполните следующие команды в терминале:</p>
+<pre tabindex="0"><code>
+git clone https://github.com/username/username.github.io
+cd username.github.io
+</code></pre><p>Это создаст локальную копию для редактирования.</p>
+<ul>
+<li><strong>Что такое клонирование?</strong> Это процесс создания локальной копии вашего репозитория на вашем компьютере, чтобы вы могли редактировать файлы.</li>
+<li><strong>Что такое терминал?</strong> Это программа, которая позволяет вам вводить команды для управления вашим компьютером и проектами.</li>
+</ul>
+<h3 id="шаг-3-добавление-контента">
+  Шаг 3: Добавление контента
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-3-%d0%b4%d0%be%d0%b1%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%bd%d1%82%d0%b0">#</a>
+  
+</h3>
+<ol>
+<li>Создайте файл <code>index.html</code> как точку входа на сайт:</li>
+</ol>
+<pre tabindex="0"><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;  
+&lt;head&gt;  
+    &lt;title&gt;Мой первый сайт на GitHub Pages&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;
+</code></pre><ol start="2">
+<li>Добавьте CSS/JavaScript в подпапки (например, <code>css/style.css</code>).
+<ul>
+<li><strong>Что такое CSS и JavaScript?</strong> CSS отвечает за стиль вашего сайта, а JavaScript — за его функциональность.</li>
+</ul>
+</li>
+</ol>
+<h3 id="шаг-4-коммит-и-отправка-изменений">
+  Шаг 4: Коммит и отправка изменений
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-4-%d0%ba%d0%be%d0%bc%d0%bc%d0%b8%d1%82-%d0%b8-%d0%be%d1%82%d0%bf%d1%80%d0%b0%d0%b2%d0%ba%d0%b0-%d0%b8%d0%b7%d0%bc%d0%b5%d0%bd%d0%b5%d0%bd%d0%b8%d0%b9">#</a>
+  
+</h3>
+<p>Загрузите файлы на GitHub:</p>
+<pre tabindex="0"><code>
+git add .
+git commit -m &#34;Первоначальная настройка сайта&#34;
+git push origin main
+</code></pre><p>Сайт станет доступен по адресу <code>https://username.github.io</code>.</p>
+<h2 id="настройка-github-pages-для-проектов">
+  Настройка GitHub Pages для проектов
+  
+  <a class="anchor" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-github-pages-%d0%b4%d0%bb%d1%8f-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%be%d0%b2">#</a>
+  
+</h2>
+<p>Для сайтов проектов (например, <code>username.github.io/project-name</code>):</p>
+<ol>
+<li>Перейдите в <strong>Настройки репозитория &gt; Pages</strong>.</li>
+<li>В разделе <strong>Build and Deployment</strong> выберите ветку <code>main</code> и папку <code>/root</code>.</li>
+<li>Нажмите <strong>Save</strong>.</li>
+</ol>
+<p>Интерфейс настройки GitHub Pages</p>
+<h2 id="подключение-пользовательского-домена">
+  Подключение пользовательского домена
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d1%81%d0%ba%d0%be%d0%b3%d0%be-%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d0%b0">#</a>
+  
+</h2>
+<h3 id="1-покупка-домена">
+  1. Покупка домена
+  
+  <a class="anchor" href="#1-%d0%bf%d0%be%d0%ba%d1%83%d0%bf%d0%ba%d0%b0-%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d0%b0">#</a>
+  
+</h3>
+<p>Зарегистрируйте домен через Namecheap, Google Domains или аналогичные сервисы.</p>
+<h3 id="2-настройка-dns-записей">
+  2. Настройка DNS-записей
+  
+  <a class="anchor" href="#2-%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-dns-%d0%b7%d0%b0%d0%bf%d0%b8%d1%81%d0%b5%d0%b9">#</a>
+  
+</h3>
+<p>Добавьте <code>CNAME</code>-запись, указывающую на <code>username.github.io</code>:</p>
+<pre tabindex="0"><code>
+Тип: CNAME
+Имя: www
+Значение: username.github.io
+TTL: 3600
+</code></pre><p>Для корневого домена (например, <code>yourdomain.com</code>) используйте <code>A</code>-записи с IP-адресами GitHub.</p>
+<h3 id="3-привязка-домена-к-github-pages">
+  3. Привязка домена к GitHub Pages
+  
+  <a class="anchor" href="#3-%d0%bf%d1%80%d0%b8%d0%b2%d1%8f%d0%b7%d0%ba%d0%b0-%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d0%b0-%d0%ba-github-pages">#</a>
+  
+</h3>
+<ol>
+<li>Создайте файл <code>CNAME</code> в репозитории с именем домена:</li>
+</ol>
+<pre tabindex="0"><code>
+yourdomain.com
+</code></pre><ol start="2">
+<li>В <strong>Настройки репозитория &gt; Pages</strong> введите домен в поле <strong>Custom Domain</strong>.</li>
+</ol>
+<h2 id="продвинутые-функции-и-кастомизация">
+  Продвинутые функции и кастомизация
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b4%d0%b2%d0%b8%d0%bd%d1%83%d1%82%d1%8b%d0%b5-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%b8-%d0%b8-%d0%ba%d0%b0%d1%81%d1%82%d0%be%d0%bc%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f">#</a>
+  
+</h2>
+<h3 id="темы-jekyll-и-генерация-статических-сайтов">
+  Темы Jekyll и генерация статических сайтов
+  
+  <a class="anchor" href="#%d1%82%d0%b5%d0%bc%d1%8b-jekyll-%d0%b8-%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d1%85-%d1%81%d0%b0%d0%b9%d1%82%d0%be%d0%b2">#</a>
+  
+</h3>
+<ol>
+<li>Установите Jekyll локально:</li>
+</ol>
+<pre tabindex="0"><code>
+gem install bundler jekyll
+</code></pre><ol start="2">
+<li>Создайте новый сайт:</li>
+</ol>
+<pre tabindex="0"><code>
+jekyll new my-site
+cd my-site
+bundle exec jekyll serve
+</code></pre><ol start="3">
+<li>Загрузите папку <code>_site</code> в GitHub. Jekyll автоматически соберёт сайт через GitHub Actions.</li>
+</ol>
+<h3 id="github-actions-для-автоматизации">
+  GitHub Actions для автоматизации
+  
+  <a class="anchor" href="#github-actions-%d0%b4%d0%bb%d1%8f-%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d1%82%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8">#</a>
+  
+</h3>
+<p>Создайте файл <code>.github/workflows/deploy.yml</code>:</p>
+<pre tabindex="0"><code>
+name: Deploy Site
+on:
+push:
+branches: [main]
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v4
+- uses: actions/jekyll-build-pages@v1
+</code></pre><p>Этот workflow будет пересобирать сайт при каждом обновлении ветки <code>main</code>.</p>
+<h2 id="решение-распространённых-проблем">
+  Решение распространённых проблем
+  
+  <a class="anchor" href="#%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d0%b5-%d1%80%d0%b0%d1%81%d0%bf%d1%80%d0%be%d1%81%d1%82%d1%80%d0%b0%d0%bd%d1%91%d0%bd%d0%bd%d1%8b%d1%85-%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc">#</a>
+  
+</h2>
+<h3 id="ошибка-404-после-развёртывания">
+  Ошибка 404 после развёртывания
+  
+  <a class="anchor" href="#%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b0-404-%d0%bf%d0%be%d1%81%d0%bb%d0%b5-%d1%80%d0%b0%d0%b7%d0%b2%d1%91%d1%80%d1%82%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h3>
+<ul>
+<li><strong>Отсутствует <code>index.html</code></strong>: Убедитесь, что в корневой папке есть <code>index.html</code>, <code>index.md</code> или <code>README.md</code>.</li>
+<li><strong>Неправильная ветка</strong>: Проверьте, что в <strong>Настройки &gt; Pages</strong> выбрана нужная ветка.</li>
+<li><strong>Задержка DNS</strong>: Подождите до 48 часов для применения изменений DNS.</li>
+</ul>
+<h3 id="ошибки-сборки-jekyll">
+  Ошибки сборки Jekyll
+  
+  <a class="anchor" href="#%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b8-%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%b8-jekyll">#</a>
+  
+</h3>
+<ul>
+<li><strong>Синтаксические ошибки</strong>: Проверьте <code>_config.yml</code> через 
+  <a href="https://yamllint.com/">YAML-линтер</a>.</li>
+<li><strong>Некорректный формат даты</strong>: Убедитесь, что даты в front matter используют формат <code>ГГГГ-ММ-ДД</code>.</li>
+<li><strong>Кодировка UTF-8</strong>: Добавьте <code>encoding: UTF-8</code> в <code>_config.yml</code>.</li>
+</ul>
+<h3 id="контент-не-обновляется">
+  Контент не обновляется
+  
+  <a class="anchor" href="#%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%bd%d1%82-%d0%bd%d0%b5-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d1%8f%d0%b5%d1%82%d1%81%d1%8f">#</a>
+  
+</h3>
+<ul>
+<li><strong>Кеш браузера</strong>: Очистите кеш или выполните <code>git commit --allow-empty -m &quot;Принудительный пересбор&quot;</code>.</li>
+<li><strong>Логи GitHub Actions</strong>: Проверьте вкладку <strong>Actions</strong> на наличие ошибок.</li>
+</ul>
+<h2 id="рекомендации-по-управлению-github-pages">
+  Рекомендации по управлению GitHub Pages
+  
+  <a class="anchor" href="#%d1%80%d0%b5%d0%ba%d0%be%d0%bc%d0%b5%d0%bd%d0%b4%d0%b0%d1%86%d0%b8%d0%b8-%d0%bf%d0%be-%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d1%8e-github-pages">#</a>
+  
+</h2>
+<h3 id="1-дисциплина-контроля-версий">
+  1. Дисциплина контроля версий
+  
+  <a class="anchor" href="#1-%d0%b4%d0%b8%d1%81%d1%86%d0%b8%d0%bf%d0%bb%d0%b8%d0%bd%d0%b0-%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9">#</a>
+  
+</h3>
+<ul>
+<li>Регулярные коммиты с описательными сообщениями:</li>
+</ul>
+<pre tabindex="0"><code>
+git commit -m &#34;Обновление шапки сайта&#34;
+</code></pre><ul>
+<li>Используйте ветки для экспериментов:</li>
+</ul>
+<pre tabindex="0"><code>
+git checkout -b новая-фича
+</code></pre><p>Сливайте изменения через pull requests, чтобы не нарушить работу основного сайта.</p>
+<h3 id="2-безопасность">
+  2. Безопасность
+  
+  <a class="anchor" href="#2-%d0%b1%d0%b5%d0%b7%d0%be%d0%bf%d0%b0%d1%81%d0%bd%d0%be%d1%81%d1%82%d1%8c">#</a>
+  
+</h3>
+<ul>
+<li><strong>Приватные репозитории</strong>: Активируйте GitHub Pro для ограничения доступа.</li>
+<li><strong>Токены</strong>: Не храните API-ключи в публичных репозиториях; используйте переменные окружения в GitHub Actions.</li>
+</ul>
+<h3 id="3-оптимизация-производительности">
+  3. Оптимизация производительности
+  
+  <a class="anchor" href="#3-%d0%be%d0%bf%d1%82%d0%b8%d0%bc%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d1%80%d0%be%d0%b8%d0%b7%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be%d1%81%d1%82%d0%b8">#</a>
+  
+</h3>
+<ul>
+<li>Минифицируйте CSS/JavaScript через 
+  <a href="https://terser.org/">Terser</a>.</li>
+<li>Сжимайте изображения в 
+  <a href="https://squoosh.app/">Squoosh</a>.</li>
+<li>Используйте CDN GitHub Pages для ускорения доставки.</li>
+</ul>
+<h2 id="заключение-усиление-вашего-веб-присутствия">
+  Заключение: Усиление вашего веб-присутствия
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d1%83%d1%81%d0%b8%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2%d0%b0%d1%88%d0%b5%d0%b3%d0%be-%d0%b2%d0%b5%d0%b1-%d0%bf%d1%80%d0%b8%d1%81%d1%83%d1%82%d1%81%d1%82%d0%b2%d0%b8%d1%8f">#</a>
+  
+</h2>
+<p>GitHub Pages упрощает публикацию сайтов, устраняя затраты на хостинг и сложности инфраструктуры. Следуя этому руководству, вы сможете развернуть профессиональный статический сайт, решать типичные проблемы и использовать продвинутые функции вроде тем Jekyll и CI/CD. Интеграция GitHub Actions и пользовательских доменов расширит возможности кастомизации. GitHub Pages остаётся незаменимым инструментом для демонстрации портфолио, документации или блога.</p>
+<p>Для дальнейшего изучения ознакомьтесь с 
+  <a href="https://docs.github.com/pages">официальной документацией</a> и форумами сообщества, чтобы быть в курсе новых функций, таких как улучшенные протоколы безопасности. При регулярной практике даже новички освоят GitHub Pages и усилят своё цифровое присутствие.</p>
+<h2 id="часто-задаваемые-вопросы-faq">
+  Часто задаваемые вопросы (FAQ)
+  
+  <a class="anchor" href="#%d1%87%d0%b0%d1%81%d1%82%d0%be-%d0%b7%d0%b0%d0%b4%d0%b0%d0%b2%d0%b0%d0%b5%d0%bc%d1%8b%d0%b5-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b-faq">#</a>
+  
+</h2>
+<h3 id="почему-мой-сайт-не-отображается">
+  Почему мой сайт не отображается?
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bc%d0%be%d0%b9-%d1%81%d0%b0%d0%b9%d1%82-%d0%bd%d0%b5-%d0%be%d1%82%d0%be%d0%b1%d1%80%d0%b0%d0%b6%d0%b0%d0%b5%d1%82%d1%81%d1%8f">#</a>
+  
+</h3>
+<ul>
+<li>Убедитесь, что у вас есть файл <code>index.html</code> в корневой папке вашего репозитория.</li>
+<li>Проверьте, что вы выбрали правильную ветку в настройках GitHub Pages.</li>
+</ul>
+<h3 id="как-обновить-сайт">
+  Как обновить сайт?
+  
+  <a class="anchor" href="#%d0%ba%d0%b0%d0%ba-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%b8%d1%82%d1%8c-%d1%81%d0%b0%d0%b9%d1%82">#</a>
+  
+</h3>
+<ul>
+<li>Внесите изменения в файлы, затем выполните команды:</li>
+</ul>
+<pre tabindex="0"><code>
+git add .
+git commit -m &#34;Описание изменений&#34;
+git push origin main
+</code></pre><ul>
+<li>Это обновит ваш сайт с последними изменениями.</li>
+</ul>
+<ul>
+<li>text=auto
+*.md text</li>
+</ul>
+<p>Автоматическое преобразование (рекомендуется для кроссплатформенной разработки)
+git config &ndash;global core.autocrlf true</p>
+<p>Или сохранять как есть
+git config &ndash;global core.autocrlf false</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="flex align-center book-icon">
+        <img src="/onboarding-assistant/svg/backward.svg" class="book-icon" alt="Previous" title="Markdown Guide" />
+        <span>Markdown Guide</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/onboarding-assistant/docs/backend/" class="flex align-center book-icon">
+        <span>Backend &amp; Database</span>
+        <img src="/onboarding-assistant/svg/forward.svg" class="book-icon" alt="Next" title="Backend &amp; Database" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#основы-github-pages-и-его-экосистема">Основы GitHub Pages и его экосистема</a>
+      <ul>
+        <li><a href="#что-такое-github-pages">Что такое GitHub Pages?</a></li>
+        <li><a href="#ключевые-особенности">Ключевые особенности</a></li>
+        <li><a href="#статические-vs-динамические-сайты">Статические vs. динамические сайты</a></li>
+      </ul>
+    </li>
+    <li><a href="#подготовка-к-работе-с-github-pages">Подготовка к работе с GitHub Pages</a>
+      <ul>
+        <li><a href="#1-создание-аккаунта-github">1. Создание аккаунта GitHub</a></li>
+        <li><a href="#2-установка-git-и-настройка-окружения">2. Установка Git и настройка окружения</a></li>
+        <li><a href="#3-базовые-навыки-работы-с-командной-строкой">3. Базовые навыки работы с командной строкой</a></li>
+      </ul>
+    </li>
+    <li><a href="#пошаговая-инструкция-по-развёртыванию-сайта">Пошаговая инструкция по развёртыванию сайта</a>
+      <ul>
+        <li><a href="#шаг-1-создание-репозитория">Шаг 1: Создание репозитория</a></li>
+        <li><a href="#шаг-2-клонирование-репозитория-локально">Шаг 2: Клонирование репозитория локально</a></li>
+        <li><a href="#шаг-3-добавление-контента">Шаг 3: Добавление контента</a></li>
+        <li><a href="#шаг-4-коммит-и-отправка-изменений">Шаг 4: Коммит и отправка изменений</a></li>
+      </ul>
+    </li>
+    <li><a href="#настройка-github-pages-для-проектов">Настройка GitHub Pages для проектов</a></li>
+    <li><a href="#подключение-пользовательского-домена">Подключение пользовательского домена</a>
+      <ul>
+        <li><a href="#1-покупка-домена">1. Покупка домена</a></li>
+        <li><a href="#2-настройка-dns-записей">2. Настройка DNS-записей</a></li>
+        <li><a href="#3-привязка-домена-к-github-pages">3. Привязка домена к GitHub Pages</a></li>
+      </ul>
+    </li>
+    <li><a href="#продвинутые-функции-и-кастомизация">Продвинутые функции и кастомизация</a>
+      <ul>
+        <li><a href="#темы-jekyll-и-генерация-статических-сайтов">Темы Jekyll и генерация статических сайтов</a></li>
+        <li><a href="#github-actions-для-автоматизации">GitHub Actions для автоматизации</a></li>
+      </ul>
+    </li>
+    <li><a href="#решение-распространённых-проблем">Решение распространённых проблем</a>
+      <ul>
+        <li><a href="#ошибка-404-после-развёртывания">Ошибка 404 после развёртывания</a></li>
+        <li><a href="#ошибки-сборки-jekyll">Ошибки сборки Jekyll</a></li>
+        <li><a href="#контент-не-обновляется">Контент не обновляется</a></li>
+      </ul>
+    </li>
+    <li><a href="#рекомендации-по-управлению-github-pages">Рекомендации по управлению GitHub Pages</a>
+      <ul>
+        <li><a href="#1-дисциплина-контроля-версий">1. Дисциплина контроля версий</a></li>
+        <li><a href="#2-безопасность">2. Безопасность</a></li>
+        <li><a href="#3-оптимизация-производительности">3. Оптимизация производительности</a></li>
+      </ul>
+    </li>
+    <li><a href="#заключение-усиление-вашего-веб-присутствия">Заключение: Усиление вашего веб-присутствия</a></li>
+    <li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a>
+      <ul>
+        <li><a href="#почему-мой-сайт-не-отображается">Почему мой сайт не отображается?</a></li>
+        <li><a href="#как-обновить-сайт">Как обновить сайт?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

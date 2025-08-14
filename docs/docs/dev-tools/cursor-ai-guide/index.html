@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+<head><script src="/onboarding-assistant/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=onboarding-assistant/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Освоение Cursor AI: Полное руководство для начинающих разработчиков
+  
+  #
+  
+
+Cursor AI представляет собой парадигмальный сдвиг в инструментах разработки, сочетающий привычный интерфейс Visual Studio Code с передовыми возможностями искусственного интеллекта. С момента интеграции модели Claude 3.5 Sonnet в середине 2024 года, этот интеллектуальный редактор кода стал незаменимым помощником для новичков, выполняющим роль наставника и коллеги одновременно12.
+
+  Эволюция сред разработки с ИИ-ассистентами
+  
+  #
+  
+
+Переход от традиционных IDE к редакторам с искусственным интеллектом кардинально изменил рабочие процессы. В отличие ранних ассистентов вроде GitHub Copilot, Cursor AI анализирует контекст всего проекта, что позволяет реализовывать сложные функции вроде кросс-файлового рефакторинга34.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/onboarding-assistant/docs/dev-tools/cursor-ai-guide/">
+  <meta property="og:site_name" content="AI onboarding assistant">
+  <meta property="og:title" content="AI onboarding assistant">
+  <meta property="og:description" content="Освоение Cursor AI: Полное руководство для начинающих разработчиков # Cursor AI представляет собой парадигмальный сдвиг в инструментах разработки, сочетающий привычный интерфейс Visual Studio Code с передовыми возможностями искусственного интеллекта. С момента интеграции модели Claude 3.5 Sonnet в середине 2024 года, этот интеллектуальный редактор кода стал незаменимым помощником для новичков, выполняющим роль наставника и коллеги одновременно12.
+Эволюция сред разработки с ИИ-ассистентами # Переход от традиционных IDE к редакторам с искусственным интеллектом кардинально изменил рабочие процессы. В отличие ранних ассистентов вроде GitHub Copilot, Cursor AI анализирует контекст всего проекта, что позволяет реализовывать сложные функции вроде кросс-файлового рефакторинга34.">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Cursor Ai Guide | AI onboarding assistant</title>
+<link rel="icon" href="/onboarding-assistant/favicon.png" >
+<link rel="manifest" href="/onboarding-assistant/manifest.json">
+<link rel="canonical" href="http://localhost:1313/onboarding-assistant/docs/dev-tools/cursor-ai-guide/">
+<link rel="stylesheet" href="/onboarding-assistant/book.min.ce742184041b67827be505801d71b6b40c09608dfb292033ea54dbbc1d71a174.css" integrity="sha256-znQhhAQbZ4J75QWAHXG2tAwJYI37KSAz6lTbvB1xoXQ=" crossorigin="anonymous">
+  <script defer src="/onboarding-assistant/fuse.min.js"></script>
+  <script defer src="/onboarding-assistant/en.search.min.b7fb698aecb025344082fd17e6382a9196b9832ef44b49a25f2de0431e5b0078.js" integrity="sha256-t/tpiuywJTRAgv0X5jgqkZa5gy70S0miXy3gQx5bAHg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/onboarding-assistant/"><span>AI onboarding assistant</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7cb49bdb84cb44cbcedabd34f28a625a" class="toggle"  />
+    <label for="section-7cb49bdb84cb44cbcedabd34f28a625a" class="flex">
+      <a href="/onboarding-assistant/docs/ai-ml/" class="flex-auto ">AI &amp; Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/llm-basics/" class="">Основы LLM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-agents/" class="">AI-агенты</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/rag/" class="">RAG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="">Ai Assistants</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/structured-output/" class="">Structured Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48bac2ebdb668c2706c02aa184db8476" class="toggle"  />
+    <label for="section-48bac2ebdb668c2706c02aa184db8476" class="flex">
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex-auto ">Search Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="">Vector Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/fulltext-search/" class="">Fulltext Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="">Hybrid Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/metadata-search/" class="">Metadata Search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f5ab346261e7d1af858195b11cdc5fb" class="toggle" checked />
+    <label for="section-5f5ab346261e7d1af858195b11cdc5fb" class="flex">
+      <a href="/onboarding-assistant/docs/dev-tools/" class="flex-auto ">Development Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai/" class="">Cursor AI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="">Ai Pair Programming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai-guide/" class="active">Cursor Ai Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="">Cursor Composer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/dify-ai/" class="">Dify Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="">Setup Cursor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/uv-tool/" class="">Uv Tool</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa32f49e3c3654f259d4d098efa4fddd" class="toggle"  />
+    <label for="section-aa32f49e3c3654f259d4d098efa4fddd" class="flex">
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex-auto ">Content Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-github-guide/" class="">Git и GitHub</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="">Markdown Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-pages/" class="">Git Pages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eefc9810de7c421f8dbbe8d3488aff57" class="toggle"  />
+    <label for="section-eefc9810de7c421f8dbbe8d3488aff57" class="flex">
+      <a href="/onboarding-assistant/docs/backend/" class="flex-auto ">Backend &amp; Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/backend/supabase-analysis/" class="">Supabase Analysis</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="toggle"  />
+    <label for="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="flex">
+      <a href="/onboarding-assistant/docs/architecture/" class="flex-auto ">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/assistant-architecture/" class="">Assistant Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/ddd-llm/" class="">Ddd Llm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4c34cc6447adf3b72852a3545bac8e21" class="toggle"  />
+    <label for="section-4c34cc6447adf3b72852a3545bac8e21" class="flex">
+      <a href="/onboarding-assistant/docs/utilities/" class="flex-auto ">Utilities</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/hugo-guide/" class="">Hugo - Статический генератор сайтов</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fe95e3eb7fab23a8556775a589dda04" class="toggle"  />
+    <label for="section-4fe95e3eb7fab23a8556775a589dda04" class="flex">
+      <a href="/onboarding-assistant/docs/additional/" class="flex-auto ">Additional Materials</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/additional/checklist/" class="">Checklist</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/onboarding-assistant/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Cursor Ai Guide</h3>
+
+  <label for="toc-control">
+    
+    <img src="/onboarding-assistant/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#эволюция-сред-разработки-с-ии-ассистентами">Эволюция сред разработки с ИИ-ассистентами</a>
+      <ul>
+        <li><a href="#архитектурные-принципы">Архитектурные принципы</a></li>
+      </ul>
+    </li>
+    <li><a href="#начало-работы-с-cursor-ai">Начало работы с Cursor AI</a>
+      <ul>
+        <li><a href="#установка-и-настройка">Установка и настройка</a></li>
+        <li><a href="#основные-горячие-клавиши">Основные горячие клавиши</a></li>
+      </ul>
+    </li>
+    <li><a href="#ключевые-функциональные-возможности">Ключевые функциональные возможности</a>
+      <ul>
+        <li><a href="#интеллектуальное-автодополнение">Интеллектуальное автодополнение</a></li>
+        <li><a href="#работа-с-естественным-языком">Работа с естественным языком</a></li>
+        <li><a href="#кросс-файловый-рефакторинг">Кросс-файловый рефакторинг</a></li>
+      </ul>
+    </li>
+    <li><a href="#практические-сценарии-обучения">Практические сценарии обучения</a>
+      <ul>
+        <li><a href="#первый-проект-калькулятор">Первый проект: Калькулятор</a></li>
+        <li><a href="#пример-отладки">Пример отладки</a></li>
+      </ul>
+    </li>
+    <li><a href="#оптимизация-конфигурации">Оптимизация конфигурации</a>
+      <ul>
+        <li><a href="#настройка-контекста">Настройка контекста</a></li>
+        <li><a href="#интеграция-документации">Интеграция документации</a></li>
+      </ul>
+    </li>
+    <li><a href="#сравнительный-анализ">Сравнительный анализ</a>
+      <ul>
+        <li><a href="#cursor-ai-vs-github-copilot">Cursor AI vs GitHub Copilot</a></li>
+      </ul>
+    </li>
+    <li><a href="#этические-аспекты">Этические аспекты</a></li>
+    <li><a href="#заключение-будущее-с-ии">Заключение: Будущее с ИИ</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="освоение-cursor-ai-полное-руководство-для-начинающих-разработчиков">
+  Освоение Cursor AI: Полное руководство для начинающих разработчиков
+  
+  <a class="anchor" href="#%d0%be%d1%81%d0%b2%d0%be%d0%b5%d0%bd%d0%b8%d0%b5-cursor-ai-%d0%bf%d0%be%d0%bb%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%b4%d0%bb%d1%8f-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0%d1%8e%d1%89%d0%b8%d1%85-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%87%d0%b8%d0%ba%d0%be%d0%b2">#</a>
+  
+</h1>
+<p>Cursor AI представляет собой парадигмальный сдвиг в инструментах разработки, сочетающий привычный интерфейс Visual Studio Code с передовыми возможностями искусственного интеллекта. С момента интеграции модели Claude 3.5 Sonnet в середине 2024 года, этот интеллектуальный редактор кода стал незаменимым помощником для новичков, выполняющим роль наставника и коллеги одновременно<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h2 id="эволюция-сред-разработки-с-ии-ассистентами">
+  Эволюция сред разработки с ИИ-ассистентами
+  
+  <a class="anchor" href="#%d1%8d%d0%b2%d0%be%d0%bb%d1%8e%d1%86%d0%b8%d1%8f-%d1%81%d1%80%d0%b5%d0%b4-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b8-%d1%81-%d0%b8%d0%b8-%d0%b0%d1%81%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bd%d1%82%d0%b0%d0%bc%d0%b8">#</a>
+  
+</h2>
+<p>Переход от традиционных IDE к редакторам с искусственным интеллектом кардинально изменил рабочие процессы. В отличие ранних ассистентов вроде GitHub Copilot, Cursor AI анализирует контекст всего проекта, что позволяет реализовывать сложные функции вроде кросс-файлового рефакторинга<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<h3 id="архитектурные-принципы">
+  Архитектурные принципы
+  
+  <a class="anchor" href="#%d0%b0%d1%80%d1%85%d0%b8%d1%82%d0%b5%d0%ba%d1%82%d1%83%d1%80%d0%bd%d1%8b%d0%b5-%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b8%d0%bf%d1%8b">#</a>
+  
+</h3>
+<p>Построенный на базе VS Code, Cursor AI сохраняет совместимость с расширениями, добавляя многоуровневую ИИ-инфраструктуру:</p>
+<ul>
+<li><strong>Claude 3.5 Sonnet</strong>: Генерация сложного кода</li>
+<li><strong>GPT-4</strong>: Обработка естественного языка</li>
+<li><strong>Кастомные модели эмбеддингов</strong>: Анализ контекста кодовой базы</li>
+</ul>
+<p>Эта мультимодельная архитектура позволяет переключаться между стратегиями решения задач в зависимости от сложности<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.</p>
+<h2 id="начало-работы-с-cursor-ai">
+  Начало работы с Cursor AI
+  
+  <a class="anchor" href="#%d0%bd%d0%b0%d1%87%d0%b0%d0%bb%d0%be-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b-%d1%81-cursor-ai">#</a>
+  
+</h2>
+<h3 id="установка-и-настройка">
+  Установка и настройка
+  
+  <a class="anchor" href="#%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-%d0%b8-%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0">#</a>
+  
+</h3>
+<ol>
+<li><strong>Скачивание</strong>: Доступно для Windows, macOS и Linux с официального сайта</li>
+<li><strong>Первоначальная конфигурация</strong>:
+<ul>
+<li>Импорт настроек и расширений из VS Code</li>
+<li>Настройка приватности (по умолчанию минимум данных)</li>
+<li>Активация пробной Pro-версии</li>
+</ul>
+</li>
+</ol>
+<p>Особое внимание стоит уделить параметру <strong>&ldquo;Codebase-wide Embeddings&rdquo;</strong>, который включает анализ связей между файлами<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h3 id="основные-горячие-клавиши">
+  Основные горячие клавиши
+  
+  <a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d1%8b%d0%b5-%d0%b3%d0%be%d1%80%d1%8f%d1%87%d0%b8%d0%b5-%d0%ba%d0%bb%d0%b0%d0%b2%d0%b8%d1%88%d0%b8">#</a>
+  
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Сочетание</th>
+          <th style="text-align: left">Функционал</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Ctrl/Cmd + K</td>
+          <td style="text-align: left">Встроенное редактирование кода</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ctrl/Cmd + I</td>
+          <td style="text-align: left">Интерфейс Composer</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ctrl/Cmd + L</td>
+          <td style="text-align: left">Панель чата с ИИ</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Alt + Tab</td>
+          <td style="text-align: left">Переключение между подсказками</td>
+      </tr>
+  </tbody>
+</table>
+<p>Интерфейс Composer (Ctrl/Cmd + I) выступает центром управления, объединяя генерацию кода, поиск документации и диагностику ошибок<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
+<h2 id="ключевые-функциональные-возможности">
+  Ключевые функциональные возможности
+  
+  <a class="anchor" href="#%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%b2%d1%8b%d0%b5-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d0%b2%d0%be%d0%b7%d0%bc%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d0%b8">#</a>
+  
+</h2>
+<h3 id="интеллектуальное-автодополнение">
+  Интеллектуальное автодополнение
+  
+  <a class="anchor" href="#%d0%b8%d0%bd%d1%82%d0%b5%d0%bb%d0%bb%d0%b5%d0%ba%d1%82%d1%83%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b5-%d0%b0%d0%b2%d1%82%d0%be%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5">#</a>
+  
+</h3>
+<p>Система Tab-дополнения Cursor AI превосходит традиционный IntelliSense:</p>
+<ol>
+<li>Предсказание многострочных реализаций</li>
+<li>Адаптация к стилю программирования</li>
+<li>Подсказки API на основе зависимостей проекта</li>
+</ol>
+<p>Пример для Python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_sum</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Наборка &#34;-&gt; float:&#34; запускает подсказки обработки возвращаемого типа</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># При использовании numpy предлагаются векторные операции</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Анализ импортов и package.json позволяет кастомизировать предложения<sup id="fnref1:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup><sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</p>
+<h3 id="работа-с-естественным-языком">
+  Работа с естественным языком
+  
+  <a class="anchor" href="#%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0-%d1%81-%d0%b5%d1%81%d1%82%d0%b5%d1%81%d1%82%d0%b2%d0%b5%d0%bd%d0%bd%d1%8b%d0%bc-%d1%8f%d0%b7%d1%8b%d0%ba%d0%be%d0%bc">#</a>
+  
+</h3>
+<p>Чат-панель (Ctrl/Cmd + L) поддерживает:</p>
+<ol>
+<li><strong>Решение ошибок</strong>: Пошаговый разбор сообщений об ошибках</li>
+<li><strong>Объяснение кода</strong>: Понятные пояснения сложных функций</li>
+<li><strong>Реализация фич</strong>: Описание функционала простым языком</li>
+</ol>
+<p>Кейс: Конвертация Python-скрипта в асинхронный код:</p>
+<pre tabindex="0"><code>Пользователь: &#34;Сделай этот скрипт асинхронным через async/await&#34;
+Cursor AI:
+1. Выявляет блокирующие вызовы
+2. Предлагает реализацию event loop
+3. Обновляет сигнатуры функций
+4. Добавляет необходимые библиотеки[^10][^15]
+</code></pre><h3 id="кросс-файловый-рефакторинг">
+  Кросс-файловый рефакторинг
+  
+  <a class="anchor" href="#%d0%ba%d1%80%d0%be%d1%81%d1%81-%d1%84%d0%b0%d0%b9%d0%bb%d0%be%d0%b2%d1%8b%d0%b9-%d1%80%d0%b5%d1%84%d0%b0%d0%ba%d1%82%d0%be%d1%80%d0%b8%d0%bd%d0%b3">#</a>
+  
+</h3>
+<p>Благодаря эмбеддингам Cursor AI отслеживает:</p>
+<ul>
+<li>Зависимости компонентов</li>
+<li>Изменения API</li>
+<li>Влияние на тесты</li>
+</ul>
+<p>При переименовании React-компонента автоматически обновляются:</p>
+<ol>
+<li>JSX-ссылки в родительских компонентах</li>
+<li>Импорты между файлами</li>
+<li>Документация Storybook</li>
+<li>Тесты Jest<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup><sup id="fnref2:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+</ol>
+<h2 id="практические-сценарии-обучения">
+  Практические сценарии обучения
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d1%81%d1%86%d0%b5%d0%bd%d0%b0%d1%80%d0%b8%d0%b8-%d0%be%d0%b1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d1%8f">#</a>
+  
+</h2>
+<h3 id="первый-проект-калькулятор">
+  Первый проект: Калькулятор
+  
+  <a class="anchor" href="#%d0%bf%d0%b5%d1%80%d0%b2%d1%8b%d0%b9-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82-%d0%ba%d0%b0%d0%bb%d1%8c%d0%ba%d1%83%d0%bb%d1%8f%d1%82%d0%be%d1%80">#</a>
+  
+</h3>
+<p>Пошаговый путь:</p>
+<ol>
+<li><strong>Каркас проекта</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-react-app calculator --template typescript
+</span></span></code></pre></div><p>Генерация начальной структуры компонентов
+2. <strong>Интерфейс</strong>:
+- Composer: &ldquo;Создать сетку цифровых кнопок через CSS Grid&rdquo;
+- Вставка скриншота для точного воспроизведения
+3. <strong>Логика</strong>:
+- Чат-команда: &ldquo;Реализовать функцию вычисления с учётом PEMDAS&rdquo;
+- Предложение использовать math.js и обработку ошибок
+4. <strong>Тестирование</strong>:
+- ПКМ по тест-файлу: &ldquo;Создать юнит-тесты для краевых случаев&rdquo;
+- Генерация полного набора тестов<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
+<h3 id="пример-отладки">
+  Пример отладки
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%be%d1%82%d0%bb%d0%b0%d0%b4%d0%ba%d0%b8">#</a>
+  
+</h3>
+<p>Проблема с изменением макета:</p>
+<ol>
+<li>Запись экрана с багом</li>
+<li>Вставка в чат с описанием</li>
+<li>Cursor AI:
+<ul>
+<li>Обнаруживает отсутствие CSS containment</li>
+<li>Предлагает исправления через Flexbox</li>
+<li>Обновляет брейкпоинты<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup><sup id="fnref1:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></li>
+</ul>
+</li>
+</ol>
+<h2 id="оптимизация-конфигурации">
+  Оптимизация конфигурации
+  
+  <a class="anchor" href="#%d0%be%d0%bf%d1%82%d0%b8%d0%bc%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f-%d0%ba%d0%be%d0%bd%d1%84%d0%b8%d0%b3%d1%83%d1%80%d0%b0%d1%86%d0%b8%d0%b8">#</a>
+  
+</h2>
+<h3 id="настройка-контекста">
+  Настройка контекста
+  
+  <a class="anchor" href="#%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b0-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%ba%d1%81%d1%82%d0%b0">#</a>
+  
+</h3>
+<p>Создание <code>.cursor_rules</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;framework&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Next.js 14&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;styling&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Tailwind CSS&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;stateManagement&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Zustand&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;testing&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vitest + Testing Library&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Это направляет ИИ-подсказки в русло предпочитаемого стека<sup id="fnref1:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup><sup id="fnref2:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
+<h3 id="интеграция-документации">
+  Интеграция документации
+  
+  <a class="anchor" href="#%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d1%86%d0%b8%d0%b8">#</a>
+  
+</h3>
+<p>Подключение документации Next.js:</p>
+<pre tabindex="0"><code>/chat @nextjs-docs https://nextjs.org/docs
+</code></pre><p>Теперь Cursor AI учитывает последние фичи Next.js при предложениях<sup id="fnref2:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref2:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<h2 id="сравнительный-анализ">
+  Сравнительный анализ
+  
+  <a class="anchor" href="#%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b9-%d0%b0%d0%bd%d0%b0%d0%bb%d0%b8%d0%b7">#</a>
+  
+</h2>
+<h3 id="cursor-ai-vs-github-copilot">
+  Cursor AI vs GitHub Copilot
+  
+  <a class="anchor" href="#cursor-ai-vs-github-copilot">#</a>
+  
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Критерий</th>
+          <th style="text-align: left">Cursor AI</th>
+          <th style="text-align: left">GitHub Copilot</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Архитектура</td>
+          <td style="text-align: left">Полная интеграция с IDE</td>
+          <td style="text-align: left">Расширение редактора</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Контекст</td>
+          <td style="text-align: left">Анализ всего проекта</td>
+          <td style="text-align: left">Фокус на текущий файл</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Генерация кода</td>
+          <td style="text-align: left">Решения уровня проекта</td>
+          <td style="text-align: left">Построчное дополнение</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Кривая обучения</td>
+          <td style="text-align: left">Средняя (возможности IDE)</td>
+          <td style="text-align: left">Низкая (простой плагин)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ценообразование</td>
+          <td style="text-align: left">Freemium ($20/мес Pro)</td>
+          <td style="text-align: left">$10/мес подписка</td>
+      </tr>
+  </tbody>
+</table>
+<p>Copilot лучше справляется с микрозадачами, тогда как Cursor AI идеален для архитектурного планирования<sup id="fnref3:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup><sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<h2 id="этические-аспекты">
+  Этические аспекты
+  
+  <a class="anchor" href="#%d1%8d%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%b0%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d1%8b">#</a>
+  
+</h2>
+<p>Распространение ИИ-ассистентов поднимает вопросы:</p>
+<ol>
+<li><strong>Риск зависимости</strong>: Разработчики могут утратить базовые навыки</li>
+<li><strong>Уязвимости</strong>: Автогенерируемый код может содержать дыры</li>
+<li><strong>Плагиат</strong>: Сложности отслеживания вклада в OSS</li>
+</ol>
+<p>Cursor AI решает это через:</p>
+<ul>
+<li><strong>Отслеживание происхождения</strong>: Маркировка ИИ-сгенерированных участков</li>
+<li><strong>Проверку безопасности</strong>: Встроенные аудиты</li>
+<li><strong>Обучение концепциям</strong>: Опциональная inline-документация<sup id="fnref1:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup><sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup></li>
+</ul>
+<h2 id="заключение-будущее-с-ии">
+  Заключение: Будущее с ИИ
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b1%d1%83%d0%b4%d1%83%d1%89%d0%b5%d0%b5-%d1%81-%d0%b8%d0%b8">#</a>
+  
+</h2>
+<p>Cursor AI трансформирует не только автодополнение, но и весь процесс разработки. Для начинающих это:</p>
+<ol>
+<li>Ускоренное обучение через контекстные подсказки</li>
+<li>Создание профессиональных проектов с первых шагов</li>
+<li>Усвоение best practices через ИИ-менторство</li>
+</ol>
+<p>Ключ успеха — баланс между ИИ-помощью и осознанной практикой. Cursor AI становится мультипликатором продуктивности на пути к мастерству<sup id="fnref2:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>
+  <a href="https://blog.openreplay.com/ru/">https://blog.openreplay.com/ru/</a>обзор-cursor-ai-альтернатива-vs-code-2025/&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>
+  <a href="https://creati.ai/ru/ai-tools/cursor/">https://creati.ai/ru/ai-tools/cursor/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>
+  <a href="https://pcnews.ru/top/blogs/day/[perevod]_obzor_ai_assistenta_cursor_dla_razrabotcikov-1511528.html">https://pcnews.ru/top/blogs/day/[perevod]_obzor_ai_assistenta_cursor_dla_razrabotcikov-1511528.html</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>
+  <a href="https://habr.com/ru/companies/otus/articles/844866/">https://habr.com/ru/companies/otus/articles/844866/</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref3:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>
+  <a href="https://habr.com/ru/articles/843784/">https://habr.com/ru/articles/843784/</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref3:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>
+  <a href="https://www.reddit.com/r/ChatGPTCoding/comments/1c1o8wm/anyone_using_cursor_ai_and_barely_writing_any/">https://www.reddit.com/r/ChatGPTCoding/comments/1c1o8wm/anyone_using_cursor_ai_and_barely_writing_any/</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>
+  <a href="https://habr.com/ru/articles/863314/">https://habr.com/ru/articles/863314/</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>
+  <a href="https://www.coingecko.com/learn/how-to-use-cursor-ai">https://www.coingecko.com/learn/how-to-use-cursor-ai</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>
+  <a href="https://habr.com/ru/articles/880628/">https://habr.com/ru/articles/880628/</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>
+  <a href="https://bestkora.com/IosDeveloper/cursor-ai-">https://bestkora.com/IosDeveloper/cursor-ai-</a>в-ios-разработке-приложение-фото-с-flickr-com/&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p>
+  <a href="https://forum.cursor.com/t/debug-with-ai-language/4237">https://forum.cursor.com/t/debug-with-ai-language/4237</a>&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p>
+  <a href="https://dtf.ru/howto/3416374-kak-oplatit-cursor-ai-v-rossii-i-belarusi-poshagovoe-rukovodstvo">https://dtf.ru/howto/3416374-kak-oplatit-cursor-ai-v-rossii-i-belarusi-poshagovoe-rukovodstvo</a>&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13">
+<p>
+  <a href="https://www.youtube.com/watch?v=pHNOhptPKQI">https://www.youtube.com/watch?v=pHNOhptPKQI</a>&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="flex align-center book-icon">
+        <img src="/onboarding-assistant/svg/backward.svg" class="book-icon" alt="Previous" title="Ai Pair Programming" />
+        <span>Ai Pair Programming</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="flex align-center book-icon">
+        <span>Cursor Composer</span>
+        <img src="/onboarding-assistant/svg/forward.svg" class="book-icon" alt="Next" title="Cursor Composer" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#эволюция-сред-разработки-с-ии-ассистентами">Эволюция сред разработки с ИИ-ассистентами</a>
+      <ul>
+        <li><a href="#архитектурные-принципы">Архитектурные принципы</a></li>
+      </ul>
+    </li>
+    <li><a href="#начало-работы-с-cursor-ai">Начало работы с Cursor AI</a>
+      <ul>
+        <li><a href="#установка-и-настройка">Установка и настройка</a></li>
+        <li><a href="#основные-горячие-клавиши">Основные горячие клавиши</a></li>
+      </ul>
+    </li>
+    <li><a href="#ключевые-функциональные-возможности">Ключевые функциональные возможности</a>
+      <ul>
+        <li><a href="#интеллектуальное-автодополнение">Интеллектуальное автодополнение</a></li>
+        <li><a href="#работа-с-естественным-языком">Работа с естественным языком</a></li>
+        <li><a href="#кросс-файловый-рефакторинг">Кросс-файловый рефакторинг</a></li>
+      </ul>
+    </li>
+    <li><a href="#практические-сценарии-обучения">Практические сценарии обучения</a>
+      <ul>
+        <li><a href="#первый-проект-калькулятор">Первый проект: Калькулятор</a></li>
+        <li><a href="#пример-отладки">Пример отладки</a></li>
+      </ul>
+    </li>
+    <li><a href="#оптимизация-конфигурации">Оптимизация конфигурации</a>
+      <ul>
+        <li><a href="#настройка-контекста">Настройка контекста</a></li>
+        <li><a href="#интеграция-документации">Интеграция документации</a></li>
+      </ul>
+    </li>
+    <li><a href="#сравнительный-анализ">Сравнительный анализ</a>
+      <ul>
+        <li><a href="#cursor-ai-vs-github-copilot">Cursor AI vs GitHub Copilot</a></li>
+      </ul>
+    </li>
+    <li><a href="#этические-аспекты">Этические аспекты</a></li>
+    <li><a href="#заключение-будущее-с-ии">Заключение: Будущее с ИИ</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+<head><script src="/onboarding-assistant/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=onboarding-assistant/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Подробное руководство по структурированному выводу с использованием цепочки рассуждений
+  
+  #
+  
+
+Структурированный вывод в сочетании с методом цепочки рассуждений (Chain of Thought, CoT) позволяет большим языковым моделям (LLM) создавать организованные, логичные ответы, демонстрируя этапы решения задач. Это руководство объединяет принципы инженерии подсказок, проектирования схем и систем рассуждений, предоставляя практические инструкции для разработчиков, исследователей и пользователей. Интеграция структурированных форматов данных с системным подходом к рассуждениям повышает точность моделей, улучшает согласованность результатов и упрощает взаимодействие человека с ИИ.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/onboarding-assistant/docs/ai-ml/structured-output/">
+  <meta property="og:site_name" content="AI onboarding assistant">
+  <meta property="og:title" content="AI onboarding assistant">
+  <meta property="og:description" content="Подробное руководство по структурированному выводу с использованием цепочки рассуждений # Структурированный вывод в сочетании с методом цепочки рассуждений (Chain of Thought, CoT) позволяет большим языковым моделям (LLM) создавать организованные, логичные ответы, демонстрируя этапы решения задач. Это руководство объединяет принципы инженерии подсказок, проектирования схем и систем рассуждений, предоставляя практические инструкции для разработчиков, исследователей и пользователей. Интеграция структурированных форматов данных с системным подходом к рассуждениям повышает точность моделей, улучшает согласованность результатов и упрощает взаимодействие человека с ИИ.">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Structured Output | AI onboarding assistant</title>
+<link rel="icon" href="/onboarding-assistant/favicon.png" >
+<link rel="manifest" href="/onboarding-assistant/manifest.json">
+<link rel="canonical" href="http://localhost:1313/onboarding-assistant/docs/ai-ml/structured-output/">
+<link rel="stylesheet" href="/onboarding-assistant/book.min.ce742184041b67827be505801d71b6b40c09608dfb292033ea54dbbc1d71a174.css" integrity="sha256-znQhhAQbZ4J75QWAHXG2tAwJYI37KSAz6lTbvB1xoXQ=" crossorigin="anonymous">
+  <script defer src="/onboarding-assistant/fuse.min.js"></script>
+  <script defer src="/onboarding-assistant/en.search.min.b7fb698aecb025344082fd17e6382a9196b9832ef44b49a25f2de0431e5b0078.js" integrity="sha256-t/tpiuywJTRAgv0X5jgqkZa5gy70S0miXy3gQx5bAHg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/onboarding-assistant/"><span>AI onboarding assistant</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7cb49bdb84cb44cbcedabd34f28a625a" class="toggle" checked />
+    <label for="section-7cb49bdb84cb44cbcedabd34f28a625a" class="flex">
+      <a href="/onboarding-assistant/docs/ai-ml/" class="flex-auto ">AI &amp; Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/llm-basics/" class="">Основы LLM</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-agents/" class="">AI-агенты</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/rag/" class="">RAG</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="">Ai Assistants</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/ai-ml/structured-output/" class="active">Structured Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48bac2ebdb668c2706c02aa184db8476" class="toggle"  />
+    <label for="section-48bac2ebdb668c2706c02aa184db8476" class="flex">
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex-auto ">Search Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/vector-search/" class="">Vector Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/fulltext-search/" class="">Fulltext Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/hybrid-search/" class="">Hybrid Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/search-tech/metadata-search/" class="">Metadata Search</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5f5ab346261e7d1af858195b11cdc5fb" class="toggle"  />
+    <label for="section-5f5ab346261e7d1af858195b11cdc5fb" class="flex">
+      <a href="/onboarding-assistant/docs/dev-tools/" class="flex-auto ">Development Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai/" class="">Cursor AI</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/ai-pair-programming/" class="">Ai Pair Programming</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-ai-guide/" class="">Cursor Ai Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/cursor-composer/" class="">Cursor Composer</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/dify-ai/" class="">Dify Ai</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/setup-cursor/" class="">Setup Cursor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/dev-tools/uv-tool/" class="">Uv Tool</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aa32f49e3c3654f259d4d098efa4fddd" class="toggle"  />
+    <label for="section-aa32f49e3c3654f259d4d098efa4fddd" class="flex">
+      <a href="/onboarding-assistant/docs/content-mgmt/" class="flex-auto ">Content Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-github-guide/" class="">Git и GitHub</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/markdown-guide/" class="">Markdown Guide</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/content-mgmt/git-pages/" class="">Git Pages</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eefc9810de7c421f8dbbe8d3488aff57" class="toggle"  />
+    <label for="section-eefc9810de7c421f8dbbe8d3488aff57" class="flex">
+      <a href="/onboarding-assistant/docs/backend/" class="flex-auto ">Backend &amp; Database</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/backend/supabase-analysis/" class="">Supabase Analysis</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="toggle"  />
+    <label for="section-7bb95aab3ab4af44a3dbde80a0ddc72f" class="flex">
+      <a href="/onboarding-assistant/docs/architecture/" class="flex-auto ">Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/assistant-architecture/" class="">Assistant Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/architecture/ddd-llm/" class="">Ddd Llm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4c34cc6447adf3b72852a3545bac8e21" class="toggle"  />
+    <label for="section-4c34cc6447adf3b72852a3545bac8e21" class="flex">
+      <a href="/onboarding-assistant/docs/utilities/" class="flex-auto ">Utilities</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/hugo-guide/" class="">Hugo - Статический генератор сайтов</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/utilities/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fe95e3eb7fab23a8556775a589dda04" class="toggle"  />
+    <label for="section-4fe95e3eb7fab23a8556775a589dda04" class="flex">
+      <a href="/onboarding-assistant/docs/additional/" class="flex-auto ">Additional Materials</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/onboarding-assistant/docs/additional/checklist/" class="">Checklist</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/onboarding-assistant/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Structured Output</h3>
+
+  <label for="toc-control">
+    
+    <img src="/onboarding-assistant/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#основы-структурированного-вывода-и-цепочки-рассуждений">Основы структурированного вывода и цепочки рассуждений</a>
+      <ul>
+        <li><a href="#что-такое-структурированный-вывод">Что такое структурированный вывод</a></li>
+        <li><a href="#принципы-цепочки-рассуждений">Принципы цепочки рассуждений</a></li>
+      </ul>
+    </li>
+    <li><a href="#практическая-реализация">Практическая реализация</a>
+      <ul>
+        <li><a href="#шаг-1-проектирование-схемы-для-рассуждений">Шаг 1: Проектирование схемы для рассуждений</a></li>
+        <li><a href="#шаг-2-формирование-подсказок">Шаг 2: Формирование подсказок</a></li>
+        <li><a href="#шаг-3-запуск-модели">Шаг 3: Запуск модели</a></li>
+        <li><a href="#шаг-4-проверка-и-обработка-ошибок">Шаг 4: Проверка и обработка ошибок</a></li>
+      </ul>
+    </li>
+    <li><a href="#продвинутые-методы">Продвинутые методы</a>
+      <ul>
+        <li><a href="#автоматическая-генерация-цепочек-auto-cot">Автоматическая генерация цепочек (Auto-CoT)</a></li>
+        <li><a href="#мультимодальные-цепочки">Мультимодальные цепочки</a></li>
+      </ul>
+    </li>
+    <li><a href="#рекомендации">Рекомендации</a></li>
+    <li><a href="#заключение">Заключение</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="подробное-руководство-по-структурированному-выводу-с-использованием-цепочки-рассуждений">
+  Подробное руководство по структурированному выводу с использованием цепочки рассуждений
+  
+  <a class="anchor" href="#%d0%bf%d0%be%d0%b4%d1%80%d0%be%d0%b1%d0%bd%d0%be%d0%b5-%d1%80%d1%83%d0%ba%d0%be%d0%b2%d0%be%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d0%bf%d0%be-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%bc%d1%83-%d0%b2%d1%8b%d0%b2%d0%be%d0%b4%d1%83-%d1%81-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5%d0%bc-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%ba%d0%b8-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9">#</a>
+  
+</h1>
+<p>Структурированный вывод в сочетании с методом цепочки рассуждений (Chain of Thought, CoT) позволяет большим языковым моделям (LLM) создавать организованные, логичные ответы, демонстрируя этапы решения задач. Это руководство объединяет принципы инженерии подсказок, проектирования схем и систем рассуждений, предоставляя практические инструкции для разработчиков, исследователей и пользователей. Интеграция структурированных форматов данных с системным подходом к рассуждениям повышает точность моделей, улучшает согласованность результатов и упрощает взаимодействие человека с ИИ.</p>
+<h2 id="основы-структурированного-вывода-и-цепочки-рассуждений">
+  Основы структурированного вывода и цепочки рассуждений
+  
+  <a class="anchor" href="#%d0%be%d1%81%d0%bd%d0%be%d0%b2%d1%8b-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b3%d0%be-%d0%b2%d1%8b%d0%b2%d0%be%d0%b4%d0%b0-%d0%b8-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%ba%d0%b8-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9">#</a>
+  
+</h2>
+<h3 id="что-такое-структурированный-вывод">
+  Что такое структурированный вывод
+  
+  <a class="anchor" href="#%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b2%d1%8b%d0%b2%d0%be%d0%b4">#</a>
+  
+</h3>
+<p>Структурированный вывод — это ответы моделей, оформленные по заранее определённым схемам, а не в свободной текстовой форме. Такой подход гарантирует машинную читаемость данных для интеграции с базами данных, API и аналитическими системами. Основные форматы:</p>
+<ul>
+<li><strong>JSON-объекты</strong> для организации данных в виде пар ключ-значение</li>
+<li><strong>XML-документы</strong> для иерархических структур</li>
+<li><strong>CSV/TSV-таблицы</strong> для табличной информации</li>
+<li><strong>Пользовательские схемы</strong> под специфические задачи</li>
+</ul>
+<p>Пример структуры для платёжной системы:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;customer_id&#34;</span>: <span style="color:#e6db74">&#34;12345&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;outstanding_balance&#34;</span>: <span style="color:#ae81ff">299.99</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;due_date&#34;</span>: <span style="color:#e6db74">&#34;2025-03-15&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;payment_options&#34;</span>: [<span style="color:#e6db74">&#34;credit_card&#34;</span>, <span style="color:#e6db74">&#34;bank_transfer&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Такая схема позволяет автоматически обрабатывать данные без ручного вмешательства.</p>
+<h3 id="принципы-цепочки-рассуждений">
+  Принципы цепочки рассуждений
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%b8%d0%bd%d1%86%d0%b8%d0%bf%d1%8b-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%ba%d0%b8-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9">#</a>
+  
+</h3>
+<p>Метод CoT направлен на:</p>
+<ol>
+<li>Разделение сложных задач на последовательные шаги</li>
+<li>Чёткое отображение логических связей</li>
+<li>Проверку промежуточных выводов</li>
+<li>Выявление допущений и неопределённостей</li>
+</ol>
+<p>Пример решения задачи:</p>
+<pre tabindex="0"><code>Задача: У фермера было 15 овец. Все, кроме 8, погибли. Сколько осталось?
+
+Цепочка рассуждений:
+1. Изначальное количество: 15
+2. &#34;Все, кроме 8&#34; → погибло 15 - 8 = 7
+3. Выжившие: 15 - 7 = 8
+Ответ: 8
+</code></pre><p>Такой подход снижает ошибки в арифметических задачах с 23% до 5% по сравнению с прямым ответом.</p>
+<h2 id="практическая-реализация">
+  Практическая реализация
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%b0%d0%ba%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f-%d1%80%d0%b5%d0%b0%d0%bb%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f">#</a>
+  
+</h2>
+<h3 id="шаг-1-проектирование-схемы-для-рассуждений">
+  Шаг 1: Проектирование схемы для рассуждений
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-1-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%81%d1%85%d0%b5%d0%bc%d1%8b-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d1%81%d1%81%d1%83%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d0%b9">#</a>
+  
+</h3>
+<p>Создавайте схемы, которые фиксируют как ответ, так и ход мыслей:</p>
+<p><strong>Базовая структура</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;reasoning_steps&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {<span style="color:#f92672">&#34;шаг&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#f92672">&#34;описание&#34;</span>: <span style="color:#e6db74">&#34;Декомпозиция задачи&#34;</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#f92672">&#34;шаг&#34;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#f92672">&#34;описание&#34;</span>: <span style="color:#e6db74">&#34;Извлечение данных&#34;</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#f92672">&#34;шаг&#34;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#f92672">&#34;описание&#34;</span>: <span style="color:#e6db74">&#34;Вычислительный процесс&#34;</span>}
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;final_answer&#34;</span>: <span style="color:#e6db74">&#34;8&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;confidence_score&#34;</span>: <span style="color:#ae81ff">0.92</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;assumptions&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Учтены все овцы&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Новых рождений/смертей не произошло&#34;</span>
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Обязательные элементы:</p>
+<ul>
+<li><strong>Цепочка рассуждений</strong> (упорядоченные шаги)</li>
+<li><strong>Подтверждающие данные</strong> (расчёты/источники)</li>
+<li><strong>Индикаторы неопределённости</strong> (уровень уверенности)</li>
+<li><strong>Обработка ошибок</strong> (резервные механизмы)</li>
+</ul>
+<h3 id="шаг-2-формирование-подсказок">
+  Шаг 2: Формирование подсказок
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-2-%d1%84%d0%be%d1%80%d0%bc%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%bf%d0%be%d0%b4%d1%81%d0%ba%d0%b0%d0%b7%d0%be%d0%ba">#</a>
+  
+</h3>
+<p>Комбинируйте схемы с инструкциями CoT:</p>
+<p><strong>Шаблон Zero-Shot</strong></p>
+<pre tabindex="0"><code>Проанализируйте задачу:
+1. Выделите ключевые компоненты
+2. Разбейте на подзадачи
+3. Решайте последовательно
+4. Проверяйте каждый шаг
+
+Формат ответа:
+{
+  &#34;рассуждения&#34;: [&#34;шаг1&#34;, &#34;шаг2&#34;, ...],
+  &#34;ответ&#34;: &#34;результат&#34;,
+  &#34;проверки&#34;: [&#34;проверка1&#34;, ...]
+}
+
+Вопрос: {user_input}
+</code></pre><p><strong>Пример Few-Shot</strong></p>
+<pre tabindex="0"><code>Пример 1:
+Вопрос: &#34;Пекарня продаёт 120 печений в день. На выходные выпечка увеличивается на 25%. Каков запас на субботу?&#34;
+
+Ответ:
+{
+  &#34;рассуждения&#34;: [
+    &#34;Базовое количество: 120&#34;,
+    &#34;25% увеличение = 120 × 0.25 = 30&#34;,
+    &#34;Запас на выходные = 120 + 30 = 150&#34;
+  ],
+  &#34;ответ&#34;: &#34;150&#34;,
+  &#34;проверки&#34;: [
+    &#34;Правильность расчёта 25%&#34;,
+    &#34;Правильность сложения&#34;
+  ]
+}
+</code></pre><p>Использование нескольких примеров повышает точность на 28% по сравнению с одним примером.</p>
+<h3 id="шаг-3-запуск-модели">
+  Шаг 3: Запуск модели
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-3-%d0%b7%d0%b0%d0%bf%d1%83%d1%81%d0%ba-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8">#</a>
+  
+</h3>
+<p>Используйте технические решения для соблюдения структуры:</p>
+<p><strong>Реализация на LangChain</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain <span style="color:#f92672">import</span> schema, models
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>structure <span style="color:#f92672">=</span> schema<span style="color:#f92672">.</span>StructuredOutput(
+</span></span><span style="display:flex;"><span>    reasoning_steps <span style="color:#f92672">=</span> schema<span style="color:#f92672">.</span>List(schema<span style="color:#f92672">.</span>Text()),
+</span></span><span style="display:flex;"><span>    final_answer <span style="color:#f92672">=</span> schema<span style="color:#f92672">.</span>Number(),
+</span></span><span style="display:flex;"><span>    confidence <span style="color:#f92672">=</span> schema<span style="color:#f92672">.</span>Float(<span style="color:#ae81ff">0.0</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ChatOpenAI()
+</span></span><span style="display:flex;"><span>structured_model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>with_structured_output(structure)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> structured_model<span style="color:#f92672">.</span>invoke(<span style="color:#e6db74">&#34;Поезд проехал 300 км за 2 часа. Какова его скорость?&#34;</span>)
+</span></span><span style="display:flex;"><span>print(response)
+</span></span></code></pre></div><p>Это гарантирует соответствие выходных данных схеме.</p>
+<h3 id="шаг-4-проверка-и-обработка-ошибок">
+  Шаг 4: Проверка и обработка ошибок
+  
+  <a class="anchor" href="#%d1%88%d0%b0%d0%b3-4-%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b0-%d0%b8-%d0%be%d0%b1%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b0-%d0%be%d1%88%d0%b8%d0%b1%d0%be%d0%ba">#</a>
+  
+</h3>
+<p>Трёхуровневая система верификации:</p>
+<ol>
+<li><strong>Валидация схемы</strong>
+<ul>
+<li>Наличие обязательных полей</li>
+<li>Корректность типов данных (число/строка)</li>
+<li>Допустимые диапазоны (0 ≤ confidence ≤ 1)</li>
+</ul>
+</li>
+<li><strong>Логическая согласованность</strong>
+<ul>
+<li>Соответствие расчётов заявленным шагам</li>
+<li>Проверка преобразования единиц измерения</li>
+<li>Корректность временной последовательности</li>
+</ul>
+</li>
+<li><strong>Контекстное соответствие</strong>
+<ul>
+<li>Релевантность ответа вопросу</li>
+<li>Отсутствие вымышленной информации</li>
+<li>Проверка источников</li>
+</ul>
+</li>
+</ol>
+<h2 id="продвинутые-методы">
+  Продвинутые методы
+  
+  <a class="anchor" href="#%d0%bf%d1%80%d0%be%d0%b4%d0%b2%d0%b8%d0%bd%d1%83%d1%82%d1%8b%d0%b5-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b">#</a>
+  
+</h2>
+<h3 id="автоматическая-генерация-цепочек-auto-cot">
+  Автоматическая генерация цепочек (Auto-CoT)
+  
+  <a class="anchor" href="#%d0%b0%d0%b2%d1%82%d0%be%d0%bc%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f-%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%b5%d0%ba-auto-cot">#</a>
+  
+</h3>
+<p>Автоматизация через:</p>
+<p><strong>Кластеризацию запросов</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.cluster <span style="color:#f92672">import</span> KMeans
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>queries <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Рассчитать 15% чаевых с $45&#34;</span>, <span style="color:#e6db74">&#34;Найти скидку 20% на $200&#34;</span>, <span style="color:#f92672">...</span>]
+</span></span><span style="display:flex;"><span>vectorized <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>encode(queries)
+</span></span><span style="display:flex;"><span>clusters <span style="color:#f92672">=</span> KMeans(n_clusters<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)<span style="color:#f92672">.</span>fit_predict(vectorized)
+</span></span></code></pre></div><p>Группировка похожих вопросов для разнообразия примеров.</p>
+<p><strong>Генерация шагов рассуждений</strong>
+Для каждого кластера:</p>
+<pre tabindex="0"><code>Кластер: Процентные расчёты
+Пример: &#34;18% от 250&#34;
+Сгенерированная цепочка:
+1. Конвертация процента: 18/100 = 0.18
+2. Умножение на базовое значение: 0.18 × 250
+3. Расчёт: 0.18 × 200 = 36, 0.18 × 50 = 9 → 36+9=45
+Ответ: 45
+</code></pre><p>Этот метод обеспечивает 94% эффективности ручного CoT при 80% экономии времени.</p>
+<h3 id="мультимодальные-цепочки">
+  Мультимодальные цепочки
+  
+  <a class="anchor" href="#%d0%bc%d1%83%d0%bb%d1%8c%d1%82%d0%b8%d0%bc%d0%be%d0%b4%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%86%d0%b5%d0%bf%d0%be%d1%87%d0%ba%d0%b8">#</a>
+  
+</h3>
+<p>Комбинация различных типов данных:</p>
+<p><strong>Гибридное решение</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;текстовые_рассуждения&#34;</span>: <span style="color:#e6db74">&#34;Сумма углов треугольника = 180°&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;формула&#34;</span>: <span style="color:#e6db74">&#34;180 - 65 - 75 = 40&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;диаграмма&#34;</span>: <span style="color:#e6db74">&#34;схема_углов_треугольника.png&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;ответ&#34;</span>: <span style="color:#e6db74">&#34;40 градусов&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Структура позволяет совмещать текст, математику и визуальные элементы.</p>
+<h2 id="рекомендации">
+  Рекомендации
+  
+  <a class="anchor" href="#%d1%80%d0%b5%d0%ba%d0%be%d0%bc%d0%b5%d0%bd%d0%b4%d0%b0%d1%86%d0%b8%d0%b8">#</a>
+  
+</h2>
+<ol>
+<li><strong>Порядок полей</strong>
+Размещайте рассуждения перед ответом:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;анализ&#34;</span>: [<span style="color:#960050;background-color:#1e0010">...</span>],  <span style="color:#75715e">// Первым
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">&#34;ответ&#34;</span>: <span style="color:#960050;background-color:#1e0010">...</span>      <span style="color:#75715e">// Последним
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>Это повышает точность на 15% по сравнению с обратным порядком.
+2. <strong>Указание неопределённости</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;уверенность&#34;</span>: <span style="color:#ae81ff">0.72</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;альтернативные_ответы&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {<span style="color:#f92672">&#34;значение&#34;</span>: <span style="color:#e6db74">&#34;42&#34;</span>, <span style="color:#f92672">&#34;обоснование&#34;</span>: <span style="color:#e6db74">&#34;Альтернативный метод&#34;</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#f92672">&#34;значение&#34;</span>: <span style="color:#e6db74">&#34;45&#34;</span>, <span style="color:#f92672">&#34;обоснование&#34;</span>: <span style="color:#e6db74">&#34;Округление&#34;</span>}
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Снижает ошибки из-за излишней уверенности на 32%.
+3. <strong>Итеративное уточнение</strong>
+Цикл обратной связи:</p>
+<pre tabindex="0"><code>Первоначальный ответ → Правки пользователя → Уточнённый ответ → Итог
+</code></pre><p>Позволяет постепенно улучшать модель.</p>
+<h2 id="заключение">
+  Заключение
+  
+  <a class="anchor" href="#%d0%b7%d0%b0%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5">#</a>
+  
+</h2>
+<p>Внедрение структурированного вывода с CoT требует интеграции проектирования схем, инженерии подсказок и механизмов проверки. Ключевые преимущества:</p>
+<ul>
+<li><strong>Прозрачность:</strong> Отслеживание хода рассуждений модели</li>
+<li><strong>Точность:</strong> Поэтапная проверка устраняет 67% ошибок</li>
+<li><strong>Интеграция:</strong> Машинно-читаемые данные упрощают автоматизацию</li>
+</ul>
+<p>Перспективные направления включают динамическую адаптацию схем и совместную работу нескольких ИИ-агентов. Разработчикам следует регулярно обновлять подходы в соответствии с новыми исследованиями.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/onboarding-assistant/docs/ai-ml/ai-assistants/" class="flex align-center book-icon">
+        <img src="/onboarding-assistant/svg/backward.svg" class="book-icon" alt="Previous" title="Ai Assistants" />
+        <span>Ai Assistants</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/onboarding-assistant/docs/search-tech/" class="flex align-center book-icon">
+        <span>Search Technologies</span>
+        <img src="/onboarding-assistant/svg/forward.svg" class="book-icon" alt="Next" title="Search Technologies" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#основы-структурированного-вывода-и-цепочки-рассуждений">Основы структурированного вывода и цепочки рассуждений</a>
+      <ul>
+        <li><a href="#что-такое-структурированный-вывод">Что такое структурированный вывод</a></li>
+        <li><a href="#принципы-цепочки-рассуждений">Принципы цепочки рассуждений</a></li>
+      </ul>
+    </li>
+    <li><a href="#практическая-реализация">Практическая реализация</a>
+      <ul>
+        <li><a href="#шаг-1-проектирование-схемы-для-рассуждений">Шаг 1: Проектирование схемы для рассуждений</a></li>
+        <li><a href="#шаг-2-формирование-подсказок">Шаг 2: Формирование подсказок</a></li>
+        <li><a href="#шаг-3-запуск-модели">Шаг 3: Запуск модели</a></li>
+        <li><a href="#шаг-4-проверка-и-обработка-ошибок">Шаг 4: Проверка и обработка ошибок</a></li>
+      </ul>
+    </li>
+    <li><a href="#продвинутые-методы">Продвинутые методы</a>
+      <ul>
+        <li><a href="#автоматическая-генерация-цепочек-auto-cot">Автоматическая генерация цепочек (Auto-CoT)</a></li>
+        <li><a href="#мультимодальные-цепочки">Мультимодальные цепочки</a></li>
+      </ul>
+    </li>
+    <li><a href="#рекомендации">Рекомендации</a></li>
+    <li><a href="#заключение">Заключение</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
