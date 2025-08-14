@@ -1,0 +1,53 @@
+baseURL = 'https://Sansan4ez.github.io/onboarding-assistant'
+languageCode = 'ru-ru'
+title = 'AI onboarding assistant'
+publishDir = "docs"
+theme = "hugo-book"
+
+[params]
+  # Enable search functionality
+  BookSearch = true
+
+  # Enable automatic menu generation (comment out for file structure menu)
+  # BookMenuBundle = '/docs/menu'
+
+  # Enable source link
+  BookRepo = 'https://github.com/Sansan4ez/onboarding-assistant'
+
+  # Enable edit link
+  BookEditPath = 'edit/main/content/'
+
+  # Enable comments
+  BookComments = true
+
+  # Enable portable links and link checks
+  BookPortableLinks = true
+
+  # Enable service worker for offline use
+  BookServiceWorker = false
+
+  # Set the path to a logo for the book
+  # BookLogo = 'logo.png'
+
+  # Set the path to a favicon for the site
+  BookFavicon = 'favicon.png'
+
+  # Specify section of content to render as menu
+  BookSection = 'docs'
+
+  # Set template for commit link for the page
+  BookLastChangeLink = 'https://github.com/Sansan4ez/onboarding-assistant/commit/{{ .GitInfo.Hash }}'
+
+  # Configure the date format used on the pages
+  BookDateFormat = 'January 2, 2006'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  # [[menu.before]]
+    # name = "GitHub"
+    # url = "https://github.com/Sansan4ez/onboarding-assistant"
+    # weight = 10
